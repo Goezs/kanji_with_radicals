@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import matplotlib.font_manager as fm
 import random
+from numpy import linspace
 
 plt.style.use("dark_background")
 font_files = fm.findSystemFonts()
@@ -28,7 +29,7 @@ def get_lvl():
   question_0 = "0: All in one"
   question_1 = "1: What is the kanji and meaning?"
   question_2 = "2: What is the use description?"
-  question_3 = "3: Give an example in japanase and the translation in english"
+  question_3 = "3: Give the sound of the kanji"
 
   possible_questions = [question_0, question_1, question_2, question_3]
 
@@ -88,7 +89,7 @@ class Kanji(object):
     question_2 = "What are the radicals and the meaning?"
     question_3 = "Give the sound"
 
-    possible_questions = [question_1, question_2, question_3, question_0,]
+    possible_questions = [question_1, question_2, question_3, question_0]
 
     return possible_questions[self.lvl]
 
@@ -103,7 +104,7 @@ class Kanji(object):
     self.parameter_to_show()
 
     # The question
-    plt.text(0.3, 0.05, "%s" % self.question(), size = 12)
+    plt.text(0.3, 0.05, "%s" % self.question(), size = 15)
     plt.show()
 
   def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
@@ -111,30 +112,27 @@ class Kanji(object):
     """
     Texts in the plt the information you know based on the level
     """
-    #plt.text(center_x + 0.25, center_y + 0.45, "CLUES", size = size_title + 10)
-    if self.lvl == -1:
+    # Limit on y axis
+    plt.ylim(top = 0.85)
+
+    if abs(self.lvl) == 1:
       # First clue
-      plt.text(center_x, center_y, "%s" % self.kanji,
+      plt.text(center_x + 0.12, center_y - 0.20, "%s" % self.kanji,
                size = size_parameter + 100)
 
     elif self.lvl == 0:
       # First clue
-      plt.text(center_x, center_y + 0.35, "Meaning:", size = size_title)
-      plt.text(center_x, center_y + 0.15, "%s" % self.meaning,
-               size = size_parameter)
+      plt.text(center_x + 0.04, center_y, "%s" % self.meaning,
+               size = size_parameter + 25)
 
-    elif self.lvl == 1:
-      # First clue
-      plt.text(center_x, center_y, "%s" % self.kanji,
-               size = size_parameter + 90)
     else:
       # First clue
-      plt.text(center_x - 0.25, center_y + 0.15, "kanji:",
+      plt.text(center_x - 0.05, center_y + 0.15, "kanji",
                size = size_title + 15)
-      plt.text(center_x - 0.20, center_y - 0.10, "%s" % self.kanji,
+      plt.text(center_x, center_y - 0.10, "%s" % self.kanji,
                size = size_parameter + 20)
       # Second clue
-      plt.text(center_x + 0.25, center_y + 0.15, "meaning:",
+      plt.text(center_x + 0.25, center_y + 0.15, "meaning",
                size = size_title + 15)
       plt.text(center_x + 0.30, center_y - 0.10, "%s" % self.meaning,
                size = size_parameter + 20)
@@ -152,39 +150,55 @@ class Kanji(object):
 
     plt.show()
 
-  def answer_to_show(self, center_x: int = 0.1, center_y: int = 0.5,
-                     size_title: float = 10, size_answer : float = 15):
+  def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
+                     size_title: float = 20, size_answer : float = 15):
     """
     Decides what answer to show based on the lvl selected
     """
-    plt.text(center_x + 0.15, center_y + 0.45, "The solution was ...",
-             size = size_title + 10)
+    const_y = 0.87
+    breath_space = 0.10
+
+    x0  = linspace(0, center_x - breath_space)
+    y0 = [const_y for i in range(len(x0))]
+
+    x1  = linspace(center_x + breath_space, 1)
+    y1 = [const_y for i in range(len(x1))]
+
+    plt.ylim(top = 1)
+
+    plt.plot(x0, y0, c = "w")
+    plt.plot(x1, y1, c = "w")
+
+    plt.text(center_x - 0.05, center_y + 0.25, self.kanji,
+             size = size_title + 40)
 
     if self.lvl == -1:
       # Answer 1
-
-      plt.text(center_x + 0.24, center_y + 0.10, self.meaning, size = size_answer)
+      plt.text(center_x - 0.4, center_y + 0.15, "Meaning", size = size_title)
+      plt.text(center_x - 0.4, center_y, self.meaning, size = size_answer)
       # Answer 2
-      plt.text(center_x + 0.15, center_y, self.radicals, size = size_answer)
+      plt.text(center_x + 0.25, center_y + 0.15, "Sound", size = size_title)
+      plt.text(center_x + 0.25, center_y, self.sound, size = size_answer)
       # Answer 3
-      plt.text(center_x + 0.15, center_y - 0.20, "Sound: ", size = size_title)
-      plt.text(center_x + 0.15, center_y - 0.30, self.sound, size = size_answer)
+      plt.text(center_x - 0.05, center_y - 0.30, "Radical(s)",
+               size = size_title)
+      plt.text(center_x - 0.05, center_y - 0.45, self.radicals,
+               size = size_answer)
 
-    elif self.lvl == 0:
-      # Answer 1
-      plt.text(center_x + 0.15, center_y, self.kanji, size = size_answer + 95)
-      # Answer 2
-      plt.text(center_x + 0.15, center_y - 0.20, "Sound: ", size = size_title)
-      plt.text(center_x + 0.15, center_y - 0.30, self.sound, size = size_answer)
     elif self.lvl == 1:
       # Answer 1
-      plt.text(center_x, center_y, self.radicals, size = size_answer)
+      plt.text(center_x - 0.4, center_y, "Radicals", size = size_title + 5)
+      plt.text(center_x - 0.4, center_y - 0.15, self.radicals,
+               size = size_answer)
       # Answer 2
-      plt.text(center_x + 0.24, center_y, self.meaning, size = size_answer)
+      plt.text(center_x + 0.2, center_y, "Meaning", size = size_title + 5)
+      plt.text(center_x + 0.2, center_y - 0.15, self.meaning,
+               size = size_answer)
+
     else:
       # Answer 1
-      plt.text(center_x + 0.15, center_y - 0.20, "Sound: ", size = size_title)
-      plt.text(center_x + 0.15, center_y - 0.30, self.sound, size = size_answer)
+      plt.text(center_x - 0.05, center_y - 0.2, self.sound,
+               size = size_answer + 30)
 
 class KanjiBox(object):
   def __init__(self, lvl, filter = 0, kanji = [], actual_k = "",
@@ -286,13 +300,17 @@ class KanjiBox(object):
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
       list_of_rad = radicals.split(sep = "+")
-      if len(list_of_rad) == self.filter:
+      is_in_desired = len(list_of_rad) == self.filter
+      if is_in_desired:
+        good_kanjies.append(i)
+      elif self.filter == 3 and len(list_of_rad) > self.filter:
         good_kanjies.append(i)
     return good_kanjies
 
   def make_round(self, left_kanjies = False):
     kanji = self.random_p()
-    print("Número de kanjies que faltan: ", len(self.kanji)) if left_kanjies == True else None
+    print("Número de kanjies que faltan: ",
+          len(self.kanji)) if left_kanjies == True else None
     kanji.show_kanji()
     self.actual_k = kanji
 
@@ -300,7 +318,7 @@ class KanjiBox(object):
     if self.actual_k == "":
       return "Start a round to show a solution"
     self.actual_k.show_answer()
-  
+
   def skips(self):
     if self.skip_kanjies == True:
       skips = int(input("\nKanjies to skip: "))
