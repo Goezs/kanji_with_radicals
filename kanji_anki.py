@@ -14,6 +14,7 @@ font_name = "Noto Sans JP"
 matplotlib.rcParams['font.family'] = font_name
 
 def initiate_game():
+  """Gets the params to create a KanjiBox and return it to the user"""
   lvl = get_lvl()
   n_rad = get_rad()
   random_state = get_random_state()
@@ -26,6 +27,7 @@ def initiate_game():
   return kanji_box
 
 def get_lvl():
+  """Asks the user a method to question and show the solutions of the kanjies"""
   question_0 = "0: All in one"
   question_1 = "1: What is the kanji and meaning?"
   question_2 = "2: What is the use description?"
@@ -46,7 +48,8 @@ def get_lvl():
   return lvl
 
 def get_rad():
-  answer = input("You want to filter kanji based on her number of radicals? y/n: ")
+  """Asks the user the number of radicals that will have the kanjies"""
+  answer = input("You want to filter kanjies based on radicals? y/n: ")
   if answer == "y":
     print("Radicals go between 1 to 3, 0 if you want any number of radicals")
     n_rad = int(input("\nradicals to have: "))
@@ -58,6 +61,7 @@ def get_rad():
     return 0
 
 def get_random_state():
+  """Asks the user what will be the timeline of sucecions of kanjies"""
   answer = input("Do you want to set a specific random state? y/n: ")
   if answer == "y":
     random_state = int(input("\nRandom state (0 is not valid): "))
@@ -66,6 +70,7 @@ def get_random_state():
     return 0
 
 def get_skip(random_state):
+  """Asks the user how many kanjies will be skiped"""
   if random_state != 0:
    answer = input("Skip kanjies? y/n: ")
    if answer == "y":
@@ -73,6 +78,15 @@ def get_skip(random_state):
   return 0
 
 class Kanji(object):
+  """
+  Creates objects for a kanji that has:
+  Args:
+    kanji (str): Symbol of the kanji to show
+    Meaning (str): Words in english with the semantic of the kanji
+    radicals (str): Words in english with the radicals of the kanji (mnemonics)
+    radicals (str): In their mayority hiragana with the most used sound
+        of the kanji
+  """
   def __init__(self, kanji, meaning, radicals, sound, lvl):
     self.kanji = kanji
     self.meaning = meaning
@@ -201,6 +215,15 @@ class Kanji(object):
                size = size_answer + 30)
 
 class KanjiBox(object):
+  """
+  Creates a boc with the kanjies that the user wants to have.
+  Args:
+    lvl (int): How will be ilustrated the rounds and solutions [0, 3]
+    filter (int): Filters the kanjies based on the radicals [0, 3]
+    random_state (int): The timeline of a sucecions of kanjies [-inf, inf]
+    skip kanjies (int): How many kanjies will be skiped
+            (cannot be higher than the kanjies that were filtered)
+  """
   def __init__(self, lvl, filter = 0, kanji = [], actual_k = "",
                random_state = 0, skip_kanjies = 0):
     self.lvl = lvl
@@ -212,7 +235,7 @@ class KanjiBox(object):
 
   def bag_of_kanji(self):
     """
-    Creates a array of the kanji
+    Creates a array of kanjies based on a .csv file
     """
     import urllib
     import csv
@@ -271,11 +294,20 @@ class KanjiBox(object):
         and a caegory of that position
     """
     if self.random_state == 0:
-      p_idx = random.choice(range(len(self.kanji)))
+      try:
+        p_idx = random.choice(range(len(self.kanji)))
+      except IndexError:
+        raise ValueError("You end the filter %s ニズ !" % self.filter)
+
       p = self.kanji.pop(p_idx)
     else:
       random.seed(self.random_state)
-      p_idx = random.choice(range(len(self.kanji)))
+      try:
+        p_idx = random.choice(range(len(self.kanji)))
+      except IndexError:
+        raise ValueError("You end the filter %s in the %s timeline" % (self.filter,
+                                                            self.random_state))
+
       p = self.kanji.pop(p_idx)
 
     return p
@@ -293,6 +325,10 @@ class KanjiBox(object):
     self.skips()
 
   def filter_kanji(self, kanjies):
+    """
+    Filters the kanji based on the number of radicals that they have
+    The 0 will be interpretated has all the kanjies
+    """
     if self.filter == 0:
       return kanjies
     good_kanjies = []
@@ -308,21 +344,26 @@ class KanjiBox(object):
     return good_kanjies
 
   def make_round(self, left_kanjies = False):
+    """Sets a new kanji to be tested and gives the left kanjies if is true"""
     kanji = self.random_p()
     print("Número de kanjies que faltan: ",
           len(self.kanji)) if left_kanjies == True else None
+          
     kanji.show_kanji()
     self.actual_k = kanji
 
   def solution(self):
+    """Shows the solution of the kanji if the user has started a round"""
     if self.actual_k == "":
       return "Start a round to show a solution"
     self.actual_k.show_answer()
 
   def skips(self):
+    """Make a skip of kanjies until the number that is given"""
     if self.skip_kanjies == True:
       skips = int(input("\nKanjies to skip: "))
       available_nums = range(0, len(self.kanji) - 2)
+
       while skips not in available_nums:
         skips = int(input("\nThat's not a number possible of days to skip: "))
       for i in range(skips):
