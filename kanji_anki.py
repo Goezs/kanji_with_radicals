@@ -225,13 +225,15 @@ class KanjiBox(object):
             (cannot be higher than the kanjies that were filtered)
   """
   def __init__(self, lvl, filter = 0, kanji = [], actual_k = "",
-               random_state = 0, skip_kanjies = 0):
+               random_state = 0, skip_kanjies = 0, onlyskip = 0):
     self.lvl = lvl
     self.kanji = kanji
     self.filter = filter
     self.actual_k = actual_k
     self.random_state = random_state
     self.skip_kanjies = skip_kanjies
+
+    random.seed(self.random_state)
 
   def bag_of_kanji(self):
     """
@@ -301,7 +303,6 @@ class KanjiBox(object):
 
       p = self.kanji.pop(p_idx)
     else:
-      random.seed(self.random_state)
       try:
         p_idx = random.choice(range(len(self.kanji)))
       except IndexError:
@@ -348,7 +349,6 @@ class KanjiBox(object):
     kanji = self.random_p()
     print("Número de kanjies que faltan: ",
           len(self.kanji)) if left_kanjies == True else None
-          
     kanji.show_kanji()
     self.actual_k = kanji
 
@@ -366,5 +366,13 @@ class KanjiBox(object):
 
       while skips not in available_nums:
         skips = int(input("\nThat's not a number possible of days to skip: "))
-      for i in range(skips):
-        self.random_p()
+      only_skips = input("\nDo you want to only have the skipped kanjies but randomized? y/n: ")
+      if only_skips:
+        new_kanjies = []
+        for i in range(skips):
+          new_kanjies.append(self.random_p())
+        self.kanji = new_kanjies
+        self.random_state = 0
+      else:
+        for i in range(skips):
+          self.random_p()
