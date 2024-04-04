@@ -1,15 +1,15 @@
 Kanji,Meaning,Radicals,Sound
-大,Big,Big,ダイ
-人,Person,Person,ジン
+大,Big,Big,だい
+人,Person,Person,じん
 七,Seven,Seven,なな
-十,Ten,Cross,ジュウ
-工,Construction,Construction,コウ
-九,Nine,Nine,キュウ
-八,Eight,Fins,や.つ
+十,Ten,Cross,じゅう
+工,Construction,Construction,こう
+九,Nine,Nine,きゅう
+八,Eight,Fins,やつ
 二,Two,Two,ふた
 上,Above,Toe + Ground,あ
 下,Below,Ground + Toe,くだ
-入,Enter,Enter, ニュウ
+入,Enter,Enter,にゅ
 口,Mouth,Mouth,くち
 力,Power,Power,りょく
 川,River,River,かわ
@@ -42,7 +42,7 @@ Kanji,Meaning,Radicals,Sound
 円,Yen,Head + Lid,えん
 四,Four,Mouth + Legs,し
 六,Six,Lid + Fins,りく
-出,Exit,Mountain,で
+出,Exit,Exit,で
 犬,Dog,Dog,けん
 子,Child,Child,し
 手,Hand,Hand,て
@@ -74,7 +74,7 @@ Kanji,Meaning,Radicals,Sound
 市,City,Lid + Towel,し
 牛,Cow,Cow,ぎゅう
 分,Part,Fins + Sword,ぶん
-母,Mother,Sun + Drop + Drop,ぼ
+母,Mother,Window,ぼ
 矢,Arrow,Arrow,や
 止,Stop,Stop,し
 北,North,Fingers + Spoon,ほく
@@ -163,7 +163,7 @@ Kanji,Meaning,Radicals,Sound
 会,Meet,Meet,かい
 近,"Near, Close",Treadmill + Axe,ちか
 考,Think,Coffin + Beggar,こう
-毎,Every,Gun + Window,まい
+毎,Every,Gun + Window + Stick,まい
 青,Blue,Blue,あお
 学,"Study, Learning",Viking + Child,がく
 何,What,Leader + Lip Ring,なに
@@ -173,14 +173,14 @@ Kanji,Meaning,Radicals,Sound
 首,Neck,Neck,しゅ
 海,"Sea, Ocean",Tsunami + Gun + Window,かい
 向,"Yonder, Facing",Drop + Head + Mouth,む
-茶,Tea,Flowers + Hat + Angel,ちゃ
+茶,Tea,Flowers + Hat + Small + Ground,ちゃ
 妹,Younger Sister,Woman + Jet,まい
 有,Have,Narwhal + Moon,ゆう
-画,"Drawing, Painting",Leaf + Rice Paddy + Box,が
+画,"Drawing, Painting",Ground + Rice Paddy + Box,が
 室,Room,Roof + Ground + Private + Dirt,しつ
 京,Capital,Lid + Mouth + Small,きょう
 姉,Older Sister,Woman + Lid + Towel,ねえ
-直,"Fix, Direct",Lion + Cross + Eye,ちょく
+直,"Fix, Direct",Cross + Eye + Ground,ちょく
 全,"All, Whole",Hat + King,ぜん
 血,Blood,Blood,けつ
 歩,Walk,Stop + Small + Slide,ほ
@@ -217,7 +217,7 @@ Kanji,Meaning,Radicals,Sound
 通,Pass Through,Treadmill + Mama + Task,つう
 週,Week,Treadmill + Circumference,しゅう
 強,Strong,Bow + Private + Insect,きょう
-組,Group,Top Hat + Thread,く
+組,Group,Thread + Top Hat,く
 必,Certain,Heart + Slide,ひつ
 家,"House, Home",Roof + Pig,か
 札,"Bill, Label, Notes",Tree + Umbrella,さつ
@@ -251,7 +251,7 @@ Kanji,Meaning,Radicals,Sound
 助,Help,Top Hat + Power,じょ
 身,"Body, Somebody",Self + Slide,み
 話,"Talk, Speak",Say + Tongue,わ
-楽,"Comfort, Ease",Ice + White + Tree,がく
+楽,"Comfort, Ease",Explosion + White + Tree,がく
 電,Electricity,Rain + Rice Paddy + Umbrella,でん
 君,Buddy,Wolverine + Slide + Mouth,くん
 朝,Morning,Car + Moon,あさ
@@ -282,13 +282,13 @@ Kanji,Meaning,Radicals,Sound
 使,Use,Leader + Ground + History,し
 重,Heavy,Heavy,じゅう
 発,Departure,Tent + Lantern,はつ
-返,Return,Treadmill + Anti,かえ
+返,Return,Treadmill + Anti *,かえ
 部,Part,Clown + Building,ぶ
 美,Beauty,Horns + King + Big,び
 乗,Ride,Grain + Mouth,の
-始,Begin,Woman + Machine,はじ
+始,Begin,Woman + Machine *,はじ
 県,Prefecture,Lion + Eye + Small,けん
-仮,Temporary,Leader + Anti,か
+仮,Temporary,Leader + Anti *,か
 談,Discuss,Say + Firex2,だん
 事,"Action, Thing",Cross + Mouth + Brush,じ
 泳,Swim,Tsunami + Drop + Water,およ
@@ -303,9 +303,9 @@ Kanji,Meaning,Radicals,Sound
 相,Mutual,Tree + Eye,そう
 要,Need,Helicopter + Woman,よう
 屋,Roof,Flag + Ground + Private + Dirt,や
-表,Express,Life + Kick,ひょう
+表,Express,King + Kick,ひょう
 度,Degrees,Hick + Stool,ど
-実,"Truth, Reality",Roof + Train,じっ
+実,"Truth, Reality",Roof + Dirt + Big,じっ
 受,"Accept, Receive",Cleat + Forehead + Stool,う
 物,Thing,Cow + Wing,もの
 調,Investigate,Say + Circumference,ちょう
@@ -314,7 +314,7 @@ Kanji,Meaning,Radicals,Sound
 葉,Leaf,Flowers + World + Tree,は
 業,Business,Spikes + Sheep + Fins,ぎょう
 軽,Lightweight,Car + Tombstone,けい
-読,Read,Say + Sell,どく
+読,Read,Say + Sell *,どく
 病,"Sick, Illness",Sick + Dynamite,びょう
 習,Learn,Feathers + White,しゅう
 算,Calculate,Bamboo + Eye + Twenty,さん
@@ -328,29 +328,29 @@ Kanji,Meaning,Radicals,Sound
 漢,Chinese,Tsunami + Chinese,かん
 親,Parent,Stand + Tree + See,おや
 語,Language,Say + Five + Mouth,ご
-歌,"Song, Sing",Lip Ring + Lack,うた
+歌,"Song, Sing",Lip Ringx2 + Lack,うた
 集,"Collect, Gather",Turkey + Tree,しゅう
 配,Distribute,Alcohol + Oneself,はい
 起,Wake Up,Run + Oneself,お
-鉄,Iron,Gold + Fault,てつ
+鉄,Iron,Gold + Fault *,てつ
 鳴,Chirp,Mouth + Bird,な
 横,Side,Tree + Yellow,よこ
 落,Fall,Flowers + Tsunami + Kiss,お
 開,Open,Gate + Lantern,かい
 運,"Carry, Luck",Treadmill + Forehead + Car,うん
-農,"Farming, Agriculture",Music + Landslide,のう
+農,"Farming, Agriculture",Music + Landslide *,のう
 線,Line,Thread + White + Water,せん
 進,Advance,Treadmill + Turkey,しん
 終,"End, Finish",Thread + Winter + Two,お
 頭,Head,Beans + Geoduck,とう
-競,Compete,(Stand + Older Brother)x2,きょう
+競,Compete,Stand + Older Brother,きょう
 位,Rank,Leader + Stand,い
 低,Low,Leader + Clan + Ground,てい
 労,Labor,Viking + Power,ろう
 昔,Long Ago,Blackjack + Sun,むかし
 特,Special,Cow + Temple,とく
-波,Wave,Tsunami + Skin,なみ
-意,Idea,Sound + Heart,い
+波,Wave,Tsunami + Skin *,なみ
+意,Idea,Sound + Heart *,い
 共,Together,Blackjack + Fins,きょう
 戦,"War, Battle",Simple + Drunkard,せん
 育,"Nurture, Raise",Boob + Moon,いく
@@ -375,13 +375,13 @@ Kanji,Meaning,Radicals,Sound
 令,Orders,Orders,れい
 利,Profit. Benefit,Grain + Knife,り
 成,Become,Drunkard + Sword,せい
-秒,Second,Grain + Few,びょう
+秒,Second,Grain + Few *,びょう
 追,"Follow, Chase",Treadmill + Bear,お
 注,Pour,Tsunami + Master,ちゅう
 争,Conflict,Prison + Wolverine + Barb,そう
 別,Separate,Mouth + Sword + Knife,べつ
 洋,"Western Style, Ocean",Tsunami + Sheep,よう
-植,Plant,Tree + Fix,しょく
+植,Plant,Tree + Fix *,しょく
 階,"Floor, Story",Building + Compare + White,かい
 短,Short,Arrow + Beans,たん
 島,Island,Bird + Mountain,しま
@@ -389,25 +389,25 @@ Kanji,Meaning,Radicals,Sound
 温,Warm,Tsunami + Sun + Plate,おん
 深,Deep,Tsunami + Pi + Tree,しん
 員,Member,Mouth + Shellfish,いん
-第,Ordinal Number Prefix,Bamboo + Younger Brother,だい
+第,Ordinal Number Prefix,Bamboo + Younger Brother *,だい
 族,"Tribe, Family",Direction + Gun + Arrow,ぞく
 庭,Garden,Mullet + Yoga + King,てい
 動,Move,Heavy + Power,どう
 商,Merchandise,Stand + Legs + Mustache,しょう
 根,Root,Tree + Root,ね
 悲,Sad,Criminal + Heart,ひ
-暑,"Hot, Hot Weather",Sun + Someone,あつ
+暑,"Hot, Hot Weather",Sun + Someone *,あつ
 勉,Exertion,Excuse + Power,べん
 登,Climb,Tent + Beans,とう
-寒,Cold,Roof + Train + Ice,さむ
-章,Chapter,Stand + Early,しょう
+寒,Cold,Roof + Train + Two,さむ
+章,Chapter,Stand + Early *,しょう
 童,Juvenile,Stand + Village,どう
 悪,Bad,Tie Fighter + Heart,あく
-都,Metropolis,Someone + Building,と
+都,Metropolis,Someone + Building *,と
 流,Stream,Tsunami + Boob + River,りゅう
 消,Extinguish,Tsunami + Triceratops + Moon,しょう
 歯,Tooth,Stop + Box + Rice,は
-野,Field,Village + Beforehand,や
+野,Field,Village + Beforehand *,や
 港,Harbor,Tsunami + Blackjack + Fins + Oneself,こう
 球,"Sphere, Ball",King + Lid + Water,きゅう
 祭,Festival,Tent + Jackhammer,まつ
@@ -427,30 +427,30 @@ Kanji,Meaning,Radicals,Sound
 熱,Heat,Womb + Circle + Boil,ねっ
 感,Feeling,Drunkard + Creeper + Heart,かん
 情,"Feeling, Emotion",Soul + Blue,じょう
-整,"Arrange, Organize",Bundle + Winter + Correct,せい
-億,Hundred Million,Leader + Idea,おく
-養,Foster,Sheep + Fins + Good,よう
+整,"Arrange, Organize",Bundle + Winter + Correct *,せい
+億,Hundred Million,Leader + Idea **,おく
+養,Foster,Sheep + Fins + Good *,よう
 標,Signpost,Tree + Helicopter + Jackhammer,ひょう
-練,Practice,Thread + East,れん
+練,Practice,Thread + East *,れん
 福,Luck,Spirit + Scarecrow,ふく
 暗,Dark,Sun + Stand + Sun,あん
-謝,Apologize,Say + Body + Measurement,しゃ
+謝,Apologize,Say + Body + Measurement *,しゃ
 橋,Bridge,Tree + Heaven + Mouth + Mustache,はし
-輪,"Wheel, Ring, Loop",Car + Roof + Bookshelf,わ
+輪,"Wheel, Ring, Loop",Car + Hat + Ground + Bookshelf,わ
 詩,Poem,Say + Temple,し
-器,"Container, Vessel",Products + Big,き
+器,"Container, Vessel",Products + Big + Products,き
 皆,"All, Everyone, Everything",Compare + White,みな
-映,Reflect,Sun + Center,えい
+映,Reflect,Sun + Center *,えい
 銀,Silver,Gold + Root,ぎん
 像,"Statue, Image",Leader + elephant,ぞう
 願,Request,original + Geoduck,がん
-宿,Lodge,Roof + Leader + Hundred,しゅく
+宿,Lodge,Roof + Leader + Hundred *,しゅく
 賞,Prize,Viking + Mouth + Shellfish,しょう
 館,Public Building,Eat + Roof + Bear,かん
 題,Topic,Sun + Coat Rack + Geoduck,だい
 料,"Fee, Material",Rice + ladle,りょう
 殺,Kill,Treasure + Tree + Weapon,さつ
-選,Choose,Treadmill + Oneself + Blackjack + Fins,せん
+選,Choose,Treadmill + Oneselfx2 + Blackjack + Fins,せん
 課,Section,Say + Fruit,か
 然,Nature,Moon + Dog + Boil,ぜん
 鏡,Mirror,Gold + Stand + See,がね
@@ -463,7 +463,7 @@ Kanji,Meaning,Radicals,Sound
 私,"I, Private",Grain + Private,し
 芸,"Acting, Art",Flowers + Cloud,げい
 残,Remainder,Yakuza + Bar,ざん
-卒,Graduate,Lid + Person + Cross,そつ
+卒,Graduate,Lid + Personx2 + Cross,そつ
 基,Foundation,Crab + Dirt,き
 性,"Gender, Nature",Soul + Life,せい
 術,Art,Go + Angel + Drop,じゅつ
@@ -472,25 +472,25 @@ Kanji,Meaning,Radicals,Sound
 望,Hope,Death + Moon + King,ぼう
 材,Lumber,Tree,ざい
 束,Bundle,Bundle,そく
-雰,Atmosphere,Rain + Part,ふん
+雰,Atmosphere,Rain + Part *,ふん
 例,Example,Leader + Yakuza + Knife,たと
 希,Wish,Treasure + Narwhal + Towel,き
 格,Status,Tree + Kiss,かく
-協,Cooperation,Cross + Power,きょう
+協,Cooperation,Cross + Powerx3,きょう
 季,Seasons,Grain + Child,き
 固,Hard,Mouth + Old,こ
 求,Request,Ground + Drop + Water,きゅう
 周,Circumference,Circumference,しゅう
 約,Promise,Thread + Pool,やく
-能,Ability,Private + Moon + Spoon,のう
+能,Ability,Private + Moon + Spoonx2,のう
 骨,Bone,Mustache + Forehead + Moon,こっ
 頑,Stubborn,Origin + Geoduck,がん
 折,Fold. Bend,Fingers + Axe,せつ
-松,Pine,Tree + Public,まつ
-坂,Slope,Dirt + Anti,さか
+松,Pine,Tree + Public *,まつ
+坂,Slope,Dirt + Anti *,さか
 式,Ritual,Ceremony + Construction,しき
-法,"Method, Law",Tsunami + past,ほう
-毒,Poison,Life + Window,どく
+法,"Method, Law",Tsunami + past *,ほう
+毒,Poison,King + Window,どく
 晩,Night,Sun + Excuse,ばん
 区,"District, Ward",Cage + Treasure,く
 昼,Noon,Shrimp + Sun + Ground,ひる
@@ -499,24 +499,24 @@ Kanji,Meaning,Radicals,Sound
 秋,"Autumn, Full",Grain + Fire,あき
 計,Measure,Say + Cross,けい
 単,Simple,Simple,たん
-司,Director,Creeper + Cape,し
+司,Director,Cape + Creeper,し
 昨,"Previous, Yesterday",Sun + Key,さく
 築,"Construct, Build",Bamboo + Saw + Tree,ちく
 夫,Husband,Husband,ぶ
 春,Spring,Train + Sun,はる
 建,Build,Yoga + Brush,けん
 浅,Shallow,Tsunami + Bar,あさ
-勇,"Courage, Bravery, Valor",Mama + Man,ゆう
+勇,"Courage, Bravery, Valor",Mama + Man *,ゆう
 紀,"Account, Narrative",Thread + Oneself,き
 列,Row,Yakuza + Knife,れつ
-飯,"Meal, Food",Eat + Anti,はん
+飯,"Meal, Food",Eat + Anti *,はん
 寺,Temple,Temple,じ
 丈,Height,Height,じょう
 晴,Clear Up,Sun + Blue,せい
 軍,Army,Forehead + Car,ぐん
 猫,Cat,Animal + Flowers + Rice Paddy,ねこ
 泣,Cry,Tsunami + Stand,な
-英,England,Flowers + Center,えい
+英,England,Flowers + Center *,えい
 変,"Change, Strange",Red + Winter,へん
 信,"Believe, Trust",Leader + Say,しん
 仏,Buddha,Leader + Private,ぶつ
@@ -526,13 +526,13 @@ Kanji,Meaning,Radicals,Sound
 険,"Risky, Steep",Building + Squid,けん
 専,Specialty,Cross + Rice Paddy + Measurement,せん
 留,Detain,Private + Sword + Rice Paddy,りゅう
-阪,"Heights, Slope",Building + Anti,はん
+阪,"Heights, Slope",Building + Anti *,はん
 曜,"Weekday, Day of the Week",Sun + Wolverine + Turkey,よう
 取,Take,Ear + Stool,と
 守,Protect,Roof + Measurement,しゅ
-証,"Evidence, Proof",Say + Correct,しょう
+証,"Evidence, Proof",Say + Correct *,しょう
 門,"Gate, Gates",Gate,もん
-浴,Bathe,Tsunami + Valley,よく
+浴,Bathe,Tsunami + Valley *,よく
 保,"Preserve, Guarantee",Leader + Mouth + Tree,ほ
 危,Dangerous,Prison + Cliff + Snake,き
 箱,Box,Bamboo + Tree + Eye,はこ
@@ -545,14 +545,14 @@ Kanji,Meaning,Radicals,Sound
 関,"Related, Connected",Gate + Horns + Heaven,かん
 真,Reality,Pope + Ground + Fins,しん
 弁,"Dialect, Speech",Private + Twenty,べん
-治,"Cure, Heal, Reign, Rule",Tsunami + Machine,じ
+治,"Cure, Heal, Reign, Rule",Tsunami + Machine *,じ
 冗,"Superfluous, Unnecessary, Uselessness",Forehead + Table,じょう
-典,Rule,Music + Fins,てん
+典,Rule,Music + Fins *,てん
 園,"Garden, Park",Mouth + Zombie,えん
 係,Connection,Leader + Ground + Thread,けい
 遠,Far,Treadmill + Zombie,えん
 書,"Write, Writing",Brush + Sun,しょ
-府,Government,Mullet + Attach,ふ
+府,Government,Mullet + Attach *,ふ
 笑,Laugh,Bamboo + Heaven,わら
 幸,Happiness,Lid + Spicy,こう
 側,Side,Leader + Shellfish + Knife,そく
@@ -564,7 +564,7 @@ Kanji,Meaning,Radicals,Sound
 官,Government,Roof + Bear,かん
 常,"Normal, Ordinary",Viking + Mouth + Towel,じょう
 梅,"Ume, Japanese Plum",Tree + Gun + Window,じょう
-識,"Discerning, Discriminating, Know",Say + Sound + Drunkard,つゆ
+識,"Discerning, Discriminating, Know",Say + Sound + Drunkard *,つゆ
 塩,Salt,Dirt + Gun + Mouth + Plate,しお
 非,"Injustice, Negative, Mistake",Criminal,ひ
 栄,"Prosperity, Flourish",Viking + Tree,えい
@@ -577,64 +577,64 @@ Kanji,Meaning,Radicals,Sound
 結,"Bind, Tie",Thread + Good Luck,けっ
 席,Seat,Hick + Towel,せき
 幻,Illusion,Trash + Cape,げん
-署,"Government Office, Political Office",Net + Someone,しょ
+署,"Government Office, Political Office",Net + Someone *,しょ
 因,Cause,Mouth + Big,いん
-渉,Ford,Tsunami + Walk,しょう
-薬,"Medicine, Drug",Flowers + Comfort,くすり
+渉,Ford,Tsunami + Walk *,しょう
+薬,"Medicine, Drug",Flowers + Comfort *,くすり
 虚,Void,Tiger + Spikes,きょ
-察,Guess,Roof + Festival,さつ
+察,Guess,Roof + Festival *,さつ
 干,"Dry, Dry Out",Dry,ほ
-是,Absolutely,Sun + Correct,ぜ
+是,Absolutely,Sun + Correct *,ぜ
 愛,Love,Cleat + Forehead + Heart + Winter,あい
 鼻,Nose,Self + Rice Paddy + Twenty,はな
 細,Thin,Thread + Rice Paddy,さい
 等,Equal,Bamboo + Temple,とう
-借,Borrow,Leader + Long Ago,しゃく
+借,Borrow,Leader + Long Ago *,しゃく
 験,Test,Horse + Squid,けん
-静,Quiet,Blue + Conflict,しず
+静,Quiet,Blue + Conflict *,しず
 喫,Consume,Mouth + Master + Sword + Big,きつ
 汽,Steam,Tsunami + Energy,き
 焼,"Bake, Cook, Burn",Fire + Gambler,や
 僧,"Priest, Monk",Leader + Mask,そう
 忘,Forget,Death + Heart,わす
 告,Announce,Slide + Dirt + Mouth,こく
-禁,Prohibition,Tree + Jackhammer,きん
+禁,Prohibition,Treex2 + Jackhammer,きん
 類,"Type, Category, Kind",Rice + Big + Geoduck,るい
 種,"Kind, Type",Grain + Heavy,しゅ
 訓,Instruction,Say + River,くん
 禅,"Zen, Zen Buddhism",Spirit + Simple,ぜん
-達,"Attain, Plural",Treadmill + Happiness,たつ
+達,"Attain, Plural",Treadmill + Happiness *,たつ
 試,"Try, Attempt",Say + Construction + Ceremony,し
-許,"Permit, Allow",Say + Noon,きょ
+許,"Permit, Allow",Say + Noon *,きょ
 弓,Bow,Bow,ゆみ
 句,"Paragraph, Phrase",Paragraph,く
-座,"Sit, Seat",Mullet + Person + Dirt,ざ
+座,"Sit, Seat",Mullet + Personx2 + Dirt,ざ
 胸,"Chest, Breast",Moon + Prison + Treasure Chest,きょう
 祈,"Pray, Prayer",Spirit + Axe,いの
 脳,Brain,Moon + Grass + Treasure Chest,のう
 枚,Flat Objects Counter,Tree + Winter,まい
 煙,Smoke,Fire + Helicopter + Dirt,えん
-報,"News, Report",Happiness + Stamp + Stool,ほう
-洗,Wash,Tsunami + Previous,あら
+報,"News, Report",Happiness + Stamp + Stool *,ほう
+洗,Wash,Tsunami + Previous *,あら
 可,Possible,Lip Ring,か
-宙,Mid Air,Roof + Reason,ちゅう
-笛,Flute,Bamboo + Reason,ふえ
-続,Continue,Thread + Sell,ぞく
-財,Wealth,Shellfish + Genius,さい
+宙,Mid Air,Roof + Reason *,ちゅう
+笛,Flute,Bamboo + Reason *,ふえ
+続,Continue,Thread + Sell *,ぞく
+財,Wealth,Shellfish + Genius *,さい
 布,Cloth,Narwhal + Towel,ふ
 宇,Outer Space,Roof + Dry,う
-暴,Violence,Sun + Together + Water,ぼう
+暴,Violence,Sun + Together + Water *,ぼう
 得,Acquire,Loiter + Sun + Temple,とく
 史,History,History,し
-詞,Part Of Speech,Say + Director,し
-歴,Continuation,Cliff + Tree + Stop,れき
+詞,Part Of Speech,Say + Director *,し
+歴,Continuation,Cliff + Treex2 + Stop,れき
 善,Morally Good,Sheep + Horns + Ground + Mouth,ぜん
 冊,Books Counter,Bookshelf,さつ
 閥,"Clique, Clan",Gate + Leader + Drunkard,ばつ
 順,"Order, Sequence",River + Geoduck,ちょう
 団,Group,Mouth + Measurement,だん
 絡,"Entangle, Coil Around, Entwine",Thread + Kiss,らく
-容,"Form, Appearance, Shape, Figure",Roof + Valley,よう
+容,"Form, Appearance, Shape, Figure",Roof + Valley *,よう
 乱,Riot,Tongue + Umbrella,らん
 節,Season,Bamboo + Root + Stamp,せつ
 昆,Descendants,Sun + Compare,こん
@@ -645,7 +645,7 @@ Kanji,Meaning,Radicals,Sound
 加,Add,Power + Mouth,カ
 履,Boots,Flag + Loiter + Black Hole,り
 易,Easy,Easy,えき
-減,Decrease,Tsunami + Feeling,へ
+減,Decrease,Tsunami + Feeling/2 *,へ
 舌,Tongue,Tongue,した
 改,Renew,Oneself + Winter,かい
 徒,"Junior, Follower",Loiter + Run,と
@@ -653,7 +653,7 @@ Kanji,Meaning,Radicals,Sound
 混,Mix,Tsunami + Sun + Compare,こん
 罪,Guilt,Net + Criminal,ざい
 難,Difficult,Chinese + Turkey,なん
-機,Machine,Tree + Trash + Drunkard + Person,き
+機,Machine,Tree + Trashx2 + Drunkard + Person,き
 確,Certain,Stone + Forehead + Turkey,かく
 圧,Pressure,Cliff + Dirt,あつ
 妻,Wife,Ground + Brush + Woman,さい
@@ -672,75 +672,75 @@ Kanji,Meaning,Radicals,Sound
 穴,"Hole, Cave",Hole,あな
 妨,"Obstruct, Impede",Woman + Direction,さまた
 経,"Passage Of Time, Pass Through, Manage",Thread + Tombstone,けい
-裕,"Abundant, Plentiful",Spirit + Valley,ゆう
+裕,"Abundant, Plentiful",Spirit + Valley *,ゆう
 械,Contraption,Tree + Drunkard + Twenty,かい
 犯,Crime,Animal + Snake,はん
 被,Incur,Spirit + Skin,ひ
 個,Individual,Leader + Mouth + Old,こ
-害,"Damage, Injury, Harm",Roof + Life + Mouth,がい
+害,"Damage, Injury, Harm",Roof + King + Mouth,がい
 倒,"Overthrow, Collapse",Leader + Mole + Knife,たお
-論,Theory,Say + Roof + Bookshelf,ろん
+論,Theory,Say + Hat + Ground + Bookshelf,ろん
 防,"Prevent, Prevention",Building + Direction,ぼう
 在,Exist,Narwhal + Stick + Dirt,ざい
 飛,Fly,★,ひ
 制,Control,Life + Towel + Knife,せい
 断,Cut Off,Lion + Rice + Axe,だん
 企,Plan,Hat + Stop,き
-資,Resources,Next + Shellfish,し
+資,Resources,Next + Shellfish *,し
 税,Tax,Grain + Guard,ぜい
 任,Duty,Leader + King,にん
-解,"Untie, Solve",Angle + Sword + Cow,かい
+解,"Untie, Solve",Angle + Sword + Cow *,かい
 義,Righteousness,Righteousness,ぎ
-審,Judge,Roof + Number,しん
-委,Committee,Woman + Grain,い
+審,Judge,Roof + Number *,しん
+委,Committee,Grain + Woman,い
 済,Come To An End,Tsunami + Simultaneous,さい
-認,Recognize,Say + Sword + Drop + Heart,にん
+認,Recognize,Say + Sword + Drop + Heart reverted,にん
 岡,Hill,Head + Horns + Ground + Mountain,おか
-総,Whole,Thread + Public + Heart,そう
+総,Whole,Thread + Public + Heart *,そう
 務,Task,Spear + Winter + Power,む
 検,Examine,Tree + Squid,けん
 批,Criticism,Fingers + Compare,ひ
-評,Evaluate,Say + Peace,ひょう
+評,Evaluate,Say + Peace *,ひょう
 設,Establish,Say + Weapon,せつ
 敵,Enemy,Mohawk + Winter,てき
-素,Element,Life + Thread,そ
+素,Element,King + Thread,そ
 挙,Raise,Grass + Ground + Fins + Hand,きょ
 派,Sect,Tsunami + Cliff + Tofu,は
-際,Occasion,Building + Festival,さい
-責,Blame,Life + Shellfish,せき
+際,Occasion,Building + Festival *,さい
+責,Blame,King + Shellfish,せき
 条,Clause,Winter + Tree,じょう
 査,"Inspect, Investigate",Tree + Top Hat,さ
 権,Rights,Tree + Arrow + Turkey,けん
 増,Increase,Dirt + Mask,ぞう
-省,Conserve,Few + Eye,せい
+省,Conserve,Few + Eye *,せい
 件,Matter,Leader + Cow,けん
-判,Judge,Knife + Half,はん
+判,Judge,Half + Knife *,はん
 罰,"Penalty, Punishment",Net + Say + Knife,ばつ
 坊,Monk,Dirt + Direction,ぼう
 援,"Aid, Assist",Fingers + Football,えん
 費,"Expense, Cost",Dollar + Shellfish,ひ
-過,Surpass,Treadmill + Mustache,か
+過,Surpass,Treadmill + Mustachex2,か
 示,"Indicate, Show",Jackhammer,じ
-勢,Force,Womb + Circle + Power,せい
-置,Put,Net + Fix,ち
+勢,Force,Womb + Circle + Power *,せい
+置,Put,Net + Fix *,ち
 応,Respond,Mullet + Heart,おう
 策,Plan,Bamboo + Tree + Head,さく
 賀,Congratulations,Power + Mouth + Shellfish,が
-態,Appearance,Ability + Heart,たい
+態,Appearance,Ability + Heart *,たい
 副,"Vice, Side",Scarecrow + Knife,ふく
-値,Value,Leader + Fix,ね
-案,Plan,Cheap + Tree,あん
+値,Value,Leader + Fix + Lion *,ね
+案,Plan,Cheap + Tree *,あん
 吸,"Suck, Inhale",Mouth + Escalator,しゅう
 藤,Wisteria,Flowers + Moon + Horns + Train + Water,とう
 営,Manage,Viking + Bathtub,えい
 観,View,Arrow + Turkey + See,かん
 領,Territory,Orders + Geoduck,りょう
 寝,"Lie Down, Lay Down, Sleep",Roof + Fingers + Wolverine + Forehead + Stool,ね
-姿,"Figure, Shape, Form",Next + Woman,し
+姿,"Figure, Shape, Form",Next + Woman *,し
 各,Each,Kiss,かく
-誕,Birth,Say + Yoga + Correct,たん
+誕,Birth,Say + Yoga + Correct *,たん
 脱,Undress,Moon + Guard,ぬ
-提,"Present, Submit",Fingers + Sun + Correct,てい
+提,"Present, Submit",Fingers + Sun + Correct *,てい
 宮,"Shinto Shrine, Shrine, Palace",Roof + Bathtub,きゅう
 統,Unite,Thread + Allocate,とう
 状,Condition,Fingers + Dog,じょう
@@ -749,42 +749,42 @@ Kanji,Meaning,Radicals,Sound
 律,Law,Loiter + Brush,りつ
 現,Present Time,King + See,げん
 収,Obtain,Vines + Stool,しゅう
-幹,Tree Trunk,Cross + Sun + Hat + Dry,かん
-呼,Call,Mouth + Peace,よ
+幹,Tree Trunk,Car + Hat + Dry,かん
+呼,Call,Mouth + Peace *,よ
 宅,"House, Home",Roof + Slide + Seven,たく
 張,Stretch,Bow + Long,ちょう
 秀,Excel,Grain + Stairs,しゅう
 革,Leather,Leather,かく
 施,Carry Out,Direction + Gun + Alligator,し
 乳,Milk,Cleat + Child + Umbrella,にゅう
-割,Divide,Roof + Master + Mouth + Knife,わり
+割,Divide,Roof + King + Mouth + Knife,わり
 鬼,Demon,Demon,おに
 師,"Teacher, Expert, Master",Drop + Bear + Ground + Towel,し
 崎,Cape,Mountain + Big + Lip Ring,みさき
 俳,Haiku,Leader + Criminal,はい
 演,Perform,Tsunami + Roof +Leaf + Rice Paddy + Fins,えん
-優,"Superior, Gentle",Leader + Hundred + Forehead + Heart + Winter,ゆう
+優,"Superior, Gentle",Leader + Hundred + Forehead + Heart + Winter *,ゆう
 準,Standard,Tsunami + Turkey + Cross,じゅん
-城,Castle,Dirt + Become,しろ
+城,Castle,Dirt + Become *,しろ
 贅,Luxury,Dirt + Direction + Winter + Shellfish,ぜい
 備,"Provide, Equip",Leader + Flowers + Cliff + Task,び
 則,Rule,Shellfish + Knife,そく
 停,Halt,Leader + restaurant,てい
 看,Watch Over,Hand + Eye,かん
 護,Defend,Say + Flowers + Turkey + Stool,ご
-導,Lead,Road + Measurement,どう
+導,Lead,Road + Measurement *,どう
 裁,Judge,Cross + Clothes + Drunkard,さい
-職,Employment,Ear + Sound + Drunkard,しょく
+職,Employment,Ear + Sound + Drunkard *,しょく
 沢,Swamp,Tsunami + Shrimp,たく
 規,Standard,Husband + See,ぎ
 管,Pipe,Bamboo + Roof + Bear,かん
 述,Mention,Treadmill + Angel + Drop,じゅつ
 武,Military,Ground + Stop + Ceremony,ぶ
 境,Boundary,Dirt + Stand + See,きょう
-質,Quality,Axe + Shellfish,しつ
+質,Quality,Axex2 + Shellfish,しつ
 環,Loop,King + Net + Ground + Zombie,かん
 祝,Celebrate,Spirit + Older Brother,しゅく
-販,Sell,Shellfish + Anti,はん
+販,Sell,Shellfish + Anti *,はん
 触,Touch,Angle + Insect,しょく
 狭,Narrow,Animal + Husband + Horns,せま
 輸,Transport,Car + Death Star,ゆ
@@ -793,33 +793,33 @@ Kanji,Meaning,Radicals,Sound
 庁,"Agency, Government Office",Mullet + Street,ちょう
 株,"Stocks, Shares",Tree + Slide + Jet,かぶ
 載,Publish,Cross + Car + Drunkard,の
-製,Manufacture,Control + Clothes,せい
-燃,Burn,Fire + Nature,ねん
+製,Manufacture,Control + Clothes *,せい
+燃,Burn,Fire + Nature *,ねん
 量,"Quantity, Amount",Dawn + Village,りょう
 肩,Shoulder,Door + Moon,かた
 層,Layer,Flag + Mask,そう
 型,"Model, Type",Lantern + Knife + Dirt,けい
-届,Deliver,Flag + Reason,とど
+届,Deliver,Flag + Reason *,とど
 担,"Carry, Bear",Fingers + Dawn,たん
 視,Look At,Spirit + See,し
 腰,Waist,Moon + Helicopter + Woman,こし
-額,"Amount, Framed Picture, Forehead",Guest + Geoduck,がく
-供,"Servant, Companion",Leader + Together,きょう
+額,"Amount, Framed Picture, Forehead",Guest + Geoduck *,がく
+供,"Servant, Companion",Leader + Together *,きょう
 違,Different,Treadmill + Korea,ちが
 腕,Arm,Moon + Roof + Evening + Snake,うで
 象,"Elephant, Phenomenon",Elephant,しょう
-影,Shadow,Sun + Capital + Hair,かげ
+影,Shadow,Sun + Capital + Hair *,かげ
 与,Give,Beggar + Ground,よ
 渡,Transit,Tsunami + Hick + Stool,わた
 訴,Sue,Say + Axe + Drop,そ
 捕,Catch,Fingers + Wedding,ほ
 肥,Obese,Moon + Bed,ひ
-絞,Strangle,Thread + Mix,しぼ
+絞,Strangle,Thread + Mix *,しぼ
 構,"Set Up, Care",Tree + Lifeguard,こう
 巻,Scroll,Horns + Train + Oneself,ま
 満,Full,Tsunami + Flowers + Both,まん
-響,"Echo, Reverberation, Resound",Trash + Root + Building + Sound,きょう
-豊,Plentiful,Music + Beans,ほう
+響,"Echo, Reverberation, Resound",Trash + Root + Building + Sound *,きょう
+豊,Plentiful,Music + Beans *,ほう
 含,Include,Now + Mouth,ふく
 補,Supplement,Spirit + Wedding,ほ
 票,Ballot,Helicopter + Jackhammer,ひょう
@@ -828,20 +828,20 @@ Kanji,Meaning,Radicals,Sound
 慣,Accustomed,Soul + Rice Paddy + Shellfish,かん
 属,Belong,Flag + Mantis,ぞく
 鮮,Fresh,Fish + Sheep,せん
-訟,Lawsuit,Say + Public,しょう
-抜,Extract,Fingers + Friend,ぬ
+訟,Lawsuit,Say + Public *,しょう
+抜,Extract,Fingers + Friend *,ぬ
 逮,Apprehend,Treadmill + Brush + Water,たい
 隠,Hide,Building + Cleat + Wolverine + Heart,かく
-効,Effective,Mix + Power,こう
+効,Effective,Mix + Power *,こう
 居,Alive,Flag + Old,い
-景,Scene,Sun + Capital,けい
+景,Scene,Sun + Capital *,けい
 限,Limit,Building + Root,げん
 輩,Comrade,Criminal + Car,はい
 況,Condition,Tsunami + Older Brother,きょう
-掛,Hang,Fingers + Dirt + Toe,か
-替,"Replace, Exchange",Husband + Sun,か
+掛,Hang,Fingers + Dirtx2 + Toe,か
+替,"Replace, Exchange",Husbandx2 + Sun,か
 模,Imitation,Tree + Greenhouse,も
-従,"Obey, Accompany, Follow",Loiter + Horns + Correct,したが
+従,"Obey, Accompany, Follow",Loiter + Horns + Correct *,したが
 徴,"Indication, Sign",Loiter + Mountain + King + Winter,ちょう
 怪,Suspicious,Soul + Tombstone,かい
 我,"I, Me",Ego,が
@@ -850,21 +850,21 @@ Kanji,Meaning,Radicals,Sound
 河,River,Tsunami + Lip Ring,が
 汗,Sweat,Tsunami + Dry,あせ
 再,Again,Leaf + Task,さ
-較,Contrast,Car + Mix,かく
+較,Contrast,Car + Mix *,かく
 印,"Seal, Mark",Comb + Stamp,しるし
 接,Adjoin,Fingers + Stand + Woman,せつ
 刺,Stab,Tree + Head + Knife,し
 振,"Shake, Wave",Fingers + Landslide,ふ
-障,Hinder,Building + Stand + Early,しょう
+障,Hinder,Building + Stand + Early *,しょう
 往,Depart,Loiter + Master,おう
 筆,Writing Brush,Bamboo + Brush,ひつ
-励,Encourage,Cliff + Ten Thousand + Power,れい
+励,Encourage,Cliff + Ten Thousand + Power *,れい
 創,Create,Warehouse + Knife,そう
 菓,Cake,Flowers + Fruit,か
-授,Instruct,Fingers + Accept,じゅ
+授,Instruct,Fingers + Accept *,じゅ
 討,Chastise,Say + Measurement,とう
 復,Restore,Loiter + Black Hole,ふく
-造,Create,Treadmill + Announce,ぞう
+造,Create,Treadmill + Announce *,ぞう
 独,Alone,Animal + Insect,どく
 獣,"Beast, Animal",Grass + Rice Paddy + Creeper + Dog,じゅう
 占,Fortune,Fortune,せん
@@ -875,14 +875,14 @@ Kanji,Meaning,Radicals,Sound
 故,"Circumstance, Reason",Old + Winter,こ
 貯,Savings,Shellfish + Roof + Street,ちょ
 迫,"Urge, Compel, Coerce",Treadmill + White,はく
-濃,Thick,Tsunami + Farming,のう
+濃,Thick,Tsunami + Farming **,のう
 胃,Stomach,Rice Paddy + Moon,い
 腹,"Belly, Abdomen, Stomach",Moon + Black Hole,はら
 退,"Retreat, Reject",Treadmill + Root,たい
 給,Salary,Thread + Suit,きゅう
-眠,Sleep,Eye + Peoples,ねむ
+眠,Sleep,Eye + Peoples *,ねむ
 誘,Invite,Say + Grain + Stairs,ゆう
-症,Symptom,Sick + Correct,しょう
+症,Symptom,Sick + Correct *,しょう
 迷,Astray,Treadmill + Rice,めい
 極,Extreme,Tree + Mouth + Beggar + Stool + Ground,きょく
 端,Edge,Stand + Mountain + Rake,たん
@@ -891,23 +891,23 @@ Kanji,Meaning,Radicals,Sound
 惑,Misguided,Drunkard + Creeper + Heart,わく
 睡,Drowsy,Eye + Car,すい
 段,"Steps, Stairs",Comb + Weapon,だん
-郎,Guy,Good + Building,ろう
+郎,Guy,Good + Building *,ろう
 健,Healthy,Leader + Yoga + Brush,けん
-靴,Shoes,Leather + Change,くつ
-就,Settle In,Capital + Dog,しゅう
-途,Route,Treadmill + Surplus,と
-織,Weave,Thread + Sound + Drunkard,おり
-貸,Lend,Substitute + Shellfish,かし
+靴,Shoes,Leather + Change *,くつ
+就,Settle In,Capital + Dog *,しゅう
+途,Route,Treadmill + Surplus *,と
+織,Weave,Thread + Sound + Drunkard *,おり
+貸,Lend,Substitute + Shellfish *,かし
 屈,Yield,Flag + Exit,くつ
 痛,Pain,Sick + Mama + Task,いた
 康,Health,Mullet + Brush + Water,こう
 悩,Worry,Soul + Grass + Treasure Chest,なや
 暇,"Spare Time, Free Time",Sun + Comb + Cage + Stool,か
 訪,Visit,Say + Direction,ほう
-招,Beckon,Fingers + Sword + Mouth,まね
+招,Beckon,Fingers + Joker,まね
 怒,"Angry, Anger",Woman + Stool + Heart,おこ
 撃,Attack,Car + Weapon + Hand,げき
-妙,Strange,Woman + Few,みょう
+妙,Strange,Woman + Few *,みょう
 麗,Lovely,Lovely,れい
 隊,Squad,Building + Horns + Pig,たい
 衆,Populace,Blood + Hair + Tofu,しゅう
@@ -921,17 +921,17 @@ Kanji,Meaning,Radicals,Sound
 逆,Reverse,Treadmill + Barracks,さか
 録,Record,Gold + Wolverine + Water,ろく
 清,Pure,Tsunami + Blue,せい
-博,"Exhibition, Gambling",Cross + Specialty,はく
+博,"Exhibition, Gambling",Cross + Specialty *,はく
 潔,Pure,Tsunami + Life + Sword + Thread,けつ
 修,Discipline,Leader + Stick + Winter + Hair,しゅう
-傘,Umbrella,Hat + Person + Cross,かさ
+傘,Umbrella,Hat + Personx4 + Cross,かさ
 程,Extent,Grain + Mouth + King,ほど
-憲,Constitution,Roof + Life + Net + Heart,けん
+憲,Constitution,Roof + King + Net + Heart,けん
 益,Benefit,Horns + Ground + Fins + Plate,えき
-移,Shift,Grain + Evening + Evening,い
+移,Shift,Grain + Eveningx2,い
 児,Child,Stick + Sun + Legs,じ
 並,Line Up,Horns + Ground + Spikes,なら
-凍,Frozen,Ice + East,こお
+凍,Frozen,Ice + East *,こお
 巨,Giant,Giant,きょ
 庫,"Storage, Warehouse",Mullet + Car,こ
 精,Spirit,Rice + Blue,せい
@@ -946,15 +946,15 @@ Kanji,Meaning,Radicals,Sound
 請,Request,Say + Blue,せい
 杯,Cup Of Liquid,Tree + Not,ぱい
 僚,Colleague,Leader + Charcoal,りょう
-板,Board,Tree + Anti,ばん
-監,Oversee,Servant + Gun + Ground + Plate,かん
-寄,Approach,Roof + Odd,よ
+板,Board,Tree + Anti *,ばん
+監,Oversee,Servant + Gun + Drop + Plate,かん
+寄,Approach,Roof + Odd *,よ
 宗,Religion,Roof + Jackhammer,しゅう
-街,Street,Go + Dirt,かい
+街,Street,Go + Dirtx2,かい
 緊,Tense,Servant + Stool + Thread,きん
 索,Search,Cross + Forehead + Thread,さく
 添,Append,Tsunami + Heaven + Small + Drop,そ
-積,Accumulate,Grain + Blame,せき
+積,Accumulate,Grain + Blame *,せき
 臣,Servant,Servant,じん
 詰,Stuffed,Say + Good Luck,つ
 催,Sponsor,Leader + Mountain + Turkey,さい
@@ -962,24 +962,24 @@ Kanji,Meaning,Radicals,Sound
 宴,Banquet,Roof + Sun + Woman,えん
 雄,"Male, Brave",Narwhal + Private + Turkey,ゆう
 促,Urge,Leader + Foot,そく
-欧,Europe,District + Lack,おう
+欧,Europe,District + Lack *,おう
 略,Abbreviation,Rice Paddy + Kiss,りゃく
-娘,Daughter,Woman + Good,じょう
+娘,Daughter,Woman + Good *,じょう
 烈,"Violent, Intense",Yakuza + Knife + Boil,れつ
 猛,Fierce,Animal + Child + Plate,もう
 怖,Scary,Soul + Narwhal + Towel,ふ
 閣,The Cabinet,Gate + Kiss,かく
-韓,Korea,Morning + Korea,かん
+韓,Korea,Car + Korea,かん
 航,Navigation,Boat + Lid + Table,こう
-乾,Dry,Morning + Gun + Nose,かん
+乾,Dry,Car + Gun + Nose,かん
 恐,Fear,Saw + Heart,きょう
-預,Deposit,Beforehand + Geoduck,よ
+預,Deposit,Beforehand + Geoduck *,よ
 貧,Poor,Part + Shellfish,ひん
 適,Suitable,Treadmill + Mohawk,てき
-延,Prolong,Yoga + Correct,えん
+延,Prolong,Yoga + Correct *,えん
 購,Subscription,Shellfish + Lifeguard,こう
 系,Lineage,Lineage,けい
-覧,Look At,Servant + Gun + Ground + See,らん
+覧,Look At,Servant + Gun + Drop + See,らん
 快,Pleasant,Soul + Hook + Person,かい
 翌,"The Following, Next",Feathers + Stand,よく
 漏,Leak,Tsunami + Flag + Rain,も
@@ -987,20 +987,20 @@ Kanji,Meaning,Radicals,Sound
 乏,Scarce,Leaf + Hills,乏
 更,Again,Ground + Rice Paddy + Treasure,さら
 婚,Marriage,Woman + Clan + Sun,こん
-背,"Back, Height",North + Moon,せ
+背,"Back, Height",North + Moon *,せ
 撮,Photograph,Fingers + Sun + Ear + Stool,と
 詳,Detailed,Say + Sheep,くわ
 騒,Boisterous,Horse + Stool + Insect,さわ
 懐,Nostalgia,Soul + Cross + Net + Clothes,なつ
 照,Illuminate,Sun + Joker + Boil,しょう
-盗,Steal,Next + Plate,とう
-版,Edition,One Sided + Anti,はん
+盗,Steal,Next + Plate *,とう
+版,Edition,One Sided + Anti *,はん
 飾,Decorate,Eat + Gun + Towel,しょく
-符,Token,Bamboo + Attach,ふ
+符,Token,Bamboo + Attach *,ふ
 浮,Float,Tsunami + Cleat + Child,う
 枕,Pillow,Tree + Big,まくら
 押,Push,Fingers + Turtle Shell,お
-越,Go Beyond,Run + Become,こ
+越,Go Beyond,Run + Become *,こ
 魅,Alluring,Demon + Jet,み
 渇,Thirst,Tsunami + Sun + Prison + Spoon,かわ
 旗,Flag,Direction + Gun + Crab,はた
@@ -1014,14 +1014,14 @@ Kanji,Meaning,Radicals,Sound
 編,Knit,Thread + Library,へん
 融,Dissolve,bully + Insect,ゆう
 既,Previously,Root + Fang,き
-除,Exclude,Building + Surplus,じ
-鑑,Model,Gold + Oversee,かん
-幾,"How Many, How Much",Trash + Drunkard + Person,いく
+除,Exclude,Building + Surplus *,じ
+鑑,Model,Gold + Oversee *,かん
+幾,"How Many, How Much",Trashx2 + Drunkard + Person,いく
 倉,Warehouse,Warehouse,そう
 嘆,Sigh,Mouth + Chinese,なげ
 驚,Surprised,Poem + Winter + Horse,おどろ
 帯,Belt,Ground + Mountain + Forehead + Towel,たい
-貨,Freight,Change + Shellfish,か
+貨,Freight,Change + Shellfish *,か
 散,Scatter,Blackjack + Moon + Winter,さん
 脈,Vein,Moon + Cliff + Tofu,みゃく
 陸,Land,Building + Womb,りく
@@ -1030,150 +1030,150 @@ Kanji,Meaning,Radicals,Sound
 掃,Sweep,Fingers + Wolverine + Forehead + Towel,そう
 巣,Nest,Simple + Fins,す
 離,Detach,Rocket + Turkey,り
-似,Resemble,Leader + Lion + Drop + Person +,に
+似,Resemble,Leader + Lion + Drop + Person,に
 富,Rich,Roof + Scarecrow,ふ
 均,Equal,Dirt + Pool,きん
 泥,Mud,Tsunami + Flag + Spoon,どろ
-救,Rescue,Request + Winter,きゅう
+救,Rescue,Request + Winter *,きゅう
 径,Diameter,Loiter + Tombstone,けい
 孫,Grandchild,Child + Lineage,まご
-廊,Corridor,Mullet + Guy,ろう
-普,Normal,Line Up + Sun,ふ
+廊,Corridor,Mullet + Guy *,ろう
+普,Normal,Line Up + Sun *,ふ
 棒,"Pole, Rod",Tree + Train + Dry,ぼう
 訳,"Translation, Reason",Say + Shrimp,やく
 桜,"Sakura, Cherry Tree",Tree + Grass + Woman,さくら
 染,Dye,Tsunami + Nine + Tree,せん
 党,Group,Viking + Older Brother,とう
-恩,Kindness,Big + Mouth + Heart,おん
-秘,Secret,Grain + Certain,ひ
+恩,Kindness,Mouth + Big + Heart,おん
+秘,Secret,Grain + Certain *,ひ
 祖,Ancestor,Spirit + Top Hat,そ
 複,Duplicate,Spirit + Black Hole,ふく
 汚,Dirty,Tsunami + Ground + Beggar,お
 机,Desk,Tree + Table,つくえ
 眼,Eyeball,Eye + Root,め
-績,Exploits,Thread + Blame,せき
+績,Exploits,Thread + Blame *,せき
 酸,Acid,Alcohol + Spider,さん
 卵,Egg,Pool,たまご
 銭,Coin,Gold + Bar,せん
 迎,Welcome,Treadmill + Cat Pirate,むか
-液,"Fluid, Liquid",Tsunami + Night,えき
+液,"Fluid, Liquid",Tsunami + Night *,えき
 捨,Throw Away,Fingers + Hat + Dirt + Mouth,す
-欲,Want,Valley + Lack,よく
+欲,Want,Valley + Lack *,よく
 永,Eternity,Water + Drop,えい
-興,Interest,Comb + Same + Ground + Fins,こう
+興,Interest,Comb + Same + Ground + Fins *,こう
 採,Gather,Fingers + Cleat + Tree,さい
 衛,Defense,Go + Korea,えい
 雑,"Random, Miscellaneous",Nine + Tree + Turkey,ざっ
 厳,Strict,Grass + Cliff + Elf + Winter,げん
 込,Crowded,Treadmill + Enter,こ
 傷,Wound,Leader + Gun + Easy,いた
-密,Secrecy,Roof + Certain + Mountain,せつ
+密,Secrecy,Roof + Certain + Mountain *,せつ
 暖,Warm,Sun + Football,だん
-賛,Agree,Husband + Shellfish,さん
+賛,Agree,Husbandx2 + Shellfish,さん
 志,Intention,Samurai + Heart,し
-序,Preface,Mullet + Beforehand,じょ
-飼,Domesticate,Eat + Director,か
+序,Preface,Mullet + Beforehand *,じょ
+飼,Domesticate,Eat + Director *,か
 糖,Sugar,Rice + Mullet + Brush + Mouth,とう
 賃,Rent,Leader + King + Shellfish,ちん
 蒸,Steam,★,じょう
-諸,Various,Say + Someone,しょ
+諸,Various,Say + Someone *,しょ
 蔵,Storehouse,Storehouse,ぞう
-肺,Lung,Moon + City,はい
-盛,"Pile, Heaps",Become + Plate,さか
+肺,Lung,Moon + City *,はい
+盛,"Pile, Heaps",Become + Plate *,さか
 拡,Extend,Fingers + Mullet + Private,かく
 忠,Loyalty,Middle + Heart,ちゅう
 装,Attire,Icicle + Samurai + Clothes,そう
 漠,"Desert, Vague",Tsunami + Greenhouse,ばく
 操,"Manipulate, Chastity",Fingers + Products + Tree,そう
-著,Author,Flowers + Someone,ちょ
-砂,Sand,Stone + Few,さ
+著,Author,Flowers + Someone *,ちょ
+砂,Sand,Stone + Few *,さ
 異,Differ,Rice Paddy + Blackjack + Fins,い
 筋,"Muscle, Tendon",Bamboo + Moon + Power,すじ
 皇,Emperor,White + King,こう
 窓,Window,Hole + Private + Heart,まど
 垂,"Dangle, Drip",Car,すい
-簡,Simplicity,Bamboo + Interval,かん
+簡,Simplicity,Bamboo + Interval *,かん
 尊,Revered,Horns + Alcohol + Measurement,そん
 否,No,Not + Mouth,ひ
 誌,Magazine,Say + Samurai + Heart,し
 裏,Backside,Lid + Village + Kick,うら
-閉,Close,Gate + Genius,し
+閉,Close,Gate + Genius *,し
 暮,Livelihood,Greenhouse + Sun,く
 宝,Treasure,Roof + King + Drop,ほう
 熟,Ripen,Sock + Circle + Boil,じゅく
 灰,Ashes,Cliff + Fire,はい
-納,Supply,Thread + Inside,なっ
+納,Supply,Thread + Inside *,なっ
 宣,Proclaim,Roof + Ground + Dawn,せん
 敬,Respect,Poem + Winter,けい
 揮,Brandish,Fingers + Forehead + Car,き
 降,Descend,Building + Winter + Cow,こう
-縮,Shrink,Thread + Roof + Leader + Hundred,しゅく
+縮,Shrink,Thread + Roof + Leader + Hundred *,しゅく
 奴,Dude,Woman + Stool,やつ
 幕,Curtain,Greenhouse + Towel,まく
 貴,Valuable,Middle + Ground + Shellfish,き
 歓,Delight,Arrow + Turkey + Lack,かん
 隷,Slave,Samurai + Jackhammer + Brush + Water,れい
 豆,Beans,Beans,とう
-損,Loss,Fingers + Member,そん
+損,Loss,Fingers + Member *,そん
 丼,Rice Bowl,Well + Drop,どんぶり
 劇,Drama,Tiger + Pig + Knife,げき
 沿,Run Alongside,Tsunami + Fins + Mouth,えん
-腐,Rot,Mullet + Attach + Meat,ふ
+腐,Rot,Mullet + Attach + Meat *,ふ
 粋,Stylish,Rice + Nine + Cross,すい
 聖,Holy,Ear + Mouth + King,せい
 拝,Worship,Fingers + Dry,はい
 推,Infer,Fingers + Turkey,すい
-磁,Magnet,Stone + Horns + Ground + Trash,じ
+磁,Magnet,Stone + Horns + Ground + Trashx2,じ
 紅,"Deep Red, Crimson",Thread + Construction,こう
 誤,Mistake,Say + Catapult,ご
 勤,Work,Boot + Power,つと
-承,Consent,Child + Water,しょう
+承,Consent,Water + Child + Groundx2,しょう
 純,Pure,Thread + Barracks,じゅん
 刻,Carve,Slice + Knife,こく
 源,Origin,Tsunami + original,げん
 吐,"Throw Up, Spit",Mouth + Dirt,は
 薦,Recommend,Flowers + Mullet + Bird,せん
-射,Shoot,Say + Body + Measurement,しゃ
+射,Shoot,Body + Measurement *,しゃ
 臓,Internal Organs,Moon + Storehouse,ぞう
-芋,Potato,Dry + Flowers,いも
+芋,Potato,Flowers + Dry,いも
 枝,Branch,Tree + Branch,えだ
-縦,Vertical,Thread + Loiter + Horns + Correct,たて
+縦,Vertical,Thread + Loiter + Horns + Correct *,たて
 爪,Claw,Claw,つめ
 舎,Cottage,Hat + Dirt + Mouth,しゃ
 汁,Soup,Tsunami + Cross,しる
 介,Jammed In,Hut,かい
 炎,Flame,Fire + Fire,えん
 亀,Turtle,Turtle,かめ
-滞,Stagnate,Tsunami + Belt,たい
+滞,Stagnate,Tsunami + Belt *,たい
 紹,Introduce,Thread + Joker,しょう
-破,Tear,Stone + Skin,は
+破,Tear,Stone + Skin *,は
 払,Pay,Fingers + Private,はら
 剣,Sword,Squid + Knife,けん
-熊,Bear,Ability + Boil,くま
-銅,Copper,Gold + Same,どう
+熊,Bear,Ability + Boil *,くま
+銅,Copper,Gold + Same *,どう
 厄,Unlucky,Cliff + Snake,やっ
 酔,Drunk,Alcohol + Nine + Cross,よ
 獄,Prison,Animal + Say + Dog,ごく
 己,Oneself,Oneself,こ
-彼,He,Loiter + Skin,あそこ
-油,Oil,Tsunami + Reason,ゆ
+彼,He,Loiter + Skin *,あそこ
+油,Oil,Tsunami + Reason *,ゆ
 講,Lecture,Say + Lifeguard,こう
 遅,Slow,Treadmill + Flag + Sheep,おそ
 測,Measure,Tsunami + Shellfish + Knife,そく
 杉,Cedar,Tree + Hair,すぎ
-醤,Soy Sauce,Commander + Alcohol,しょう
+醤,Soy Sauce,Commander + Alcohol *,しょう
 為,Sake,Sake,な
 互,Mutual,Ground + Shuriken,ご
 寿,Lifespan,Train + Measurement,じゅ
 彫,Carve,Circumference + Hair,ちょう
 恥,Shame,Ear + Heart,は
 酢,Vinegar,Alcohol + Key,す
-鍋,Pot,Gold + Mustache + Mustache,なべ
+鍋,Pot,Gold + Mustachex2,なべ
 噌,Boisterous,Mouth + Mask,そ
 湖,Lake,Tsunami + Old + Moon,こ
 甘,Sweet,Sweet,あま
 牙,"Fang, Tusk",Fang,げ
-盟,Alliance,Bright + Plate,めい
+盟,Alliance,Bright + Plate *,めい
 旧,Former,Stick + Sun,きゅう
 及,Reach,Escalator,およ
 舞,Dance,Nothing + Dance,ま
@@ -1188,11 +1188,11 @@ Kanji,Meaning,Radicals,Sound
 奈,Nara,Big + Jackhammer,な
 療,Heal,Sick + Charcoal,りょう
 頼,Trust,Bundle + Geoduck,らい
-献,Offer,South + Dog,けん
-廃,Obsolete,Mullet + Departure,はい
+献,Offer,South + Dog *,けん
+廃,Obsolete,Mullet + Departure *,はい
 超,"Ultra, Super",Run + Joker,ちょう
 継,Inherit,Thread + Lion + Rice,つ
-遺,Leave Behind,Treadmill + Valuable,い
+遺,Leave Behind,Treadmill + Valuable *,い
 伎,Deed,Leader + Branch,き
 般,Generally,Boat + Weapon,ぱん
 将,Commander,Icicle + Cleat + Measurement,しょう
@@ -1201,8 +1201,8 @@ Kanji,Meaning,Radicals,Sound
 鹿,Deer,Mullet + Helicopter + Compare,か
 換,Exchange,Fingers + Prison + Head + Legs + Big,か
 貿,Trade,Private + Sword + Shellfish,ぼう
-諾,Agreement,Say + Flowers + Right,だく
-債,Debt,Leader + Blame,さい
+諾,Agreement,Say + Flowers + Right *,だく
+債,Debt,Leader + Blame *,さい
 姓,"Surname, Family Name",Woman + Life,せい
 狙,Aim,Animal + Top Hat,ねら
 香,Fragrance,Grain + Sun,こう
@@ -1215,11 +1215,11 @@ Kanji,Meaning,Radicals,Sound
 塁,"Base, Baseball Base",Rice Paddy + Explosion + Dirt,るい
 闘,Struggle,Gate + Beans + Measurement,とう
 漁,Fishing,Tsunami + Fish,ぎょ
-爆,Explode,Fire + Violence,ばく
+爆,Explode,Fire + Violence *,ばく
 湾,Gulf,Tsunami + Red + Bow,わん
-崩,Crumble,Mountain + Moon,くず
+崩,Crumble,Mountain + Moonx2,くず
 葬,Burial,Flowers + Ground + Yakuza + Spoon + Twenty,そう
-償,Reparation,Leader + Prize,しょう
+償,Reparation,Leader + Prize *,しょう
 刑,Punish,Lantern + Knife,けい
 抵,Resist,Fingers + Clan + Ground,てい
 募,Recruit,Greenhouse + Power,ぼ
@@ -1229,7 +1229,7 @@ Kanji,Meaning,Radicals,Sound
 患,Afflicted,Skewer + Heart,かん
 戻,Return,Door + Big,もど
 契,Pledge,Master + Sword + Big,けい
-執,Tenacious,Happiness + Circle,しっ
+執,Tenacious,Happiness + Circle *,しっ
 聴,Listen,Ear + Cross + Net + Heart,ちょう
 陣,Army Base,Building + Car,じん
 旬,"In Season, Time of the Month, Season",Prison + Sun,じゅん
@@ -1242,90 +1242,90 @@ Kanji,Meaning,Radicals,Sound
 抑,Suppress,Fingers + Cat Pirate,よく
 避,Dodge,Treadmill + Hot Pepper,ひ
 還,Send Back,Treadmill + Net + Ground + Zombie,かん
-傾,Lean,Change + Geoduck,けい
+傾,Lean,Change + Geoduck *,けい
 娠,Pregnant,Woman + Landslide,しん
 妊,Pregnant,Woman + King,にん
 描,Draw,Fingers + Flowers + Rice Paddy,えが
 託,Consign,Say + Slide + Seven,たく
-懸,Suspend,Prefecture + Lineage + Heart,けん
+懸,Suspend,Prefecture + Lineage + Heart *,けん
 需,Demand,Rain + Rake,じゅ
 賂,Bribe,Shellfish + Kiss,ろ
 緩,Loose,Thread + Football,ゆる
-賄,Bribe,Shellfish + Have,わい
-却,Contrary,past + Stamp,きゃく
+賄,Bribe,Shellfish + Have *,わい
+却,Contrary,past + Stamp *,きゃく
 奏,Play Music,Train + Heaven,そう
 盤,Tray,Boat + Weapon + Plate,ばん
 奥,Interior,Drop + Head + Rice + Big,おく
-緒,Together,Thread + Someone,しょ
-慮,Consider,Tiger + Think,りょ
+緒,Together,Thread + Someone *,しょ
+慮,Consider,Tiger + Think *,りょ
 宜,Best Regards,Roof + Top Hat,よろ
 繰,Spin,Thread + Syrup,く
 致,Do,Mole + Winter,ち
 択,Select,Fingers + Shrimp,たく
 称,Title,Grain + Gun + Small,しょう
 扱,Handle,Fingers + Escalator,あつか
-伴,Accompany,Leader + Half,ともな
+伴,Accompany,Leader + Half *,ともな
 逃,Escape,Treadmill + Omen,に
-齢,Age,Tooth + Orders,れい
+齢,Age,Tooth + Orders *,れい
 併,Join,Leader + Horns + Lantern,ぺい
 奪,Rob,Big + Turkey + Measurement,だつ
-埼,Cape,Dirt + Odd,さき
+埼,Cape,Dirt + Odd *,さき
 銃,Gun,Gold + Allocate,じゅう
 祉,Welfare,Spirit + Stop,ふく
 免,Excuse,Excuse,めん
-鋼,Steel,Gold + Hill,はがね
+鋼,Steel,Gold + Hill *,はがね
 隆,Prosperity,Building + Winter + Life,りゅう
-圏,Range,Mouth + Scroll,けん
+圏,Range,Mouth + Scroll *,けん
 片,One Sided,one sided,かた
 埋,Bury,Dirt + Village,まい
-慎,Humility,Soul + Reality,しん
+慎,Humility,Soul + Reality *,しん
 枠,Frame,Tree + Nine + Cross,わく
 阜,Mound,Drop + Bear + Cross,ふ
 壁,Wall,Hot Pepper + Dirt,かべ
 邦,Home Country,Three + Slide + Building,ぽう
 岐,Branch Off,Mountain + Branch,ぎ
-躍,Leap,Foot + Wolverine + Turkey,やく
+躍,Leap,Foot + Wolverinex2 + Turkey,やく
 甲,"Turtle Shell, A",Turtle Shell,がい
 譲,Defer,Say + Nurse,ゆず
 雇,Employ,Door + Turkey,こ
 項,Paragraph,Construction + Geoduck,こう
 勧,Recommend,Arrow + Turkey + Power,すす
 充,Allocate,Allocate,じゅう
-御,Honorable,Loiter + Gun + Correct + Stamp,ご
+御,Honorable,Loiter + Gun + Correct + Stamp *,ご
 斐,Patterned,Criminal + Writing,ひ
 渋,Bitter,Tsunami + Stop + Explosion,じゅう
 鈴,Buzzer,Gold + Orders,すず
-群,Flock,Buddy + Sheep,ぐん
-稲,Rice Plant,Grain + Cleat + Former,いな
+群,Flock,Buddy + Sheep *,ぐん
+稲,Rice Plant,Grain + Cleat + Former *,いな
 棋,Chess Piece,Tree + Crab,ぎ
 拒,Refusal,Fingers + Giant,きょ
 仙,Hermit,Leader + Mountain,せん
 謙,Modesty,Say + Mona Lisa,けん
-控,Abstain,Fingers + Sky,こう
-殿,"Milord, Lord",Flag + Together + Weapon,でん
+控,Abstain,Fingers + Sky *,こう
+殿,"Milord, Lord",Flag + Together + Weapon *,でん
 犠,Sacrifice,Cow + Righteousness,ぎ
 誉,Honor,Grass + Ground + Fins + Say,よ
 隣,Neighbor,Building + Rice + Dance,りん
-殖,Multiply,Yakuza + Fix,しょく
+殖,Multiply,Yakuza + Fix *,しょく
 兼,Concurrently,Mona Lisa,か
 獲,Seize,Animal + Flowers + Turkey + Stool,かく
 雅,Elegant,Fang + Turkey,が
-薄,Dilute,Flowers + Tsunami + Specialty,うす
-顧,Review,Employ + Geoduck,こ
+薄,Dilute,Flowers + Tsunami + Specialty *,うす
+顧,Review,Employ + Geoduck *,こ
 堀,Ditch,Dirt + Flag + Exit,ほり
 敷,Spread,Cross + Rice Paddy + Direction + Winter,しき
 柱,Pillar,Tree + Master,ちゅう
-頻,Frequent,Walk + Geoduck,ひん
+頻,Frequent,Walk + Geoduck *,ひん
 吹,Blow,Mouth + Lack,ふ
 茂,Luxuriant,Flowers + Slide + Drunkard,しげ
-唱,Chant,Mouth + Sun + Sun,しょう
-駆,Gallop,Horse + District,か
+唱,Chant,Mouth + Sunx2,しょう
+駆,Gallop,Horse + District *,か
 孝,Filial Piety,Teacher,こう
 衝,Collide,Go + Heavy,しょう
-敏,Alert,Every + Winter,びん
-褒,Praise,Lid + Preserve + Clothes,ほう
+敏,Alert,Every + Winter *,びん
+褒,Praise,Lid + Preserve + Clothes *,ほう
 巡,Patrol,Treadmill + Flood,まわ
-繁,Overgrown,Every + Winter + Thread,はん
+繁,Overgrown,Every + Winter + Thread *,はん
 駐,Resident,Horse + Master,ちゅう
 戒,Commandment,Drunkard + Twenty,かい
 携,Portable,Fingers + Turkey + Stairs,けい
@@ -1339,11 +1339,11 @@ Kanji,Meaning,Radicals,Sound
 樹,Wood,Tree + Cross + Beans + Measurement,とら
 酎,Sake,Alcohol + Measurement,ちゅう
 至,Attain,Mole,いた
-誠,Sincerity,Say + Become,まこと
+誠,Sincerity,Say + Become *,まこと
 瀬,"Rapids, Shallows",Tsunami + Bundle + Geoduck,せ
 畑,Field,Fire + Rice Paddy,はたけ
-墟,Ruins,Dirt + Tiger + Cactus,きょ
-伺,Pay Respects,Leader + Director,うかが
+墟,Ruins,Dirt + Tiger + Spikes,きょ
+伺,Pay Respects,Leader + Director *,うかが
 徹,Penetrate,Loiter + Boob + Moon + Winter,てつ
 鉱,Mineral,Gold + Wide,こう
 儀,Ceremony,Leader + Righteousness,ぎ
@@ -1359,26 +1359,26 @@ Kanji,Meaning,Radicals,Sound
 炭,Charcoal,Mountain + Cliff + Fire,たん
 包,Wrap,Prison + Oneself,ほう
 撤,Withdrawal,Fingers + Boob + Moon + Winter,てっ
-蜜,Honey,Roof + Certain + Insect,みつ
+蜜,Honey,Roof + Certain + Insect *,みつ
 蛍,Firefly,Viking + Insect,けい
-艦,Warship,Boat + Oversee,かん
-措,Set Aside,Fingers + Long Ago,そ
-郷,Hometown,poop + Guy,きょう
+艦,Warship,Boat + Oversee *,かん
+措,Set Aside,Fingers + Long Ago *,そ
+郷,Hometown,poop + Guy *,きょう
 範,Example,Bamboo + Car + Snake,はん
 揚,Hoist,Fingers + Easy,よう
 斎,Purification,Simultaneous + Jackhammer,さい
-袋,Sack,Substitute + Clothes,ぶくろ
+袋,Sack,Substitute + Clothes *,ぶくろ
 到,Arrival,Mole + Knife,とう
 克,Overcome,Old + Legs,こく
 床,Floor,Mullet + Tree,とこ
 暫,Temporarily,Car + Axe + Sun,しばら
 弧,Arc,Bow + Melon,こ
-握,Grip,Fingers + Shop,あく
-網,Netting,Thread + Hill,あみ
+握,Grip,Fingers + flag + Ground + Private + Dirt,あく
+網,Netting,Thread + Hill *,あみ
 析,Analysis,Tree + Axe,せき
-綱,Cable,Thread + Hill,つな
+綱,Cable,Thread + Hill *,つな
 哲,Philosophy,Fingers + Axe + Mouth,てつ
-喪,Mourning,Cross + Mouth + Mouth + Clothes,そう
+喪,Mourning,Cross + Mouthx2 + Clothes,そう
 泊,Overnight,Tsunami + White,と
 堅,Solid,Servant + Stool + Dirt,けん
 糾,Twist,Thread + Vines,きゅう
@@ -1386,62 +1386,62 @@ Kanji,Meaning,Radicals,Sound
 荒,Wild,Flowers + Death + River,あら
 紛,Distract,Thread + Part,ふん
 掘,Dig,Fingers + Flag + Exit,ほ
-軸,Axis,Car + Reason,じく
+軸,Axis,Car + Reason *,じく
 双,Pair,Stool + Stool,ふた
 芝,Lawn,Flowers + Hills,しば
 肝,Liver,Moon + Dry,かん
 柄,Pattern,Tree + Dynamite,がら
 潟,Lagoon,Tsunami + Sun + Wing,がた
-枢,Hinge,Tree + District,すう
+枢,Hinge,Tree + District *,すう
 括,Fasten,Fingers + Tongue,かっ
 揺,Shake,Fingers + Satellite,ゆ
 焦,Char,Turkey + Boil,しょう
-滑,Slippery,Tsunami + Bone,すべ
+滑,Slippery,Tsunami + Bone *,すべ
 慰,Consolation,Flag + Jackhammer + Measurement + Heart,なぐさ
 懇,Courteous,badger + Root + Heart,こん
 炉,Furnace,Fire + Door,こん
-封,"Seal, Seal In, Closing",Dirt + Dirt + Measurement,ふう
+封,"Seal, Seal In, Closing",Dirtx2 + Measurement,ふう
 即,Instant,Root + Stamp,すなわ
 滅,Destroy,Tsunami + Slide + Drunkard + Ground + Fire,めつ
-筒,Cylinder,Bamboo + Same,とう
+筒,Cylinder,Bamboo + Same *,とう
 斉,Simultaneous,Simultaneous,さい
 趣,Gist,Run + Ear + Stool,しゅ
 摩,Chafe,Mullet + Tree + Tree + Hand,ま
 距,Distance,Foot + Giant,きょ
 襲,Attack,Imperial + Clothes,おそ
-沈,Sink,Tsunami + Pirate,しず
+沈,Sink,Tsunami + Roof + Person,しず
 沼,Bog,Tsunami + Joker,ぬま
-籍,Enroll,Bamboo + Plow + Long Ago,せき
+籍,Enroll,Bamboo + Plow + Long Ago *,せき
 貢,Tribute,Construction + Shellfish,こう
-潮,Tide,Tsunami + Morning + Moon,しお
+潮,Tide,Tsunami + Morning *,しお
 懲,Chastise,Loiter + Mountain + King + Winter + Heart,こ
 旨,"Point, Delicious",Spoon + Sun,し
-撲,Slap,Fingers + Business,ぼく
+撲,Slap,Fingers + Business *,ぼく
 珍,Rare,King + Hat + Hair,ちん
 岳,Peak,Axe + Ground + Mountain,がく
 柔,Gentle,Spear + Tree,じゅう
 刷,Printing,Flag + Towel + Knife,さつ
 誰,Who,Say + Turkey,だれ
 牧,Pasture,Cow + Winter,ぼく
-朗,Bright,Good + Moon,ろう
-滋,Nourishing,Tsunami + Horns + Ground + Trash + Trash,じ
+朗,Bright,Good + Moon *,ろう
+滋,Nourishing,Tsunami + Horns + Ground + Trashx2,じ
 露,"Expose, Dew",Rain + Foot + Kiss,ろ
-威,Majesty,Drunkard + Slide + Ground + Woman,い
+威,Majesty,Drunkard + Slide + Leaf + Woman,い
 垣,"Hedge, Fence",Dirt + Ground + Dawn,かき
 泰,Peace,Train + Water,たい
-擦,Grate,Fingers + Roof + Festival,さつ
-琴,Harp,King + King + Now,こと
+擦,Grate,Fingers + Roof + Festival *,さつ
+琴,Harp,Kingx2 + Now,こと
 裂,"Split, Tear",Yakuza + Knife + Clothes,れつ
 竜,Dragon,Dragon,りゅう
 謎,Riddle,Say + Treadmill + Rice,なぞ
 芽,Sprout,Flowers + Fang,め
 涙,Teardrop,Tsunami + Door + Big,なみだ
-嵐,Storm,Mountain + Wind,あらし
+嵐,Storm,Mountain + Wind *,あらし
 吉,Good Luck,Good Luck,きつ
 俺,"I, Me",Leader + Big + Rice Paddy + Umbrella,おれ
 縁,Edge,Thread + Wolverine + Pig,えん
 桃,Peach,Tree + Omen,もも
-髪,Hair,Long + Hair + Friend,かみ
+髪,Hair,Long + Hair + Friend *,かみ
 梨,Pear,Grain + Knife + Tree,なし
 丘,Hill,Axe + Ground,おか
 斗,"Ladle, Big Dipper",ladle,と
@@ -1453,20 +1453,20 @@ Kanji,Meaning,Radicals,Sound
 寸,Measurement,Measurement,すん
 姫,Princess,Woman + Servant,ひめ
 刃,Blade,Blade,は
-翼,Wing,Feathers + Rice Paddy + Together,つばさ
+翼,Wing,Feathers + Rice Paddy + Together *,つばさ
 叫,Shout,Mouth + Vines,さけ
 忍,Endure,Blade + Heart,にん
-棚,Shelf,Tree + Moon + Moon,だな
+棚,Shelf,Tree + Moonx2,だな
 粒,Grains,Rice + Stand,つぶ
 釣,Fishing,Gold + Pool,つ
 叱,Scold,Mouth + Seven,しか
 辛,Spicy,Spicy,しん
 侍,Samurai,Leader + Temple,じ
-僕,"I, Me",Leader + Business,ぼく
-砲,Cannon,Stone + Wrap,ほう
+僕,"I, Me",Leader + Business *,ぼく
+砲,Cannon,Stone + Wrap *,ほう
 塔,Tower,Dirt + Flowers + Suit,とう
 朱,Vermillion,Slide + Jet,しゅ
-暦,Calendar,Cliff + Tree + Tree + Sun,れき
+暦,Calendar,Cliff + Treex2 + Sun,れき
 呪,Curse,Mouth + Older Brother,のろ
 陰,Shade,Building + Now + Cloud,かげ
 肌,Skin,Moon + Table,はだ
@@ -1475,23 +1475,23 @@ Kanji,Meaning,Radicals,Sound
 湿,Damp,Tsunami + Sun + Spikes,しつ
 眺,Stare,Eye + Omen,なが
 塾,Cram School,Sock + Circle + Dirt,じゅく
-磨,Polish,Mullet + Tree + Tree + Stone,みが
-卓,Table,Toe + Early,たく
-狩,Hunt,Animal + Protect,しゅ
+磨,Polish,Mullet + Treex2 + Stone,みが
+卓,Table,Toe + Early *,たく
+狩,Hunt,Animal + Protect *,しゅ
 嫁,Bride,Woman + House,よめ
 菌,Bacteria,Flowers + Mouth + Grain,きん
 澄,Lucidity,Tsunami + Tent + Beans,す
 鐘,Bell,Gold + Stand + Village,かね
-脚,"Leg, Foot",Moon + past + Stamp,きゃく
+脚,"Leg, Foot",Moon + past + Stamp *,きゃく
 矛,Halberd,Spear,む
 凶,Villain,Treasure Chest,きょう
 裸,Naked,Spirit + Fruit,はだか
 嬢,Miss,Woman + Nurse,じょう
-翔,Fly,Sheep + Feathers +,かけ
+翔,Fly,Sheep + Feathers,かけ
 狂,"Lunatic, Crazy",Animal + King,くる
-硬,Stiff,Stone + Again,こう
-疲,Exhausted,Sick + Skin,つか
-賭,Gamble,Shellfish + Someone,か
+硬,Stiff,Stone + Again *,こう
+疲,Exhausted,Sick + Skin *,つか
+賭,Gamble,Shellfish + Someone *,か
 滝,Waterfall,Tsunami + Dragon,たき
 溝,Gutter,Tsunami + Lifeguard,みぞ
 魂,"Soul, Spirit",Cloud + Demon,たましい
@@ -1505,26 +1505,26 @@ Kanji,Meaning,Radicals,Sound
 寧,Rather,Roof + Heart + Net + Street,ねい
 穏,Calm,Grain + Cleat + Wolverine + Heart,おだ
 碁,Go,Crab + Stone,ご
-穂,"Head of Plant, Ear of Plant",Grain + Favor,ほ
+穂,"Head of Plant, Ear of Plant",Grain + Favor *,ほ
 帝,Sovereign,Stand + Towel,てい
 瞳,Pupil,Eye + Stand + Village,ひとみ
-俵,Sack,Leader + Life + Kick,ひょう
-椅,Chair,Tree + Odd,い
-錬,Tempering,Gold + East,ね
-棟,Pillar,Tree + East,むね
+俵,Sack,Leader + King + Kick,ひょう
+椅,Chair,Tree + Odd *,い
+錬,Tempering,Gold + East *,ね
+棟,Pillar,Tree + East *,むね
 誇,Pride,Say + Big + Ground + Beggar,ほこ
 歳,Years Old,Stop + Slide + Drunkard + Jackhammer,さい
 孔,"Cavity, Hole",Child + Umbrella,く
 阻,Thwart,Building + Top Hat,そ
 租,Tariff,Grain + Top Hat,そ
 鳩,"Dove, Pigeon",Nine + Bird,はと
-魔,Devil,Mullet + Tree + Tree + Demon,ま
-涼,Cool,Tsunami + Capital,すず
+魔,Devil,Mullet + Treex2 + Demon,ま
+涼,Cool,Tsunami + Capital *,すず
 癖,Habit,Sick + Hot Pepper,くせ
 盆,Lantern Festival,Part + Plate,ぼん
 庄,Manor,Mullet + Dirt,しょう
 菊,Chrysanthemum,Flowers + Prison + Rice,きく
-泡,Bubbles,Tsunami + Wrap,あわ
+泡,Bubbles,Tsunami + Wrap *,あわ
 綿,Cotton,Thread + White + Towel,めん
 鍛,Forge,Gold + Comb + Weapon,きた
 黙,Shut Up,Village + Dog + Boil,もく
@@ -1537,12 +1537,12 @@ Kanji,Meaning,Radicals,Sound
 零,"Zero, Spill",Rain + Orders,れい
 寮,Dormitory,Roof + Charcoal,りょう
 鈍,Dull,Gold + Barracks,にぶ
-幽,Secluded,Mountain + Trash + Trash,ゆう
+幽,Secluded,Mountain + Trashx2,ゆう
 幣,Cash,penguin + Towel,へい
 欺,Deceit,Crab + Lack,ぎ
 帽,Hat,Towel + Sun + Eye,ぼう
-爽,Refreshing,Big + Treasure,さわ
-崖,Cliff,Mountain + Cliff + Dirt + Dirt,がけ
+爽,Refreshing,Big + Treasurex4,さわ
+崖,Cliff,Mountain + Cliff + Dirtx2,がけ
 芯,Wick,Flowers + Heart,しん
 恨,Grudge,Soul + Root,うら
 粘,Sticky,Rice + Fortune,ねん
@@ -1557,17 +1557,17 @@ Kanji,Meaning,Radicals,Sound
 塀,Fence,Dirt + Flag + Horns + Lantern,へい
 如,Likeness,Woman + Mouth,どう
 虹,Rainbow,Insect + Construction,にじ
-婆,Old Woman,Wave + Woman,ばあ
+婆,Old Woman,Wave + Woman *,ばあ
 哀,Pathetic,Lid + Mouth + Kick,あわ
 挿,Insert,Fingers + Thousand + Humble,さし
-霧,Fog,Rain + Task,きり
+霧,Fog,Rain + Task *,きり
 炊,Cook,Fire + Lack,すい
 伊,Italy,Leader + Wolverine + Slide,い
 滴,Drip,Tsunami + Mohawk,てき
 扇,Folding Fan,Door + Feathers,せん
 尺,"Shaku, Japanese Foot",Shrimp,しゃく
-胴,Torso,Moon + Same,どう
-箸,Chopsticks,Bamboo + Someone,はし
+胴,Torso,Moon + Same *,どう
+箸,Chopsticks,Bamboo + Someone *,はし
 瞭,Clear,Eye + Charcoal,りょう
 砕,Smash,Stone + Nine + Cross,くだ
 柳,Willow,Tree + Stamp,やなぎ
@@ -1576,45 +1576,45 @@ Kanji,Meaning,Radicals,Sound
 佐,Help,Leader + Narwhal + Construction,さ
 班,Squad,King + Knife + King,はん
 穫,Harvest,Grain + Flowers + Turkey + Stool,かく
-殴,Assault,Cage + Treasure + Weapon,なぐ
+殴,Assault,District + Weapon *,なぐ
 彩,Coloring,Cleat + Tree + Hair,さい
 耐,Resistant,Rake + Measurement,たい
-脅,Threaten,Power + Power + Power + Moon,きょう
+脅,Threaten,Powerx3 + Moon,きょう
 辱,Humiliate,Landslide + Measurement,じょく
-闇,Darkness,Gate + Sound,やみ
+闇,Darkness,Gate + Sound *,やみ
 盾,Shield,Cliff + Pope,じゅん
 蛇,Snake,Insect + Roof + Spoon,へび
 蓄,Amass,Flowers + Mysterious + Rice Paddy,たくわ
-塗,Paint,Tsunami + Surplus + Dirt,ぬ
+塗,Paint,Tsunami + Surplus + Dirt *,ぬ
 畜,Livestock,Mysterious + Rice Paddy,ちく
 灯,Lamp,Fire + Street,とう
-悔,Regret,Soul + Every,くや
-憶,Recollection,Soul + Idea,おく
-溶,Melt,Tsunami + Form,よう
+悔,Regret,Soul + Every *,くや
+憶,Recollection,Soul + Idea **,おく
+溶,Melt,Tsunami + Form **,よう
 培,Cultivate,Dirt + Clown,ばい
-輝,Radiance,Sunlight + Forehead + Car,かがや
+輝,Radiance,Sunlight + Forehead + Car *,かがや
 飢,Starve,Eat + Table,う
 踊,Dance,Foot + Mama + Task,おど
 賢,Clever,Servant + Stool + Shellfish,かしこ
 咲,Blossom,Mouth + Horns + Heaven,さ
 餓,Starve,Eat + Ego,う
-脇,Armpit,Moon + Power + Power + Power,わき
+脇,Armpit,Moon + Powerx3,わき
 遂,Accomplish,Treadmill + Horns + Pig,と
-斜,Diagonal,Surplus + ladle,しゃ
+斜,Diagonal,Surplus + ladle *,しゃ
 蚊,Mosquito,Insect + Writing,か
 迅,Swift,Treadmill + Cliff + Cross,じん
 霜,Frost,Rain + Tree + Eye,しも
 鉢,Bowl,Gold + book,はち
 貼,Paste,Shellfish + Fortune,は
 隙,Crevice,Building + Small + Sun + Small,すき
-尽,Exhaust,Shrimp + Ice,つ
-麻,Hemp,Mullet + Tree + Tree,ま
-騎,Horse,Horse + Odd,き
+尽,Exhaust,Shrimp + Two,つ
+麻,Hemp,Mullet + Treex2,ま
+騎,Horse,Horse + Odd *,き
 帳,Notebook,Towel + Long,ちょう
 陛,Highness,Building + Compare + Dirt,へい
-劣,Inferiority,Few + Power,れっ
-抽,Pluck,Fingers + Reason,ちゅう
-桑,Mulberry,Stool + Stool + Stool + Tree,くわ
+劣,Inferiority,Few + Power *,れっ
+抽,Pluck,Fingers + Reason *,ちゅう
+桑,Mulberry,Stoolx3 + Tree,くわ
 衰,Decline,Lid + Sun + Kick,すい
 潤,Watered,Tsunami + Gate + King,じゅん
 尼,Nun,Flag + Spoon,に
@@ -1622,23 +1622,23 @@ Kanji,Meaning,Radicals,Sound
 駒,Chess Piece,Horse + Paragraph,こま
 謀,Conspire,Say + Sweet + Tree,ぼう
 拘,Arrest,Fingers + Paragraph,こう
-俗,Vulgar,Leader + Valley,ぞく
+俗,Vulgar,Leader + Valley *,ぞく
 刈,Prune,Treasure + Knife,か
 陶,Pottery,Building + Prison + Can,とう
 礎,Foundation,Stone + Tree + Coat Rack,そ
-壇,Podium,Dirt + Lid + Times + Dawn,だん
+壇,Podium,Dirt + Lid + Times + Dawn *,だん
 隔,Isolate,Building + bully,かく
 鶴,Crane,Roof + Turkey + Bird,つる
 珠,Pearl,King + Slide + Jet,じゅ
-剛,Sturdy,Hill + Knife,ごう
-奨,Encourage,Commander + big,しょう
+剛,Sturdy,Hill + Knife *,ごう
+奨,Encourage,Commander + big *,しょう
 勘,Intuition,Crab Trap + Power,かん
 誓,Vow,Fingers + Axe + Say,ちか
-煮,Boil,Someone + Boil,に
-淡,Faint,Tsunami + Fire + Fire,たん
+煮,Boil,Someone + Boil *,に
+淡,Faint,Tsunami + Firex2,たん
 妃,"Princess, Queen",Woman + Oneself,ひ
 覆,"Capsize, Cover",Helicopter + Loiter + Black Hole,おお
-征,Subjugate,Loiter + Correct,せい
+征,Subjugate,Loiter + Correct *,せい
 拓,Cultivation,Fingers + Stone,たく
 悟,Comprehension,Soul + Five + Mouth,ご
 概,Approximation,Tree + Root + Fang,がい
@@ -1651,36 +1651,36 @@ Kanji,Meaning,Radicals,Sound
 壮,Robust,Icicle + Samurai,そう
 巧,Adept,Construction + Beggar,こう
 墳,Tomb,Dirt + Cross + Flowers + Shellfish,ふん
-簿,Record Book,Bamboo + Tsunami + Specialty,ぼ
+簿,Record Book,Bamboo + Tsunami + Specialty *,ぼ
 搬,Transport,Fingers + Boat + Weapon,はん
-涯,Horizon,Tsunami + Cliff + Dirt + Dirt,がい
+涯,Horizon,Tsunami + Cliff + Dirtx2,がい
 疫,Epidemic,Sick + Weapon,えき
-彰,Patent,chapter + Hair,しょう
+彰,Patent,chapter + Hair **,しょう
 把,"Bundle, Grasp",Fingers + Bed,は
 邪,Wicked,Fang + Building,じゃ
-淀,Eddy,Tsunami + Roof + Correct,よど
-鰐,Alligator,Fish + Mouth + Mouth + Ground + Beggar,わに
+淀,Eddy,Tsunami + Roof + Correct *,よど
+鰐,Alligator,Fish + Mouthx2 + Ground + Beggar,わに
 峰,Summit,Mountain + Winter + Signpost,みね
 唐,"China, Sudden",Mullet + Brush + Mouth,とう
 亭,Restaurant,restaurant,てい
 堰,Dam,Dirt + Cage + Sun + Woman,せき
-晶,Crystal,Sun + Sun + Sun,しょう
+晶,Crystal,Sunx3,しょう
 后,Empress,Cliff + Ground + Mouth,ごう
-洞,Cave,Tsunami + Same,どう
+洞,Cave,Tsunami + Same *,どう
 廷,Courts,Yoga + King,てい
-鬱,Gloom,Tree + Can + Tree + Psychopath,うつ
-蟹,Crab,Angle + Sword + Cow + Insect,かに
+鬱,Gloom,Treex2 + Can + Treasure chest + Spoon + Hair,うつ
+蟹,Crab,Angle + Sword + Cow + Insect *,かに
 漫,Manga,Tsunami + Sun + Net + Stool,まん
 軌,Rut,Car + Nine,き
-諮,Consult,Say + Next + Mouth,し
+諮,Consult,Say + Next + Mouth *,し
 仰,Look Up To,Leader + Cat Pirate,あお
 奮,Stirred Up,Big + Turkey + Rice Paddy,ふん
-翻,Flip,Number + Feathers,ほん
-堤,Embankment,Dirt + Sun + Correct,てい
-銘,Inscription,Gold + Name,めい
-駄,Burdensome,Horse + Fat,だ
+翻,Flip,Number + Feathers *,ほん
+堤,Embankment,Dirt + Sun + Correct *,てい
+銘,Inscription,Gold + Name *,めい
+駄,Burdensome,Horse + Fat *,だ
 頂,"Summit, Humbly",Street + Geoduck,ちょう
-聡,Wise,Ear + Public + Heart,そう
+聡,Wise,Ear + Public + Heart *,そう
 隅,Corner,Building + Splinter,すみ
 燥,Dry Up,Fire + Syrup,そう
 媛,"Princess, Beautiful Woman",Woman + Football,ひめ
@@ -1690,56 +1690,56 @@ Kanji,Meaning,Radicals,Sound
 肯,"Agreement, Consent",Stop + Moon,こう
 肪,Obese,Moon + Direction,ぼう
 釈,Explanation,Sickle + Shrimp,しゃく
-膚,Skin,Tiger + Stomach,ふ
+膚,Skin,Tiger + Stomach *,ふ
 脂,Fat,Moon + Spoon + Sun,し
-喚,"Scream, Yell",Mouth + Prison + Big + Legs,かん
+喚,"Scream, Yell",Mouth + Prison + Legs + Big,かん
 軒,House Counter,Car + Dry,のき
 軟,Soft,Car + Lack,なん
-渦,Whirlpool,Tsunami + Mustache,うず
-郊,Suburbs,Mix + Building,こう
+渦,Whirlpool,Tsunami + Mustachex2,うず
+郊,Suburbs,Mix + Building *,こう
 苗,"Seedling, Sapling",Flowers + Rice Paddy,みょう
-瓶,Bottle,Horns + Lantern + Ten Thousand + Drop + Ground,なえ
+瓶,Bottle,Horns + Lantern + Ten Thousand + Drop + Ground *,なえ
 玄,Mysterious,Mysterious,げん
 沸,Boil,Tsunami + Dollar,わ
 亮,Clear,Lid + Mouth + Forehead + Legs,りょう
 濯,Wash,Tsunami + Wolverine + Turkey,たく
-襟,Collar,Spirit + Tree + Jackhammer,えり
+襟,Collar,Spirit + Treex2 + Jackhammer,えり
 耕,Plow,Plow + Well,こう
 偉,Greatness,Leader + Korea,い
 浦,Bay,Tsunami + Wedding,うら
 枯,Wither,Tree + Old,か
 召,Call,Joker,め
-慈,Mercy,Horns + Ground + Trash + Heart,じ
-郡,"County, District",Buddy + Building,ぐん
+慈,Mercy,Horns + Ground + Trashx2 + Heart,じ
+郡,"County, District",Buddy + Building *,ぐん
 塚,Mound,Dirt + Forehead + Pig,づか
 挟,Between,Fingers + Husband + Horns,はさ
 蓮,Lotus,Flowers + Treadmill + Car,はす
-颯,"Quick, Sudden",Stand + Wind,さっ
-遭,"Encounter, Meet",Treadmill + Music + Sun + Ground,そう
+颯,"Quick, Sudden",Stand + Wind *,さっ
+遭,"Encounter, Meet",Treadmill + Music + Sun *,そう
 噴,Erupt,Mouth + Cross + Flowers + Shellfish,ふん
 鎖,Chain,Gold + Triceratops + Shellfish,くさり
 偏,Biased,Leader + Library,へん
 貫,"Pierce, Sushi Counter",Window + Shellfish,つらぬ
 綾,Design,Thread + Frostbite,あや
 孤,"Orphan, Alone",Child + Melon,こ
-陥,Cave In,Building + Stick + Prison + Sun,かん
+陥,Cave In,Building + Prison + Stick + Sun,かん
 賠,"Compensation, Compensate",Shellfish + Clown,ばい
-倫,Ethics,Leader + Roof + Bookshelf,りん
-猟,Hunting,Animal + Grass + elephant,りょう
+倫,Ethics,Leader + Hat + Ground + Bookshelf,りん
+猟,Hunting,Animal + Grass + Task,りょう
 擁,Embrace,Fingers + Lid + Trash + Turkey,擁
 乃,From,Stairs,ない
 祥,Auspicious,Spirit + Sheep,しょう
 慢,"Ridicule, Laziness",Soul + Sun + Net + Stool,まん
 輔,Help,Car + Wedding,ほ
-茨,"Briar, Thorn",Flowers + Next,いばら
+茨,"Briar, Thorn",Flowers + Next *,いばら
 恒,"Constant, Always",Soul + Ground + Dawn,こう
 殊,Especially,Yakuza + Slide + Jet,しゅ
 呂,Bath,Bathtub,ろ
 覇,Leadership,Helicopter + Leather + Moon,は
-秩,"Order, Regularity",Grain + Fault,ちつ
+秩,"Order, Regularity",Grain + Fault *,ちつ
 芳,Perfume,Flowers + Direction,ほう
 遇,Treatment,Treadmill + Splinter,ぐう
-陳,Exhibit,Building + East,ちん
+陳,Exhibit,Building + East *,ちん
 牲,Offering,Cow + Life,せい
 唆,Instigate,Mouth + Spider,さ
 隼,Falcon,Turkey + Cross,はやぶさ
@@ -1750,8 +1750,8 @@ Kanji,Meaning,Radicals,Sound
 膨,Swell,Moon + Dirt + Beans + Hair,ふく
 没,Die,Tsunami + Weapon,ぼっ
 鯉,"Carp, Koi",Fish + Village,こい
-浄,"Cleanse, Purify",Tsunami + Conflict,じょう
-随,All,Building + Treadmill + Have,ずい
+浄,"Cleanse, Purify",Tsunami + Conflict *,じょう
+随,All,Building + Treadmill + Have *,ずい
 駿,Speed,Horse + Spider,しゅん
 戴,Receive,Cross + Drunkard + Rice Paddy + Blackjack + Fins,たい
 丹,Rust Colored,Boat,たん
@@ -1760,43 +1760,43 @@ Kanji,Meaning,Radicals,Sound
 葵,Hollyhock,Flowers + Tent + Heaven,あおい
 緋,Scarlet,Thread + Criminal,ひ
 莉,Jasmine,Flowers + Grain + Knife,り
-徐,Gently,Loiter + Surplus,じょ
-胞,"Cell, Placenta",Moon + Wrap,ほう
+徐,Gently,Loiter + Surplus *,じょ
+胞,"Cell, Placenta",Moon + Wrap *,ほう
 虐,Oppress,Tiger + Wolverine,ぎゃく
 諭,Admonish,Say + Death Star,ゆ
 寛,Tolerance,Roof + Flowers + See,かん
 准,Semi,Ice + Turkey,じゅん
-披,Expose,Fingers + Skin,ひ
+披,Expose,Fingers + Skin *,ひ
 搭,"Board, Embark",Fingers + Flowers + Suit,とう
 艇,Rowboat,Boat + Yoga + King,てい
-曙,Dawn,Sun + Net + Someone,あけぼの
+曙,Dawn,Sun + Net + Someone *,あけぼの
 緯,Latitude,Thread + Korea,い
 騰,Inflation,Moon + Train + Horse,とう
 据,Install,Fingers + Flag + Old,す
-舗,"Shop, Store",Cottage + Wedding,ほ
+舗,"Shop, Store",Cottage + Wedding *,ほ
 瓜,Melon,Melon,いか
 壌,"Soil, Earth",Dirt + Nurse,じょう
-稿,Draft,Grain + Tall,こう
-諒,"Comprehend, Reality",Say + Capital,りょう
+稿,Draft,Grain + Tall *,こう
+諒,"Comprehend, Reality",Say + Capital *,りょう
 胡,Barbarian,Old + Moon,こ
 帥,Commander,Drop + Bear + Towel,すい
 惨,Disaster,Soul + Private + Big + Hair,さん
-繊,"Fiber, Slender",Thread + Cross + Spikes + Drunkard,せん
+繊,"Fiber, Slender",Thread + Cross + Drunkard + Spikes,せん
 剰,Surplus,Mouth + Grain + Knife,じょう
 錦,Brocade,Gold + White + Towel,にしき
 且,Also,Top Hat,か
-鯨,Whale,Fish + Capital,げい
+鯨,Whale,Fish + Capital *,げい
 疾,Rapid,Sick + Arrow,しっ
 逸,Deviate,Treadmill + Excuse,そ
 栽,Planting,Plow + Drunkard,さい
 茜,Red Dye,Flowers + West,あかね
-叙,Describe,Surplus + Stool,じょ
+叙,Describe,Surplus + Stool *,じょ
 愚,Foolish,Splinter + Heart,ぐ
 勲,Merit,Heavy + Power + Boil,くん
 庶,"All, Bastard",Hick + Boil,しょ
 荘,Villa,Flowers + Icicle + Samurai,そう
-酬,Repay,Alcohol + Drop + River,しゅう
-卸,Wholesale,Noon + Stop + Stamp,おろし
+酬,Repay,Alcohol + Dropx3 + River,しゅう
+卸,Wholesale,Noon + Stop + Stamp *,おろし
 悠,Leisure,Leader + Stick + Winter + Heart,ゆう
 尚,"Furthermore, Esteem",Triceratops + Mustache,なお
 顕,"Appear, Existing",Sun + Spikes + Geoduck,けん
@@ -1806,70 +1806,70 @@ Kanji,Meaning,Radicals,Sound
 紋,Family Crest,Thread + Writing,もん
 疎,"Neglect, Sparse",Coat Rack + Bundle,そ
 謡,Noh Chanting,Say + Satellite,うたい
-酷,"Cruel, Unjust",Alcohol + Announce,ひど
+酷,"Cruel, Unjust",Alcohol + Announce *,ひど
 痴,Stupid,Sick + Arrow + Mouth,ち
-栞,Bookmark,Dry + Tree,しおり
+栞,Bookmark,Dryx2 + Tree,しおり
 呆,Shock,Mouth + Tree,ほ
 冠,"Crown, Cap",Forehead + Origin + Measurement,かん
 践,"Practice, Trample",Foot + Bar,せん
 阿,Flatter,Building + Lip Ring,あ
-欄,"Column, Space",Tree + Gate + East,らん
+欄,"Column, Space",Tree + Gate + East *,らん
 哺,"Nurse, Suckle",Mouth + Wedding,ほ
 杏,Apricot,Tree + Mouth,あんず
 鎌,"Sickle, Scythe",Gold + Mona Lisa,かま
 傲,Proud,Leader + Dirt + Direction + Winter,ごう
 茎,Stem,Flowers + Tombstone,くき
 旦,Dawn,Dawn,たん
-惜,Frugal,Soul + Long Ago,お
+惜,Frugal,Soul + Long Ago *,お
 尿,"Urine, Pee",Flag + Water,にょう
 癒,"Healing, Cure",Sick + Death Star + Heart,ゆ
-悼,"Grieve, Mourn",Soul + Toe + Early,とう
+悼,"Grieve, Mourn",Soul + Toe + Early *,とう
 憂,Grief,Ground + Self + Forehead + Heart + Winter,ゆう
-栃,Horse Chestnut,Tree + Cliff + Ten Thousand,とち
-髄,"Marrow, Bone Marrow",Bone + Treadmill + Have,ずい
+栃,Horse Chestnut,Tree + Cliff + Ten Thousand *,とち
+髄,"Marrow, Bone Marrow",Bone + Treadmill + Have *,ずい
 那,What,Sword + Two + Building,な
 抹,Erase,Fingers + Jet,まっ
 累,Accumulate,Rice Paddy + Thread,るい
 粗,Coarse,Rice + Top Hat,そ
-憾,"Remorse, Regret",Soul + Feeling,かん
+憾,"Remorse, Regret",Soul + Feeling *,かん
 之,This,Hills + Drop,の
 赴,"Proceed, Move On",Run + Toe,ふ
 伏,"Bow, Lay",Leader + Dog,ふく
 栓,"Cork, Plug",Tree + Hat + King,せん
-鎮,Tranquilize,Gold + Reality,ちん
+鎮,Tranquilize,Gold + Reality *,ちん
 傍,"Nearby, Side",Leader + Lid + Fins + Forehead + Direction,かたわ
-瑛,Crystal,King + Flowers + Center,えい
+瑛,Crystal,King + Flowers + Center *,えい
 遼,Distant,Treadmill + Charcoal,りょう
 奉,Dedicate,Train + Two + Stick,ほう
-脊,"Stature, Height",Two + Person + Moon,せき
+脊,"Stature, Height",Explosion + Person + Moon,せき
 昌,Prosperous,Sun,しょう
 弥,Increasing,Bow + Gun + Small,み
-佳,"Excellent, Skilled",Leader + Dirt,か
-凝,"Congeal, Freeze, Absorbed In",Ice + Doubt,じっ
+佳,"Excellent, Skilled",Leader + Dirtx2,か
+凝,"Congeal, Freeze, Absorbed In",Ice + Doubt *,じっ
 該,"The Above, That Specifically",Say + Slice,がい
 朴,"Simple, Crude",Tree + Toe,ぼく
 循,"Circulation, Sequential",Loiter + Cliff + Pope,じゅん
 郭,Enclosure,Sock + Building,かく
 愉,Pleasant,Soul + Death Star,ゆ
-虜,Captive,Tiger + Man,りょ
-賓,"VIP, Guest",Roof + Ground + Few + Shellfish,ひん
+虜,Captive,Tiger + Man *,りょ
+賓,"VIP, Guest",Roof + Ground + Few + Shellfish *,ひん
 龍,"Imperial, Dragon",Imperial,りゅう
-碑,Tombstone,Stone + Drop + Rice Paddy + Cross,いしぶみ
+碑,Tombstone,Stone + Slide + Rice Paddy + Cross,いしぶみ
 呉,"Give, Do For",Catapult,く
 穀,Grain,Samurai + Forehead + Grain + Weapon,こく
 陵,"Mausoleum, Tomb",Building + Frostbite,みささぎ
-縛,"Bind, Retrain",Thread + Drop + Specialty,しば
-飽,"Bored, Sated",Eat + Wrap,あ
-洪,Flood,Tsunami + Together,こう
+縛,"Bind, Retrain",Thread + Drop + Specialty *,しば
+飽,"Bored, Sated",Eat + Wrap *,あ
+洪,Flood,Tsunami + Together *,こう
 搾,Squeeze,Fingers + Hole + Key,さく
-窮,Destitute,Hole + Body + Bow,きゅう
+窮,Destitute,Hole + Body + Bow *,きゅう
 猶,Still,Animal + Horns + Alcohol,ゆう
 宰,Manager,Roof + Spicy,さい
 拍,Beat,Fingers + White,はく
 庸,Common,Mullet + Brush + Task,よう
-恭,Respect,Together + Small + Drop,きょう
+恭,Respect,Together + Small + Drop *,きょう
 錯,"Confused, Mixed",Gold + Blackjack + Sun,さく
-縫,Sew,Thread + Winter + Treadmill + Signpost,ぬ
+縫,Sew,Thread + Treadmill + Winter + Signpost,ぬ
 弦,"Chord, Bowstring",Bow + Mysterious,つる
 凡,Mediocre,Table + Drop,あら
 遥,"Far Off, Far Away",Treadmill + Satellite,はる
@@ -1879,11 +1879,11 @@ Kanji,Meaning,Radicals,Sound
 舶,Ship,Boat + White,はく
 紳,Gentleman,Thread + Humble,しん
 蝶,Butterfly,Insect + World + Tree,ちょう
-轄,Control,Car + Roof + Life + Mouth,かつ
+轄,Control,Car + Roof + King + Mouth,かつ
 悦,"Delight, Joy",Soul + Guard,えつ
 柴,"Brushwood, Firewood",Stop + Spoon + Tree,しば
 匠,Artisan,Cage + Axe,しょう
-凛,Cold,Ice + Lid + Times + Jackhammer,りん
+凛,Cold,Ice + Lid + Times + Jackhammer *,りん
 嘉,Esteem,Drum + Power + Mouth,か
 靖,Peaceful,Stand + Blue,やす
 寂,Lonely,Roof + Above + Small + Stool,さび
@@ -1894,7 +1894,7 @@ Kanji,Meaning,Radicals,Sound
 羅,"Spread Out, Arrange",Net + Thread + Turkey,ら
 腸,"Intestines, Guts",Moon + Easy,ちょう
 膜,Membrane,Moon + Greenhouse,まく
-胎,"Womb, Uterus",Moon + Machine,たい
+胎,"Womb, Uterus",Moon + Machine *,たい
 遮,Intercept,Treadmill + Hick + Boil,さえぎ
 醸,Brew,Alcohol + Nurse,じょう
 酵,Ferment,Alcohol + Teacher,こう
@@ -1906,9 +1906,9 @@ Kanji,Meaning,Radicals,Sound
 敢,Daring,Elf + Winter,かん
 凹,"Concave, Hollow",Concave,くぼ
 鼓,Beat,Drum + Branch,こ
-萌,Sprout,Flowers + Bright,も
+萌,Sprout,Flowers + Bright *,も
 盲,Blind,Death + Eye,もう
-楓,Maple,Tree + Wind,かえで
+楓,Maple,Tree + Wind *,かえで
 峡,Ravine,Mountain + Husband + Horns,きょう
 凸,"Convex, Uneven",Convex,でこ
 俸,Salary,Leader + Train + Two + Stick,ほう
@@ -1916,10 +1916,10 @@ Kanji,Meaning,Radicals,Sound
 遍,Universal,Treadmill + Library,へん
 紺,"Navy, Dark Blue",Thread + Sweet,こん
 弔,Condolence,Bow + Stick,ちょう
-堕,Degenerate,Building + Have + Dirt,だ
-坪,Two Mat Area,Dirt + Peace,つぼ
+堕,Degenerate,Building + Have + Dirt *,だ
+坪,Two Mat Area,Dirt + Peace *,つぼ
 閲,Inspection,Gate + Guard,えつ
-槽,"Tank, Vat",Tree + Ground + Music + Sun,そう
+槽,"Tank, Vat",Tree + Ground + Music + Sun *,そう
 乙,"Latter, B",Nose,おつ
 款,Article,Samurai + Jackhammer + Lack,かん
 賊,Robber,Shellfish + Drunkard + Cross,ぞく
@@ -1927,7 +1927,7 @@ Kanji,Meaning,Radicals,Sound
 菅,Sedge,Flowers + Roof + Bear,すげ
 絹,Silk,Thread + Mouth + Moon,きぬ
 酌,Serve,Alcohol + Pool,しゃく
-迭,Alternate,Treadmill + Fault,てつ
+迭,Alternate,Treadmill + Fault *,てつ
 嘱,"Request, Entrust",Mouth + Flag + Mantis,しょく
 錠,Lock,Gold + Roof + Coat Rack,じょう
 鶏,Chicken,Cleat + Husband + Bird,とり
@@ -1940,7 +1940,7 @@ Kanji,Meaning,Radicals,Sound
 奔,"Run, Bustle",Big + Cross + Twenty,ほん
 慨,Sigh,Soul + Root + Fang,がい
 陪,Accompany,Building + Clown,ばい
-藩,Fiefdom,Flowers + Tsunami + Number,はん
+藩,Fiefdom,Flowers + Tsunami + Number *,はん
 殻,"Husk, Shell",Samurai + Forehead + Table + Weapon,から
 朽,"Rot, Decay",Tree + Ground + Prison,きゅう
 肖,Resemblance,Triceratops + Moon,しょう
@@ -1957,43 +1957,43 @@ Kanji,Meaning,Radicals,Sound
 瑞,Congratulations,King + Mountain + Rake,みず
 帆,Sail,Towel + Table + Drop,ほ
 傑,"Greatness, Excellence",Leader + Dance + Tree,けっ
-譜,"Genealogy, Score",Say + Line Up + Sun,ふ
+譜,"Genealogy, Score",Say + Line Up + Sun *,ふ
 凌,Endure,Ice + Frostbite,しの
 姻,"Marry, Matrimony",Woman + Mouth + Big,こん
 憧,"Long For, Yearn",Soul + Stand + Village,あこが
 甚,"Very, Great",Crab Trap,はなは
 鋳,"Cast, Casting",Gold + Slide + Three + Measurement,ちゅう
-汰,Select,Tsunami + Fat,た
+汰,Select,Tsunami + Fat *,た
 慶,Congratulate,Mullet + Helicopter + Barb + Heart + Winter,よろこ
 蔑,"Scorn, Neglect",Flowers + Net + Slide + Drunkard + Drop,べつ
 胆,Guts,Moon + Dawn,たん
 閑,Leisure,Gate + Tree,かん
 睦,Friendly,Eye + Womb,ぼく
-擬,Imitate,Fingers + Doubt,ぎ
+擬,Imitate,Fingers + Doubt *,ぎ
 叔,Uncle. Aunt,Above + Small + Stool,おじ
 屯,Barracks,Barracks,とん
 礁,Reef,Stone + Turkey + Boil,しょう
 亜,Asia,Tie Fighter,あ
-沙,Sand,Tsunami + Few,さ
+沙,Sand,Tsunami + Few *,さ
 酪,Dairy,Alcohol + Kiss,らく
-曹,Official,Ground + Music + Sun,そう
+曹,Official,Ground + Music + Sun *,そう
 漆,"Lacquer, Varnish",Tsunami + Tree + Hat + Water,しっ
 梓,Wood Block,Tree + Spicy,あずさ
 岬,Cape,Mountain + Turtle Shell,みさき
 吟,Recital,Mouth + Now,ぎん
 遷,Transition,Treadmill + Helicopter + Big + Oneself,せん
-侮,Despise,Leader + Every,ぶ
+侮,Despise,Leader + Every *,ぶ
 堪,Endure,Dirt + Crab Trap,たま
 雌,Female,Stop + Spoon + Turkey,めす
 崇,"Worship, Revere",Mountain + Roof + Jackhammer,すう
 峠,Ridge,Mountain + Above + Below,とうげ
-禍,"Evil, Misfortune",Spirit + Mustache,か
+禍,"Evil, Misfortune",Spirit + Mustachex2,か
 卑,"Lowly, Base",Drop + Rice Paddy + Cross,ひ
 拙,Clumsy,Fingers + Exit,せっ
 紡,Spinning,Thread + Direction,ぼう
 詠,"Compose, Recite",Say + Water + Drop,うた
 篤,Deliberate,Bamboo + Horse,とく
-浪,Wander,Tsunami + Good,ろう
+浪,Wander,Tsunami + Good *,ろう
 唄,Shamisen Song,Mouth + Shellfish,うた
 某,Certain,Sweet + Tree,ぼう
 囚,Criminal,Mouth + Person,しゅう
@@ -2007,9 +2007,9 @@ Kanji,Meaning,Radicals,Sound
 倹,Thrifty. Frugal,Leader + Squid,けん
 漸,Gradually,Tsunami + Car + Axe,ようや
 痢,Diarrhea,Sick + Grain + Knife,り
-匿,Hide,Cage + Flowers + Right,とく
+匿,Hide,Cage + Flowers + Right *,とく
 狐,Fox,Animal + Melon,きつね
-湧,Well,Tsunami + Courage,わ
+湧,Well,Tsunami + Courage *,わ
 殉,Martyr,Yakuza + Prison + Sun,じゅん
 慕,"Yearn For, Adore",Greenhouse + Small + Drop,した
 拷,Torture,Fingers + Coffin + Beggar,ごう
@@ -2017,12 +2017,12 @@ Kanji,Meaning,Radicals,Sound
 坑,Pit,Dirt + Lid + Table,こう
 升,"Grid, Measure",Slide + Twenty,ます
 妄,Reckless,Death + Woman,もう
-泌,Secrete,Tsunami + Certain,ぴつ
+泌,Secrete,Tsunami + Certain *,ぴつ
 婿,Groom,Woman + Coat Rack + Moon,むこ
 藻,Seaweed,Flowers + Tsunami + Syrup,も
 謹,Humble,Say + Boot,きん
-畔,Shore,Rice Paddy + Half,はん
-藍,Indigo,Flowers + Oversee,ぼろ
+畔,Shore,Rice Paddy + Half *,はん
+藍,Indigo,Flowers + Oversee *,ぼろ
 矯,Correct,Arrow + Heaven + Mouth + Mustache,きょう
 劾,Censure,Slice + Power,がい
-罷,Quit,Net + Ability,ひ
+罷,Quit,Net + Ability *,ひ
