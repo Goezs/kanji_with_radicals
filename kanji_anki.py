@@ -51,9 +51,14 @@ def get_rad():
   """Asks the user the number of radicals that will have the kanjies"""
   answer = input("You want to filter kanjies based on radicals? y/n: ")
   if answer == "y":
-    print("Radicals go between 1 to 3, 0 if you want any number of radicals")
+    print("\nRadicals explanations: \n")
+    print("Filter on number 1: Radicals (Some are also kanjies).")
+    print("Filter on number 2: Kanjies made with radicals.")
+    print("Filter on number 3: Kanjies made with kanjies of filter 2.")
+    print("Filter on number 4: Kanjies made with kanjies of filter 3.\n")
+    
     n_rad = int(input("\nradicals to have: "))
-    available_nums = range(0, 4)
+    available_nums = range(0, 5)
     while n_rad not in available_nums:
        n_rad = int(input("Introduce an avaible number of radicals: "))
     return n_rad
@@ -336,12 +341,26 @@ class KanjiBox(object):
     for i in kanjies:
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
+
+      if ("**" in radicals) and (self.filter == 4):
+        i.radicals = i.radicals[:-2]
+        good_kanjies.append(i)
+        continue
+
+      if ("*" in radicals) and (self.filter == 3):
+        i.radicals = i.radicals[:-1]
+        good_kanjies.append(i)
+        continue
+
       list_of_rad = radicals.split(sep = "+")
-      is_in_desired = len(list_of_rad) == self.filter
-      if is_in_desired:
+      n_rads = len(list_of_rad)
+      if (n_rads == 1) and (self.filter == 1):
         good_kanjies.append(i)
-      elif self.filter == 3 and len(list_of_rad) > self.filter:
+        continue
+
+      elif (n_rads > 1) and ("*" not in list_of_rad[-1]) and self.filter == 2:
         good_kanjies.append(i)
+      
     return good_kanjies
 
   def make_round(self, left_kanjies = False):
