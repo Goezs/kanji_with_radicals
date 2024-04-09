@@ -386,7 +386,7 @@ class KanjiBox(object):
       while skips not in available_nums:
         skips = int(input("\nThat's not a number possible of days to skip: "))
       only_skips = input("\nDo you want to only have the skipped kanjies but randomized? y/n: ")
-      if only_skips:
+      if only_skips == "y":
         new_kanjies = []
         for i in range(skips):
           new_kanjies.append(self.random_p())
