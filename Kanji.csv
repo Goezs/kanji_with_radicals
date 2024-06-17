@@ -958,7 +958,7 @@ Kanji,Meaning,Radicals,Sound
 臣,Servant,Servant,じん
 詰,Stuffed,Say + Good Luck,つ
 催,Sponsor,Leader + Mountain + Turkey,さい
-督,Coach,Above + Small + Stool + Eye,とく
+督,Coach,Above + Small + Stool + Eye *,とく
 宴,Banquet,Roof + Sun + Woman,えん
 雄,"Male, Brave",Narwhal + Private + Turkey,ゆう
 促,Urge,Leader + Foot,そく
@@ -1886,7 +1886,7 @@ Kanji,Meaning,Radicals,Sound
 凛,Cold,Ice + Lid + Times + Jackhammer *,りん
 嘉,Esteem,Drum + Power + Mouth,か
 靖,Peaceful,Stand + Blue,やす
-寂,Lonely,Roof + Above + Small + Stool,さび
+寂,Lonely,Roof + Above + Small + Stool *,さび
 窒,Suffocate,Hole + Mole,ちっ
 弊,Evil,penguin + Twenty,へい
 漬,"Pickle, Soak",Tsunami + Life + Shellfish,つ
@@ -1944,7 +1944,7 @@ Kanji,Meaning,Radicals,Sound
 殻,"Husk, Shell",Samurai + Forehead + Table + Weapon,から
 朽,"Rot, Decay",Tree + Ground + Prison,きゅう
 肖,Resemblance,Triceratops + Moon,しょう
-淑,Graceful,Tsunami + Above + Small + Stool,しと
+淑,Graceful,Tsunami + Above + Small + Stool *,しと
 忌,Mourning,Oneself + Heart,い
 窃,Steal,Hole + Seven + Sword,せっ
 暁,Dawn,Sun + Gambler,あかつき
@@ -1970,7 +1970,7 @@ Kanji,Meaning,Radicals,Sound
 閑,Leisure,Gate + Tree,かん
 睦,Friendly,Eye + Womb,ぼく
 擬,Imitate,Fingers + Doubt *,ぎ
-叔,Uncle. Aunt,Above + Small + Stool,おじ
+叔,Uncle. Aunt,Above + Small + Stool *,おじ
 屯,Barracks,Barracks,とん
 礁,Reef,Stone + Turkey + Boil,しょう
 亜,Asia,Tie Fighter,あ
@@ -1986,7 +1986,7 @@ Kanji,Meaning,Radicals,Sound
 堪,Endure,Dirt + Crab Trap,たま
 雌,Female,Stop + Spoon + Turkey,めす
 崇,"Worship, Revere",Mountain + Roof + Jackhammer,すう
-峠,Ridge,Mountain + Above + Below,とうげ
+峠,Ridge,Mountain + Above + Below *,とうげ
 禍,"Evil, Misfortune",Spirit + Mustachex2,か
 卑,"Lowly, Base",Drop + Rice Paddy + Cross,ひ
 拙,Clumsy,Fingers + Exit,せっ
