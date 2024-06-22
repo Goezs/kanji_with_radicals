@@ -424,7 +424,7 @@ Kanji,Meaning,Radicals,Sound
 士,Samurai,Samurai,し
 疑,Doubt,Spoon + Arrow + Mama + Coat Rack,ぎ
 想,Concept,Tree + Eye + Heart,そう
-熱,Heat,Womb + Circle + Boil,ねっ
+熱,Heat,Womb + Circle + Boil *,ねっ
 感,Feeling,Drunkard + Creeper + Heart,かん
 情,"Feeling, Emotion",Soul + Blue,じょう
 整,"Arrange, Organize",Bundle + Winter + Correct *,せい
@@ -1100,7 +1100,7 @@ Kanji,Meaning,Radicals,Sound
 閉,Close,Gate + Genius *,し
 暮,Livelihood,Greenhouse + Sun,く
 宝,Treasure,Roof + King + Drop,ほう
-熟,Ripen,Sock + Circle + Boil,じゅく
+熟,Ripen,Sock + Circle + Boil *,じゅく
 灰,Ashes,Cliff + Fire,はい
 納,Supply,Thread + Inside *,なっ
 宣,Proclaim,Roof + Ground + Dawn,せん
@@ -1474,7 +1474,7 @@ Kanji,Meaning,Radicals,Sound
 曇,Cloudy,Sun + Rain + Cloud,くも
 湿,Damp,Tsunami + Sun + Spikes,しつ
 眺,Stare,Eye + Omen,なが
-塾,Cram School,Sock + Circle + Dirt,じゅく
+塾,Cram School,Sock + Circle + Dirt *,じゅく
 磨,Polish,Mullet + Treex2 + Stone,みが
 卓,Table,Toe + Early *,たく
 狩,Hunt,Animal + Protect *,しゅ
