@@ -22,7 +22,7 @@ def initiate_game():
 
   kanji_box = KanjiBox(lvl, filter = n_rad, random_state = random_state,
                        skip_kanjies = skip)
-  kanji_box.get_kanji()
+  kanji_box.get_kanji
 
   return kanji_box
 
@@ -99,6 +99,7 @@ class Kanji(object):
     self.sound = sound
     self.lvl = lvl
 
+  @property
   def question(self):
     """
     Given a number returns the correspondent andswer
@@ -112,6 +113,7 @@ class Kanji(object):
 
     return possible_questions[self.lvl]
 
+  @property
   def show_kanji(self):
     """
     Shows the clue of the kanji
@@ -123,7 +125,7 @@ class Kanji(object):
     self.parameter_to_show()
 
     # The question
-    plt.text(0.3, 0.05, "%s" % self.question(), size = 15)
+    plt.text(0.3, 0.05, "%s" % self.question, size = 15)
     plt.show()
 
   def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
@@ -156,7 +158,7 @@ class Kanji(object):
       plt.text(center_x + 0.30, center_y - 0.10, "%s" % self.meaning,
                size = size_parameter + 20)
 
-
+  @property
   def show_answer(self):
     """Plots the answer to the question in a plot"""
     print("kanji chars: ", self.kanji)
@@ -238,8 +240,10 @@ class KanjiBox(object):
     self.random_state = random_state
     self.skip_kanjies = skip_kanjies
 
-    random.seed(self.random_state)
+    if random_state != 0:
+      random.seed(self.random_state)
 
+  @property
   def bag_of_kanji(self):
     """
     Creates a array of kanjies based on a .csv file
@@ -295,40 +299,40 @@ class KanjiBox(object):
                         self.lvl)
     return kanji
 
+  @property
   def random_p(self):
     """
     Gets a random kanji from a list of kanji based on a funnel(position)
         and a caegory of that position
     """
     if self.random_state == 0:
-      try:
-        p_idx = random.choice(range(len(self.kanji)))
-      except IndexError:
-        raise ValueError("You end the filter %s ニズ !" % self.filter)
-
-      p = self.kanji.pop(p_idx)
+      message = "You end the filter %s in the ニズ !" % self.filter
     else:
-      try:
-        p_idx = random.choice(range(len(self.kanji)))
-      except IndexError:
-        raise ValueError("You end the filter %s in the %s timeline" % (self.filter,
-                                                            self.random_state))
-
-      p = self.kanji.pop(p_idx)
-
+      message = "You end the filter %s in the %s timeline" % (self.filter,
+      							   self.random_state)
+      							   						   
+    try:
+      p_idx = random.choice(range(len(self.kanji)))
+    except IndexError:
+      raise ValueError(message)
+    
+    p = self.kanji.pop(p_idx)
+    
     return p
+     
 
+  @property
   def get_kanji(self):
     """
     Fills the kanji list with Kanji objects based on a bag of kanji
     """
-    kanji_box = self.bag_of_kanji()
+    kanji_box = self.bag_of_kanji
     all_kanjies = []
     for k in kanji_box:
       all_kanjies.append(self.kanjilizer(k))
     # Filter kanjies
     self.kanji = self.filter_kanji(all_kanjies)
-    self.skips()
+    self.skips
 
   def filter_kanji(self, kanjies):
     """
@@ -365,18 +369,20 @@ class KanjiBox(object):
 
   def make_round(self, left_kanjies = False):
     """Sets a new kanji to be tested and gives the left kanjies if is true"""
-    kanji = self.random_p()
+    kanji = self.random_p
     print("Número de kanjies que faltan: ",
           len(self.kanji)) if left_kanjies == True else None
-    kanji.show_kanji()
+    kanji.show_kanji
     self.actual_k = kanji
 
+  @property
   def solution(self):
     """Shows the solution of the kanji if the user has started a round"""
     if self.actual_k == "":
       return "Start a round to show a solution"
-    self.actual_k.show_answer()
+    self.actual_k.show_answer
 
+  @property
   def skips(self):
     """Make a skip of kanjies until the number that is given"""
     if self.skip_kanjies == True:
@@ -389,9 +395,9 @@ class KanjiBox(object):
       if only_skips == "y":
         new_kanjies = []
         for i in range(skips):
-          new_kanjies.append(self.random_p())
+          new_kanjies.append(self.random_p)
         self.kanji = new_kanjies
         self.random_state = 0
       else:
         for i in range(skips):
-          self.random_p()
+          self.random_p
