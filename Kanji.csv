@@ -974,7 +974,7 @@ Kanji,Meaning,Radicals,Sound
 乾,Dry,Car + Gun + Nose,かん
 恐,Fear,Saw + Heart,きょう
 預,Deposit,Beforehand + Geoduck *,よ
-貧,Poor,Part + Shellfish,ひん
+貧,Poor,Part + Shellfish *,ひん
 適,Suitable,Treadmill + Mohawk,てき
 延,Prolong,Yoga + Correct *,えん
 購,Subscription,Shellfish + Lifeguard,こう
@@ -1010,7 +1010,7 @@ Kanji,Meaning,Radicals,Sound
 菜,Vegetable,Flowers + Cleat + Tree,さい
 豪,Luxurious,Lid + Mouth + Forehead + Pig,ごう
 探,Look For,Fingers + Pi + Tree,たん
-粉,Powder,Rice + Part,こな
+粉,Powder,Rice + Part *,こな
 編,Knit,Thread + Library,へん
 融,Dissolve,bully + Insect,ゆう
 既,Previously,Root + Fang,き
@@ -1271,7 +1271,7 @@ Kanji,Meaning,Radicals,Sound
 奪,Rob,Big + Turkey + Measurement,だつ
 埼,Cape,Dirt + Odd *,さき
 銃,Gun,Gold + Allocate,じゅう
-祉,Welfare,Spirit + Stop,ふく
+祉,Welfare,Spirit + Stop,し
 免,Excuse,Excuse,めん
 鋼,Steel,Gold + Hill *,はがね
 隆,Prosperity,Building + Winter + Life,りゅう
@@ -1384,7 +1384,7 @@ Kanji,Meaning,Radicals,Sound
 糾,Twist,Thread + Vines,きゅう
 挑,Challenge,Fingers + Omen,ちょう
 荒,Wild,Flowers + Death + River,あら
-紛,Distract,Thread + Part,ふん
+紛,Distract,Thread + Part *,ふん
 掘,Dig,Fingers + Flag + Exit,ほ
 軸,Axis,Car + Reason *,じく
 双,Pair,Stool + Stool,ふた
@@ -1521,7 +1521,7 @@ Kanji,Meaning,Radicals,Sound
 魔,Devil,Mullet + Treex2 + Demon,ま
 涼,Cool,Tsunami + Capital *,すず
 癖,Habit,Sick + Hot Pepper,くせ
-盆,Lantern Festival,Part + Plate,ぼん
+盆,Lantern Festival,Part + Plate *,ぼん
 庄,Manor,Mullet + Dirt,しょう
 菊,Chrysanthemum,Flowers + Prison + Rice,きく
 泡,Bubbles,Tsunami + Wrap *,あわ
@@ -1702,7 +1702,7 @@ Kanji,Meaning,Radicals,Sound
 玄,Mysterious,Mysterious,げん
 沸,Boil,Tsunami + Dollar,わ
 亮,Clear,Lid + Mouth + Forehead + Legs,りょう
-濯,Wash,Tsunami + Wolverine + Turkey,たく
+濯,Wash,Tsunami + Wolverinex2 + Turkey,たく
 襟,Collar,Spirit + Treex2 + Jackhammer,えり
 耕,Plow,Plow + Well,こう
 偉,Greatness,Leader + Korea,い
