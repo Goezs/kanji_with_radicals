@@ -2,7 +2,9 @@ import matplotlib.pyplot as plt
 import matplotlib
 import matplotlib.font_manager as fm
 import random
-from numpy import linspace
+import numpy.random as rnd
+from numpy import array, linspace
+
 
 plt.style.use("dark_background")
 font_files = fm.findSystemFonts()
@@ -56,7 +58,7 @@ def get_rad():
     print("Filter on number 2: Kanjies made with radicals.")
     print("Filter on number 3: Kanjies made with kanjies of filter 2.")
     print("Filter on number 4: Kanjies made with kanjies of filter 3.\n")
-    
+
     n_rad = int(input("\nradicals to have: "))
     available_nums = range(0, 5)
     while n_rad not in available_nums:
@@ -92,12 +94,13 @@ class Kanji(object):
     radicals (str): In their mayority hiragana with the most used sound
         of the kanji
   """
-  def __init__(self, kanji, meaning, radicals, sound, lvl):
+  def __init__(self, kanji, meaning, radicals, sound, lvl, points = []):
     self.kanji = kanji
     self.meaning = meaning
     self.radicals = radicals
     self.sound = sound
     self.lvl = lvl
+    self.points = points
 
   @property
   def question(self):
@@ -113,8 +116,7 @@ class Kanji(object):
 
     return possible_questions[self.lvl]
 
-  @property
-  def show_kanji(self):
+  def show_kanji(self, loading_square):
     """
     Shows the clue of the kanji
     """
@@ -124,8 +126,12 @@ class Kanji(object):
     # The parameters you know
     self.parameter_to_show()
 
+    # Loading square if wanted
+    if loading_square == True:
+      self.points = self.loading_square(self.points)
+
     # The question
-    plt.text(0.3, 0.05, "%s" % self.question, size = 15)
+    plt.text(0.3 * 3, 0.05 * 3, "%s" % self.question, size = 15)
     plt.show()
 
   def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
@@ -134,7 +140,9 @@ class Kanji(object):
     Texts in the plt the information you know based on the level
     """
     # Limit on y axis
-    plt.ylim(top = 0.85)
+    plt.ylim(top = 0.85, bottom = 0)
+    plt.xlim(right = 1, left = 0)
+
 
     if abs(self.lvl) == 1:
       # First clue
@@ -220,6 +228,48 @@ class Kanji(object):
       # Answer 1
       plt.text(center_x - 0.05, center_y - 0.2, self.sound,
                size = size_answer + 30)
+
+  def loading_square(self, points = []):
+      """
+      Plots lines that will form a square the more they are drawn.
+      Args:
+        points [array of tuple of ints]: Points that trace the square.
+
+      returns:
+        points [array of tuple of ints]: points but one more than last time.
+      """
+
+      plt.style.use("dark_background")
+
+      if points == []:
+        for i in range(2):
+          axis_choice = rnd.randint(2)
+          side_choice = rnd.randint(2)
+          if axis_choice == 0:
+            x = side_choice
+            y = rnd.rand()
+          else:
+            y = side_choice
+            x = rnd.rand()
+          points.append([x, y])
+      else:
+        axis_choice = rnd.randint(2)
+        side_choice = rnd.randint(2)
+        if axis_choice == 0:
+          x = side_choice
+          y = rnd.rand()
+        else:
+          y = side_choice
+          x = rnd.rand()
+        points.append([x, y])
+
+      plot_points = array(points)
+      # Plot coordinates
+      plt.plot(array(plot_points)[:,0] / 10 + 0.9,
+              array(plot_points)[:,1] / 5, c = "w")
+
+      return points
+
 
 class KanjiBox(object):
   """
@@ -310,16 +360,16 @@ class KanjiBox(object):
     else:
       message = "You end the filter %s in the %s timeline" % (self.filter,
       							   self.random_state)
-      							   						   
+
     try:
       p_idx = random.choice(range(len(self.kanji)))
     except IndexError:
       raise ValueError(message)
-    
+
     p = self.kanji.pop(p_idx)
-    
+
     return p
-     
+
 
   @property
   def get_kanji(self):
@@ -364,15 +414,19 @@ class KanjiBox(object):
 
       elif (n_rads > 1) and ("*" not in list_of_rad[-1]) and self.filter == 2:
         good_kanjies.append(i)
-      
+
     return good_kanjies
 
-  def make_round(self, left_kanjies = False):
+  def make_round(self, left_kanjies = False, loading_square = False):
     """Sets a new kanji to be tested and gives the left kanjies if is true"""
     kanji = self.random_p
+    # Optional parameters
+
     print("Número de kanjies que faltan: ",
           len(self.kanji)) if left_kanjies == True else None
-    kanji.show_kanji
+
+    # Kanji showing
+    kanji.show_kanji(loading_square)
     self.actual_k = kanji
 
   @property
