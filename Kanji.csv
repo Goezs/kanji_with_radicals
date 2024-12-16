@@ -192,7 +192,7 @@ Kanji,Meaning,Radicals,Sound
 化,Change,Leader + Spoon,か
 知,Know,Arrow + Mouth,ち
 科,Science,Grain + Ladle,か
-夜,Night,Lid + Leader + Winter + Drop,や
+夜,Night,Lid + Leader + Winter + Drop,よる
 思,Think,Rice Paddy + Heart,おも
 南,South,Cross + Head + Sheep,なん
 亡,Death,Death,ぼう
@@ -227,7 +227,7 @@ Kanji,Meaning,Radicals,Sound
 黄,Yellow,Yellow,き
 由,Reason,Cross + Mouth,ゆう
 校,School,Tree + Lid + Father,こう
-高,"Tall, High, Expensive",Lid + Mouth + Mustache,だか
+高,"Tall, High, Expensive",Lid + Mouth + Mustache,たか
 失,Fault,Husband + Slide,しっ
 辺,Area,Treadmill + Sword,へん
 紙,Paper,Thread + Clan,がみ
@@ -250,7 +250,7 @@ Kanji,Meaning,Radicals,Sound
 場,Location,Dirt + Easy,じょう
 助,Help,Top Hat + Power,じょ
 身,"Body, Somebody",Self + Slide,み
-話,"Talk, Speak",Say + Tongue,わ
+話,"Talk, Speak",Say + Tongue,はな
 楽,"Comfort, Ease",Explosion + White + Tree,がく
 電,Electricity,Rain + Rice Paddy + Umbrella,でん
 君,Buddy,Wolverine + Slide + Mouth,くん
@@ -340,10 +340,10 @@ Kanji,Meaning,Radicals,Sound
 運,"Carry, Luck",Treadmill + Forehead + Car,うん
 農,"Farming, Agriculture",Music + Landslide *,のう
 線,Line,Thread + White + Water,せん
-進,Advance,Treadmill + Turkey,しん
+進,Advance,Treadmill + Turkey,すす
 終,"End, Finish",Thread + Winter + Two,お
 頭,Head,Beans + Geoduck,とう
-競,Compete,Stand + Older Brother,きょう
+競,Compete,Standx2 + Older Brotherx2,きょう
 位,Rank,Leader + Stand,い
 低,Low,Leader + Clan + Ground,てい
 労,Labor,Viking + Power,ろう
@@ -460,7 +460,7 @@ Kanji,Meaning,Radicals,Sound
 完,Perfect,Roof + Origin,かん
 的,"Target, ~al, ~like",White + Pool,てき
 囲,Surround,Mouth + Well,い
-私,"I, Private",Grain + Private,し
+私,"I, Private",Grain + Private,わたし
 芸,"Acting, Art",Flowers + Cloud,げい
 残,Remainder,Yakuza + Bar,ざん
 卒,Graduate,Lid + Personx2 + Cross,そつ
@@ -1037,7 +1037,7 @@ Kanji,Meaning,Radicals,Sound
 救,Rescue,Request + Winter *,きゅう
 径,Diameter,Loiter + Tombstone,けい
 孫,Grandchild,Child + Lineage,まご
-廊,Corridor,Mullet + Guy *,ろう
+廊,Corridor,Mullet + Guy **,ろう
 普,Normal,Line Up + Sun *,ふ
 棒,"Pole, Rod",Tree + Train + Dry,ぼう
 訳,"Translation, Reason",Say + Shrimp,やく
@@ -1363,7 +1363,7 @@ Kanji,Meaning,Radicals,Sound
 蛍,Firefly,Viking + Insect,けい
 艦,Warship,Boat + Oversee *,かん
 措,Set Aside,Fingers + Long Ago *,そ
-郷,Hometown,poop + Guy *,きょう
+郷,Hometown,Trash + Slide + Guy **,きょう
 範,Example,Bamboo + Car + Snake,はん
 揚,Hoist,Fingers + Easy,よう
 斎,Purification,Simultaneous + Jackhammer,さい
