@@ -428,7 +428,7 @@ Kanji,Meaning,Radicals,Sound
 感,Feeling,Slide + Drunkard + Creeper + Heart,かん
 情,"Feeling, Emotion",Soul + Blue,じょう
 整,"Arrange, Organize",Bundle + Winter + Correct *,せい
-億,Hundred Million,Leader + Idea **,おく
+億,Hundred Million,Leader + Idea #,おく
 養,Foster,Sheep + Fins + Good *,よう
 標,Signpost,Tree + Helicopter + Jackhammer,ひょう
 練,Practice,Thread + East *,れん
@@ -875,7 +875,7 @@ Kanji,Meaning,Radicals,Sound
 故,"Circumstance, Reason",Old + Winter,こ
 貯,Savings,Shellfish + Roof + Street,ちょ
 迫,"Urge, Compel, Coerce",Treadmill + White,はく
-濃,Thick,Tsunami + Farming **,のう
+濃,Thick,Tsunami + Farming #,のう
 胃,Stomach,Rice Paddy + Moon,い
 腹,"Belly, Abdomen, Stomach",Moon + Black Hole,はら
 退,"Retreat, Reject",Treadmill + Root,たい
@@ -1037,7 +1037,7 @@ Kanji,Meaning,Radicals,Sound
 救,Rescue,Request + Winter *,きゅう
 径,Diameter,Loiter + Tombstone,けい
 孫,Grandchild,Child + Lineage,まご
-廊,Corridor,Mullet + Guy **,ろう
+廊,Corridor,Mullet + Guy #,ろう
 普,Normal,Line Up + Sun *,ふ
 棒,"Pole, Rod",Tree + Train + Dry,ぼう
 訳,"Translation, Reason",Say + Shrimp,やく
@@ -1215,7 +1215,7 @@ Kanji,Meaning,Radicals,Sound
 塁,"Base, Baseball Base",Rice Paddy + Explosion + Dirt,るい
 闘,Struggle,Gate + Beans + Measurement,とう
 漁,Fishing,Tsunami + Fish,ぎょ
-爆,Explode,Fire + Violence **,ばく
+爆,Explode,Fire + Violence #,ばく
 湾,Gulf,Tsunami + Red + Bow,わん
 崩,Crumble,Mountain + Moonx2,くず
 葬,Burial,Flowers + Ground + Yakuza + Spoon + Twenty,そう
@@ -1589,8 +1589,8 @@ Kanji,Meaning,Radicals,Sound
 畜,Livestock,Mysterious + Rice Paddy,ちく
 灯,Lamp,Fire + Street,とう
 悔,Regret,Soul + Every *,くや
-憶,Recollection,Soul + Idea **,おく
-溶,Melt,Tsunami + Form **,よう
+憶,Recollection,Soul + Idea #,おく
+溶,Melt,Tsunami + Form #,よう
 培,Cultivate,Dirt + Clown,ばい
 輝,Radiance,Sunlight + Forehead + Car *,かがや
 飢,Starve,Eat + Table,う
@@ -1655,7 +1655,7 @@ Kanji,Meaning,Radicals,Sound
 搬,Transport,Fingers + Boat + Weapon,はん
 涯,Horizon,Tsunami + Cliff + Dirtx2,がい
 疫,Epidemic,Sick + Weapon,えき
-彰,Patent,chapter + Hair **,しょう
+彰,Patent,chapter + Hair #,しょう
 把,"Bundle, Grasp",Fingers + Bed,は
 邪,Wicked,Fang + Building,じゃ
 淀,Eddy,Tsunami + Roof + Correct *,よど
