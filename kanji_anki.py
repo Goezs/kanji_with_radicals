@@ -397,7 +397,7 @@ class KanjiBox(object):
       radicals = radicals.replace(" ", "")
 
       if ("#" in radicals) and (self.filter == 4):
-        i.radicals = i.radicals[:-2]
+        i.radicals = i.radicals[:-1]
         good_kanjies.append(i)
         continue
 
