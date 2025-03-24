@@ -58,14 +58,16 @@ def get_rad():
     print("Filter on number 2: Kanjies made with radicals.")
     print("Filter on number 3: Kanjies made with kanjies of filter 2.")
     print("Filter on number 4: Kanjies made with kanjies of filter 3.\n")
+    ########## FILTER 5
+    print("Filter on number 5: Vocabulary made based on all kanjies.\n")
 
     n_rad = int(input("\nradicals to have: "))
-    available_nums = range(0, 5)
+    available_nums = range(0, 6) ########## If nothing selected is 5
     while n_rad not in available_nums:
-       n_rad = int(input("Introduce an avaible number of radicals: "))
+       n_rad = int(input("Introduce an available number of radicals: "))
     return n_rad
   else:
-    return 0
+    return 0 ########## If nothing selected is 5
 
 def get_random_state():
   """Asks the user what will be the timeline of sucecions of kanjies"""
@@ -91,8 +93,12 @@ class Kanji(object):
     kanji (str): Symbol of the kanji to show
     Meaning (str): Words in english with the semantic of the kanji
     radicals (str): Words in english with the radicals of the kanji (mnemonics)
-    radicals (str): In their mayority hiragana with the most used sound
+    sound (str): In their mayority hiragana with the most used sound
         of the kanji
+    ########################################### MODIFICATION
+    lvl(int) : Gives a question based on the level selected
+    points(int) : Help parameter to create the loading square
+
   """
   def __init__(self, kanji, meaning, radicals, sound, lvl, points = []):
     self.kanji = kanji
@@ -105,7 +111,7 @@ class Kanji(object):
   @property
   def question(self):
     """
-    Given a number returns the correspondent andswer
+    Given a number returns the correspondent answer
     """
     question_0 = ""
     question_1 = "What is the kanji and sound?"
@@ -116,6 +122,7 @@ class Kanji(object):
 
     return possible_questions[self.lvl]
 
+  ##################################### kanji triangular background
   def show_kanji(self, loading_square):
     """
     Shows the clue of the kanji
@@ -128,7 +135,7 @@ class Kanji(object):
 
     # Loading square if wanted
     if loading_square == True:
-      self.points = self.loading_square(self.points)
+      self.points = self.loading_square
 
     # The question
     plt.text(0.3 * 3, 0.05 * 3, "%s" % self.question, size = 15)
@@ -144,8 +151,15 @@ class Kanji(object):
     plt.xlim(right = 1, left = 0)
 
 
+########################### Make here that it ask for rad == 5 then arrange kanj
+    ########################### Use the formula to define the centralizing
+    ########################### Only on x because y is the same always
+
     if abs(self.lvl) == 1:
       # First clue
+
+      ###########################
+
       plt.text(center_x + 0.12, center_y - 0.20, "%s" % self.kanji,
                size = size_parameter + 100)
 
@@ -158,6 +172,9 @@ class Kanji(object):
       # First clue
       plt.text(center_x - 0.05, center_y + 0.15, "kanji",
                size = size_title + 15)
+
+      ###########################
+
       plt.text(center_x, center_y - 0.10, "%s" % self.kanji,
                size = size_parameter + 20)
       # Second clue
@@ -184,20 +201,31 @@ class Kanji(object):
     """
     Decides what answer to show based on the lvl selected
     """
+    ########################### Ask for rad == 5, then aument the breath_space
+    ########################### or ~~~~, and ask len vocabulary, to customize it
+
     const_y = 0.87
     breath_space = 0.10
 
+
+    # Upper left line
     x0  = linspace(0, center_x - breath_space)
     y0 = [const_y for i in range(len(x0))]
 
+    # Upper right line
     x1  = linspace(center_x + breath_space, 1)
     y1 = [const_y for i in range(len(x1))]
 
     plt.ylim(top = 1)
 
+    # Plot lines with white color
     plt.plot(x0, y0, c = "w")
     plt.plot(x1, y1, c = "w")
 
+    ########################### Use the formula to define the centralizing
+    ########################### Only on x because y is the same always
+
+    # Print the kanji
     plt.text(center_x - 0.05, center_y + 0.25, self.kanji,
              size = size_title + 40)
 
@@ -229,15 +257,15 @@ class Kanji(object):
       plt.text(center_x - 0.05, center_y - 0.2, self.sound,
                size = size_answer + 30)
 
-  def loading_square(self, points = []):
+  @property
+  def loading_square(self):
       """
       Plots lines that will form a square the more they are drawn.
-      Args:
-        points [array of tuple of ints]: Points that trace the square.
 
       returns:
         points [array of tuple of ints]: points but one more than last time.
       """
+      points = self.points
 
       plt.style.use("dark_background")
 
@@ -276,10 +304,11 @@ class KanjiBox(object):
   Creates a boc with the kanjies that the user wants to have.
   Args:
     lvl (int): How will be ilustrated the rounds and solutions [0, 3]
-    filter (int): Filters the kanjies based on the radicals [0, 3]
+    ##################################### Kanjies rad 5 [1, 5]
+    filter (int): Filters the kanjies based on the radicals [1, 5]
     random_state (int): The timeline of a sucecions of kanjies [-inf, inf]
     skip kanjies (int): How many kanjies will be skiped
-            (cannot be higher than the kanjies that were filtered)
+            (cannot be higher than the kanjies total kanjies in a filter )
   """
   def __init__(self, lvl, filter = 0, kanji = [], actual_k = "",
                random_state = 0, skip_kanjies = 0, onlyskip = 0):
@@ -301,20 +330,28 @@ class KanjiBox(object):
     import urllib
     import csv
 
-    webpage = urllib.request.urlopen("https://raw.githubusercontent.com/Goezs/kanji_with_radicals/main/Kanji.csv")
+    # each one with his own webpage and the vocabulary needed (rad 5, and 1-4)
+    if self.filter == 5:
+      url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/main/kanjgetting/cleared_vocabulary.csv"
+    else:
+      url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/refs/heads/main/Kanji.csv"
 
-    data = csv.reader(webpage.read().decode('utf-8'))
+    webpage = urllib.request.urlopen(url)
+
+    data = csv.reader(webpage.read().decode('utf-8'),)
 
     raw_kanji = []
     row = []
     word = ""
 
     for line in data:
-      for i in range(51):
-        continue
       if len(line) < 1:
         row.append(word)
-        raw_kanji.append(row)
+        if self.filter == 5:
+          if len(row) != 1:
+            raw_kanji.append(row[1:])
+        else:
+          raw_kanji.append(row)
         row = []
         word = ""
         continue
@@ -324,18 +361,7 @@ class KanjiBox(object):
         continue
       word = word + line[0]
 
-    for line in data:
-      for i in range(51):
-        continue
-      if len(line) == 2:
-        row.append(word)
-        word = ""
-        continue
-      if line == []:
-        raw_kanji.append(row)
-        row = []
-        continue
-      word = word + line[0]
+    webpage.close()
 
     return raw_kanji[1:]
 
@@ -356,7 +382,7 @@ class KanjiBox(object):
         and a caegory of that position
     """
     if self.random_state == 0:
-      message = "You end the filter %s in the ニズ !" % self.filter
+      message = "You end the filter %s, ニズ !" % self.filter
     else:
       message = "You end the filter %s in the %s timeline" % (self.filter,
       							   self.random_state)
@@ -387,17 +413,20 @@ class KanjiBox(object):
   def filter_kanji(self, kanjies):
     """
     Filters the kanji based on the number of radicals that they have
+    ######## 0 is not default but 5
     The 0 will be interpretated has all the kanjies
     """
-    if self.filter == 0:
+
+    ############### Make different argumentations for each bag of kanjies
+    if self.filter == 5:
       return kanjies
     good_kanjies = []
     for i in kanjies:
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
 
-      if ("#" in radicals) and (self.filter == 4):
-        i.radicals = i.radicals[:-1]
+      if ("**" in radicals) and (self.filter == 4):
+        i.radicals = i.radicals[:-2]
         good_kanjies.append(i)
         continue
 
