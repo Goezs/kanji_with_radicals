@@ -381,15 +381,16 @@ class KanjiBox(object):
     Gets a random kanji from a list of kanji based on a funnel(position)
         and a caegory of that position
     """
-    if self.random_state == 0:
-      message = "You end the filter %s, ニズ !" % self.filter
-    else:
-      message = "You end the filter %s in the %s timeline" % (self.filter,
-      							   self.random_state)
 
     try:
       p_idx = random.choice(range(len(self.kanji)))
     except IndexError:
+      if self.random_state == 0:
+        message = "You end the filter %s, ニズ !" % self.filter
+      else:
+        message = "You end the filter %s in the %s timeline" % (self.filter,
+                        self.random_state)
+
       raise ValueError(message)
 
     p = self.kanji.pop(p_idx)
@@ -417,15 +418,16 @@ class KanjiBox(object):
     The 0 will be interpretated has all the kanjies
     """
 
-    ############### Make different argumentations for each bag of kanjies
+    # Make different argumentations for each bag of kanjies
     if self.filter == 5:
       return kanjies
+
     good_kanjies = []
     for i in kanjies:
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
 
-      if ("**" in radicals) and (self.filter == 4):
+      if ("#" in radicals) and (self.filter == 4):
         i.radicals = i.radicals[:-2]
         good_kanjies.append(i)
         continue
@@ -443,6 +445,7 @@ class KanjiBox(object):
 
       elif (n_rads > 1) and ("*" not in list_of_rad[-1]) and self.filter == 2:
         good_kanjies.append(i)
+
 
     return good_kanjies
 
