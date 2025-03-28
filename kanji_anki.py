@@ -150,17 +150,16 @@ class Kanji(object):
     plt.ylim(top = 0.85, bottom = 0)
     plt.xlim(right = 1, left = 0)
 
-
-########################### Make here that it ask for rad == 5 then arrange kanj
-    ########################### Use the formula to define the centralizing
-    ########################### Only on x because y is the same always
+    # Arrangement space neccesary for more than 1 character showing
+    lenght_kanji = len(self.kanji) - 1
+    arrangement_space = lenght_kanji * 0.09
 
     if abs(self.lvl) == 1:
       # First clue
 
       ###########################
 
-      plt.text(center_x + 0.12, center_y - 0.20, "%s" % self.kanji,
+      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.kanji,
                size = size_parameter + 100)
 
     elif self.lvl == 0:
@@ -175,7 +174,7 @@ class Kanji(object):
 
       ###########################
 
-      plt.text(center_x, center_y - 0.10, "%s" % self.kanji,
+      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.kanji,
                size = size_parameter + 20)
       # Second clue
       plt.text(center_x + 0.25, center_y + 0.15, "meaning",
@@ -201,12 +200,14 @@ class Kanji(object):
     """
     Decides what answer to show based on the lvl selected
     """
-    ########################### Ask for rad == 5, then aument the breath_space
-    ########################### or ~~~~, and ask len vocabulary, to customize it
 
+    # Arrangament for more than 1 character and for lines
+    lenght_kanji = len(self.kanji) - 1
+    arrangement_space = lenght_kanji * 0.06
+
+
+    breath_space = 0.10 + arrangement_space
     const_y = 0.87
-    breath_space = 0.10
-
 
     # Upper left line
     x0  = linspace(0, center_x - breath_space)
@@ -222,11 +223,8 @@ class Kanji(object):
     plt.plot(x0, y0, c = "w")
     plt.plot(x1, y1, c = "w")
 
-    ########################### Use the formula to define the centralizing
-    ########################### Only on x because y is the same always
-
     # Print the kanji
-    plt.text(center_x - 0.05, center_y + 0.25, self.kanji,
+    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.kanji,
              size = size_title + 40)
 
     if self.lvl == -1:
