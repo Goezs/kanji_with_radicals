@@ -343,12 +343,12 @@ class BasicSymbol(Symbol):
     if abs(self.lvl) == 1:
       # First clue
 
-      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.sound,
+      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.symbol,
                size = size_parameter + 100)
 
     elif self.lvl == 0:
       # First clue
-      plt.text(center_x + 0.04, center_y, "%s" % self.katakana,
+      plt.text(center_x + 0.04, center_y, "%s" % self.sound,
                size = size_parameter + 25)
 
     else:
@@ -366,7 +366,7 @@ class BasicSymbol(Symbol):
     """
 
     # Arrangament for more than 1 character and for lines
-    lenght_sound = len(self.sound) - 1
+    lenght_sound = len(self.symbol) - 1
     arrangement_space = lenght_sound * 0.06
 
 
@@ -388,17 +388,17 @@ class BasicSymbol(Symbol):
     plt.plot(x1, y1, c = "w")
 
     # Print the roman sound
-    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.sound,
+    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.symbol,
              size = size_title + 40)
 
     # Answer 1 (Hiragana symbol)
-    plt.text(center_x - 0.4, center_y + 0.15, "Main symbol(Hiragana)",
+    plt.text(center_x - 0.4, center_y, "Sound in roman letters",
               size = size_title)
-    plt.text(center_x - 0.4, center_y, self.symbol, size = size_answer)
+    plt.text(center_x - 0.4, center_y - 0.15, self.sound, size = size_answer)
 
     # Answer 2 (Katakana symbol)
-    plt.text(center_x + 0.25, center_y + 0.15, "katakana", size = size_title)
-    plt.text(center_x + 0.25, center_y, self.katakana, size = size_answer)
+    plt.text(center_x + 0.25, center_y, "katakana", size = size_title)
+    plt.text(center_x + 0.25, center_y - 0.15, self.katakana, size = size_answer)
 
 
 class SymbolBox(object):
@@ -536,7 +536,7 @@ class SymbolBox(object):
       return kanjies
 
     good_kanjies = []
-    
+
     for i in kanjies:
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
