@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Get vocabulary
-vocabulary = pd.read_csv("../kanjgetting/vocabulary.csv", index_col= 0)
+vocabulary = pd.read_csv("../kanjgetting/vocabulary.csv")
 
 # Delete repeated vocabulary
 vocabulary_kanjies = vocabulary.iloc[:, 0]
@@ -26,5 +26,5 @@ for i in range(len(vocabulary_kanjies)):
 
 cleared_vocabulary_data = vocabulary.iloc[cleared_vocabulary, :]
 
-cleared_vocabulary_data.to_csv("cleared_vocabulary.csv", columns = ["Kanji", "Meaning", "Radicals", "Sound"])
+cleared_vocabulary_data.to_csv("cleared_vocabulary.csv", columns = ["Kanji", "Meaning", "Radicals", "Sound"], index = False)
 

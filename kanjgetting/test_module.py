@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 
 # Get the kanjies to search in jisho
-kanjies_and_data = pd.read_csv("../kanjgetting/kanjies_and_data.csv", index_col= 0)
+kanjies_and_data = pd.read_csv("../kanjgetting/kanjies_and_data.csv")
+
 kanjies_and_meanings = kanjies_and_data.iloc[:, [0,1]]
 
 # Open the driver and page
@@ -127,18 +128,31 @@ def get_information(concept):
 
     return info_row
 
-# All the vocabulary from all kanjies
+# Vocabulary that is being redacted from kanjies
+start_from_certain_kanji = False
+
+## Verifies if the code stop and start from the last kanji printed
+## If it so, the variable 'start_from_certain_kanji' has to be true
+## and the 'last_kanji' variable is the last kanji printed
+
+if start_from_certain_kanji == True:
+    last_kanji = ""
+    start_idx = 0
+    start_idx = kanjies_and_data.index[kanjies_and_data['Kanji'] == last_kanji].tolist()[0]
+
+    kanjies_symbols = kanjies_and_meanings.iloc[start_idx:, 0]
+else:
+    kanjies_symbols = kanjies_and_meanings.iloc[:, 0]
+
+
  
-for kanji in kanjies_and_meanings.iloc[:, 0]:
+for kanji in kanjies_symbols:
     print(kanji)
 
     # Vocabulary associated with a single kanji
 
     ## Vocabulary learned until now
-    vocabulary_data = pd.read_csv("../kanjgetting/vocabulary.csv", index_col = 0)
-
-    # Remaining kanjies
-    new_kanjies_and_data = pd.read_csv("../kanjgetting/kanjies_and_data.csv", index_col = 0)
+    vocabulary_data = pd.read_csv("../kanjgetting/vocabulary.csv")
 
     # array with the specific kanji vocabulary information
     specific_vocabulary = []
@@ -187,10 +201,7 @@ for kanji in kanjies_and_meanings.iloc[:, 0]:
 
     ### Vocabulary added
  
-    new_vocabulary_data.to_csv("vocabulary.csv", columns = ["Kanji", "Meaning", "Radicals", "Sound"])
+    new_vocabulary_data.to_csv("vocabulary.csv", columns = ["Kanji", "Meaning", "Radicals", "Sound"], index = False)
 
-    ## Kanjies done
-    new_kanjies_and_data = new_kanjies_and_data.iloc[1:, :]
-    new_kanjies_and_data.to_csv("kanjies_and_data.csv")
 
 driver.quit()
