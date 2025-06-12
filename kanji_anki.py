@@ -16,20 +16,20 @@ font_name = "Noto Sans JP"
 matplotlib.rcParams['font.family'] = font_name
 
 def initiate_game():
-  """Gets the params to create a SymbolBox and return it to the user"""
+  """Gets the params to create a KanjiBox and return it to the user"""
   lvl = get_lvl()
   n_rad = get_rad()
   random_state = get_random_state()
   skip = get_skip(random_state)
 
-  symbol_box = SymbolBox(lvl, filter = n_rad, random_state = random_state,
+  kanji_box = KanjiBox(lvl, filter = n_rad, random_state = random_state,
                        skip_kanjies = skip)
-  symbol_box.get_kanji
+  kanji_box.get_kanji
 
-  return symbol_box
+  return kanji_box
 
 def get_lvl():
-  """Asks the user a method to question and show the solution of the symbol"""
+  """Asks the user a method to question and show the solutions of the kanjies"""
   question_0 = "0: All in one"
   question_1 = "1: What is the kanji and meaning?"
   question_2 = "2: What is the use description?"
@@ -54,9 +54,6 @@ def get_rad():
   answer = input("You want to filter kanjies based on radicals? y/n: ")
   if answer == "y":
     print("\nRadicals explanations: \n")
-    ### Filter 0
-    print("Filter on number 0: Sounds that make kanjies.\n")
-
     print("Filter on number 1: Radicals (Some are also kanjies).")
     print("Filter on number 2: Kanjies made with radicals.")
     print("Filter on number 3: Kanjies made with kanjies of filter 2.")
@@ -70,7 +67,7 @@ def get_rad():
        n_rad = int(input("Introduce an available number of radicals: "))
     return n_rad
   else:
-    return 5 ########## If nothing selected is 5
+    return 0 ########## If nothing selected is 5
 
 def get_random_state():
   """Asks the user what will be the timeline of sucecions of kanjies"""
@@ -82,31 +79,35 @@ def get_random_state():
     return 0
 
 def get_skip(random_state):
-  """Asks the user how many symbols will be skipped"""
+  """Asks the user how many kanjies will be skiped"""
   if random_state != 0:
-    answer = input("Skip a quantity of symbols? y/n: ")
-    if answer == "y":
-      return 1
+   answer = input("Skip kanjies? y/n: ")
+   if answer == "y":
+     return 1
   return 0
 
-class Symbol(object):
+class Kanji(object):
   """
-  Creates objects for a symbol that has:
+  Creates objects for a kanji that has:
   Args:
-    symbol (str): Symbol  to show
-    sound (str): Sound writhed on roman letters or hiragana
+    kanji (str): Symbol of the kanji to show
+    Meaning (str): Words in english with the semantic of the kanji
+    radicals (str): Words in english with the radicals of the kanji (mnemonics)
+    sound (str): In their mayority hiragana with the most used sound
+        of the kanji
     ########################################### MODIFICATION
     lvl(int) : Gives a question based on the level selected
     points(int) : Help parameter to create the loading square
 
   """
-  def __init__(self, symbol, sound, lvl, points = []):
-    self.symbol = symbol
+  def __init__(self, kanji, meaning, radicals, sound, lvl, points = []):
+    self.kanji = kanji
+    self.meaning = meaning
+    self.radicals = radicals
     self.sound = sound
     self.lvl = lvl
     self.points = points
 
-  ################### Change this for 'select_question'
   @property
   def question(self):
     """
@@ -121,10 +122,10 @@ class Symbol(object):
 
     return possible_questions[self.lvl]
 
-  ##################################### symbol triangular background
-  def show_symbol(self, loading_square):
+  ##################################### kanji triangular background
+  def show_kanji(self, loading_square):
     """
-    Shows the clue of the symbol
+    Shows the clue of the kanji
     """
     #Plot modifications
     plt.figure(figsize = (10, 4))
@@ -134,16 +135,53 @@ class Symbol(object):
 
     # Loading square if wanted
     if loading_square == True:
-       self.points = self.loading_square
+      self.points = self.loading_square
 
     # The question
     plt.text(0.3 * 3, 0.05 * 3, "%s" % self.question, size = 15)
     plt.show()
 
+  def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
+                     size_title: float = 10, size_parameter : float = 15):
+    """
+    Texts in the plt the information you know based on the level
+    """
+    # Limit on y axis
+    plt.ylim(top = 0.85, bottom = 0)
+    plt.xlim(right = 1, left = 0)
+
+    # Arrangement space neccesary for more than 1 character showing
+    lenght_kanji = len(self.kanji) - 1
+    arrangement_space = lenght_kanji * 0.09
+
+    if abs(self.lvl) == 1:
+      # First clue
+
+      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.kanji,
+               size = size_parameter + 100)
+
+    elif self.lvl == 0:
+      # First clue
+      plt.text(center_x + 0.04, center_y, "%s" % self.meaning,
+               size = size_parameter + 25)
+
+    else:
+      # First clue
+      plt.text(center_x - 0.05, center_y + 0.15, "kanji",
+               size = size_title + 15)
+
+      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.kanji,
+               size = size_parameter + 20)
+      # Second clue
+      plt.text(center_x + 0.25, center_y + 0.15, "meaning",
+               size = size_title + 15)
+      plt.text(center_x + 0.30, center_y - 0.10, "%s" % self.meaning,
+               size = size_parameter + 20)
+
   @property
   def show_answer(self):
     """Plots the answer to the question in a plot"""
-    print("symbol chars: ", self.symbol)
+    print("kanji chars: ", self.kanji)
     # Plot modifications
     plt.figure(figsize = (10, 4))
     plt.axis("off")
@@ -152,6 +190,66 @@ class Symbol(object):
     self.answer_to_show()
 
     plt.show()
+
+  def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
+                     size_title: float = 20, size_answer : float = 15):
+    """
+    Decides what answer to show based on the lvl selected
+    """
+
+    # Arrangament for more than 1 character and for lines
+    lenght_kanji = len(self.kanji) - 1
+    arrangement_space = lenght_kanji * 0.06
+
+
+    breath_space = 0.10 + arrangement_space
+    const_y = 0.87
+
+    # Upper left line
+    x0  = linspace(0, center_x - breath_space)
+    y0 = [const_y for i in range(len(x0))]
+
+    # Upper right line
+    x1  = linspace(center_x + breath_space, 1)
+    y1 = [const_y for i in range(len(x1))]
+
+    plt.ylim(top = 1)
+
+    # Plot lines with white color
+    plt.plot(x0, y0, c = "w")
+    plt.plot(x1, y1, c = "w")
+
+    # Print the kanji
+    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.kanji,
+             size = size_title + 40)
+
+    if self.lvl == -1:
+      # Answer 1
+      plt.text(center_x - 0.4, center_y + 0.15, "Meaning", size = size_title)
+      plt.text(center_x - 0.4, center_y, self.meaning, size = size_answer)
+      # Answer 2
+      plt.text(center_x + 0.25, center_y + 0.15, "Sound", size = size_title)
+      plt.text(center_x + 0.25, center_y, self.sound, size = size_answer)
+      # Answer 3
+      plt.text(center_x - 0.05, center_y - 0.30, "Radical(s)",
+               size = size_title)
+      plt.text(center_x - 0.05, center_y - 0.45, self.radicals,
+               size = size_answer)
+
+    elif self.lvl == 1:
+      # Answer 1
+      plt.text(center_x - 0.4, center_y, "Radicals", size = size_title + 5)
+      plt.text(center_x - 0.4, center_y - 0.15, self.radicals,
+               size = size_answer)
+      # Answer 2
+      plt.text(center_x + 0.2, center_y, "Meaning", size = size_title + 5)
+      plt.text(center_x + 0.2, center_y - 0.15, self.meaning,
+               size = size_answer)
+
+    else:
+      # Answer 1
+      plt.text(center_x - 0.05, center_y - 0.2, self.sound,
+               size = size_answer + 30)
 
   @property
   def loading_square(self):
@@ -194,228 +292,22 @@ class Symbol(object):
 
       return points
 
-class Kanji(Symbol):
+
+class KanjiBox(object):
   """
-  Creates objects for a kanji that has:
-  Args:
-    kanji (str): Symbol of the kanji to show
-    Meaning (str): Words in english with the semantic of the kanji
-    radicals (str): Words in english with the radicals of the kanji (mnemonics)
-    sound (str): In their mayority hiragana with the most used sound
-        of the kanji
-    ########################################### MODIFICATION
-    lvl(int) : Gives a question based on the level selected
-    points(int) : Help parameter to create the loading square
-
-  """
-
-  def __init__(self, symbol, meaning, radicals, sound, lvl, points = []):
-    super().__init__(symbol, sound, lvl, points)
-    self.meaning = meaning
-    self.radicals = radicals
-
-  def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
-                     size_title: float = 10, size_parameter : float = 15):
-    """
-    Texts in the plt the information you know based on the level
-    """
-    # Limit on y axis
-    plt.ylim(top = 0.85, bottom = 0)
-    plt.xlim(right = 1, left = 0)
-
-    # Arrangement space neccesary for more than 1 character showing
-    lenght_kanji = len(self.symbol) - 1
-    arrangement_space = lenght_kanji * 0.09
-
-    if abs(self.lvl) == 1:
-      # First clue
-
-      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.symbol,
-               size = size_parameter + 100)
-
-    elif self.lvl == 0:
-      # First clue
-      plt.text(center_x + 0.04, center_y, "%s" % self.meaning,
-               size = size_parameter + 25)
-
-    else:
-      # First clue
-      plt.text(center_x - 0.05, center_y + 0.15, "kanji",
-               size = size_title + 15)
-
-      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.symbol,
-               size = size_parameter + 20)
-      # Second clue
-      plt.text(center_x + 0.25, center_y + 0.15, "meaning",
-               size = size_title + 15)
-      plt.text(center_x + 0.30, center_y - 0.10, "%s" % self.meaning,
-               size = size_parameter + 20)
-
-  def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
-                     size_title: float = 20, size_answer : float = 15):
-    """
-    Decides what answer to show based on the lvl selected
-    """
-
-    # Arrangament for more than 1 character and for lines
-    lenght_symbol = len(self.symbol) - 1
-    arrangement_space = lenght_symbol * 0.06
-
-
-    breath_space = 0.10 + arrangement_space
-    const_y = 0.87
-
-    # Upper left line
-    x0  = linspace(0, center_x - breath_space)
-    y0 = [const_y for i in range(len(x0))]
-
-    # Upper right line
-    x1  = linspace(center_x + breath_space, 1)
-    y1 = [const_y for i in range(len(x1))]
-
-    plt.ylim(top = 1)
-
-    # Plot lines with white color
-    plt.plot(x0, y0, c = "w")
-    plt.plot(x1, y1, c = "w")
-
-    # Print the kanji
-    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.symbol,
-             size = size_title + 40)
-
-    if self.lvl == -1:
-      # Answer 1
-      plt.text(center_x - 0.4, center_y + 0.15, "Meaning", size = size_title)
-      plt.text(center_x - 0.4, center_y, self.meaning, size = size_answer)
-      # Answer 2
-      plt.text(center_x + 0.25, center_y + 0.15, "Sound", size = size_title)
-      plt.text(center_x + 0.25, center_y, self.sound, size = size_answer)
-      # Answer 3
-      plt.text(center_x - 0.05, center_y - 0.30, "Radical(s)",
-               size = size_title)
-      plt.text(center_x - 0.05, center_y - 0.45, self.radicals,
-               size = size_answer)
-
-    elif self.lvl == 1:
-      # Answer 1
-      plt.text(center_x - 0.4, center_y, "Radicals", size = size_title + 5)
-      plt.text(center_x - 0.4, center_y - 0.15, self.radicals,
-               size = size_answer)
-      # Answer 2
-      plt.text(center_x + 0.2, center_y, "Meaning", size = size_title + 5)
-      plt.text(center_x + 0.2, center_y - 0.15, self.meaning,
-               size = size_answer)
-
-    else:
-      # Answer 1
-      plt.text(center_x - 0.05, center_y - 0.2, self.sound,
-               size = size_answer + 30)
-
-class BasicSymbol(Symbol):
-  """
-  Creates objects basic symbol (hiragana and katakana) that has:
-  Args:
-    sound (str): Sound in roman letters
-    symbol (str): Representation of the sound in hiragana
-    katakana (str): Representation of the sound in katakana
-    ########################################### MODIFICATION
-    lvl(int) : Gives a question based on the level selected
-    points(int) : Help parameter to create the loading square
-  """
-
-  def __init__(self, sound, symbol, katakana, lvl, points = []):
-    super().__init__(symbol, sound, lvl, points)
-    self.katakana = katakana
-
-  def parameter_to_show(self, center_x: int = 0.25, center_y: int = 0.5,
-                     size_title: float = 10, size_parameter : float = 15):
-    """
-    Texts in the plt the information you know based on the level
-    """
-    # Limit on y axis
-    plt.ylim(top = 0.85, bottom = 0)
-    plt.xlim(right = 1, left = 0)
-
-    # Arrangement space neccesary for more than 1 character showing
-    lenght_symbol = len(self.symbol) - 1
-    arrangement_space = lenght_symbol * 0.09
-
-    if abs(self.lvl) == 1:
-      # First clue
-
-      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.symbol,
-               size = size_parameter + 100)
-
-    elif self.lvl == 0:
-      # First clue
-      plt.text(center_x + 0.04, center_y, "%s" % self.sound,
-               size = size_parameter + 25)
-
-    else:
-      # First clue
-      plt.text(center_x - 0.05, center_y + 0.15, "symbol",
-               size = size_title + 15)
-
-      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.level,
-               size = size_parameter + 20)
-
-  def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
-                     size_title: float = 20, size_answer : float = 15):
-    """
-    Decides what answer to show based on the lvl selected
-    """
-
-    # Arrangament for more than 1 character and for lines
-    lenght_sound = len(self.symbol) - 1
-    arrangement_space = lenght_sound * 0.06
-
-
-    breath_space = 0.10 + arrangement_space
-    const_y = 0.87
-
-    # Upper left line
-    x0  = linspace(0, center_x - breath_space)
-    y0 = [const_y for i in range(len(x0))]
-
-    # Upper right line
-    x1  = linspace(center_x + breath_space, 1)
-    y1 = [const_y for i in range(len(x1))]
-
-    plt.ylim(top = 1)
-
-    # Plot lines with white color
-    plt.plot(x0, y0, c = "w")
-    plt.plot(x1, y1, c = "w")
-
-    # Print the roman sound
-    plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.symbol,
-             size = size_title + 40)
-
-    # Answer 1 (Hiragana symbol)
-    plt.text(center_x - 0.4, center_y, "Sound in roman letters",
-              size = size_title)
-    plt.text(center_x - 0.4, center_y - 0.15, self.sound, size = size_answer)
-
-    # Answer 2 (Katakana symbol)
-    plt.text(center_x + 0.25, center_y, "katakana", size = size_title)
-    plt.text(center_x + 0.25, center_y - 0.15, self.katakana, size = size_answer)
-
-
-class SymbolBox(object):
-  """
-  Creates a box with the symbols that the user wants to have.
+  Creates a boc with the kanjies that the user wants to have.
   Args:
     lvl (int): How will be ilustrated the rounds and solutions [0, 3]
     ##################################### Kanjies rad 5 [1, 5]
-    filter (int): Filters the symbols based on the radicals [0, 5]
-    random_state (int): The timeline of a succecions of kanjies [-inf, inf]
-    skip kanjies (int): How many kanjies will be skipped
-            (cannot be higher than the total symbols in a filter )
+    filter (int): Filters the kanjies based on the radicals [1, 5]
+    random_state (int): The timeline of a sucecions of kanjies [-inf, inf]
+    skip kanjies (int): How many kanjies will be skiped
+            (cannot be higher than the kanjies total kanjies in a filter )
   """
-  def __init__(self, lvl, filter = 0, symbols = [], actual_k = "",
+  def __init__(self, lvl, filter = 0, kanji = [], actual_k = "",
                random_state = 0, skip_kanjies = 0, onlyskip = 0):
     self.lvl = lvl
-    self.symbols = symbols
+    self.kanji = kanji
     self.filter = filter
     self.actual_k = actual_k
     self.random_state = random_state
@@ -425,77 +317,72 @@ class SymbolBox(object):
       random.seed(self.random_state)
 
   @property
-  def bag_of_symbols(self):
+  def bag_of_kanji(self):
     """
     Creates a array of kanjies based on a .csv file
     """
+    def split_with_commas_outside_of_quotes(string):
+        arr = []
+        start, flag = 0, False
+        for pos, x in enumerate(string):
+          if x == '"':
+            flag= not(flag)
+          if flag == False and x == ',':
+              arr.append(string[start:pos])
+              start = pos+1
+        arr.append(string[start:])
+        return arr 
+
     import urllib
     import csv
 
     # each one with his own webpage and the vocabulary needed (rad 5, and 1-4)
-    if self.filter == 0:
-      url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/refs/heads/main/basic_symbols.csv"
-    elif self.filter == 5:
-      url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/main/kanjgetting/cleared_vocabulary.csv"
+    if self.filter == 5:
+      url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/main/kanjgetting/cleared_vocabulary1.csv"
+      split_str = "\r\n"
     else:
       url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/refs/heads/main/Kanji.csv"
+      split_str = "\n"
 
     webpage = urllib.request.urlopen(url)
 
-    data = csv.reader(webpage.read().decode('utf-8'),)
+    data = webpage.read().decode('utf-8')
 
-    raw_kanji = []
-    row = []
-    word = ""
+    # Each row divided by a str
+    data_row = data.split(split_str)
 
-    for line in data:
-      if len(line) < 1:
-        row.append(word)
-        if self.filter == 5:
-          if len(row) != 1:
-            raw_kanji.append(row[1:])
-        else:
-          raw_kanji.append(row)
-        row = []
-        word = ""
-        continue
-      elif len(line) > 1:
-        row.append(word)
-        word = ""
-        continue
-      word = word + line[0]
+    # Rows divided by a comma
+    data_each = []
+    for i in data_row:
+      data_each.append(split_with_commas_outside_of_quotes(i))
+
+    # Rows without the title and the last line that is empty
+    clear_data = data_each[1:-1]
 
     webpage.close()
 
-    return raw_kanji[1:]
+    return clear_data
+  
 
-  #### Kanjilizer transformation
-  def kanjilizer(self, symbol):
+  def kanjilizer(self, kanji):
     """
-    Converts an array of 3 elements into a basic symbol or 5 elements to a Kanji
+    Converts an array of 5 elements to a Kanji
     """
+    kanji, meaning, radicals, sound = kanji
 
-    if self.filter == 0:
-      sound, symbol, katakana = symbol
-      class_symbol = BasicSymbol(sound, symbol, katakana,
-                             self.lvl)
-
-    else:
-      kanji, meaning, radicals, sound = symbol
-
-      class_symbol = Kanji(kanji, meaning, radicals, sound,
-                          self.lvl)
-    return class_symbol
+    kanji = Kanji(kanji, meaning, radicals, sound,
+                        self.lvl)
+    return kanji
 
   @property
   def random_p(self):
     """
-    Gets a random symbol from a list of symbols based on a funnel(position)
-        and a category of that position
+    Gets a random kanji from a list of kanji based on a funnel(position)
+        and a caegory of that position
     """
 
     try:
-      p_idx = random.choice(range(len(self.symbols)))
+      p_idx = random.choice(range(len(self.kanji)))
     except IndexError:
       if self.random_state == 0:
         message = "You end the filter %s, ニズ !" % self.filter
@@ -505,7 +392,7 @@ class SymbolBox(object):
 
       raise ValueError(message)
 
-    p = self.symbols.pop(p_idx)
+    p = self.kanji.pop(p_idx)
 
     return p
 
@@ -513,33 +400,32 @@ class SymbolBox(object):
   @property
   def get_kanji(self):
     """
-    Fills the symbol list with Symbol objects based on a bag of symbols
+    Fills the kanji list with Kanji objects based on a bag of kanji
     """
-    symbol_box = self.bag_of_symbols
-    all_symbols = []
-    for s in symbol_box:
-      all_symbols.append(self.kanjilizer(s))
-    # Filter symbols
-    self.symbols = self.filter_kanji(all_symbols)
+    kanji_box = self.bag_of_kanji
+    all_kanjies = []
+    for k in kanji_box:
+      all_kanjies.append(self.kanjilizer(k))
+    # Filter kanjies
+    self.kanji = self.filter_kanji(all_kanjies)
     self.skips
 
   def filter_kanji(self, kanjies):
     """
     Filters the kanji based on the number of radicals that they have
     ######## 0 is not default but 5
-    The 0 will be interpretated has all the folders
+    The 0 will be interpretated has all the kanjies
     """
 
-    # Make different argumentations for each bag of symbols
-    ######### If it's 0 level then skip too
-    if self.filter == 5 or self.filter == 0:
+    # Make different argumentations for each bag of kanjies
+    if self.filter == 5:
       return kanjies
 
     good_kanjies = []
-
     for i in kanjies:
       radicals = i.radicals
       radicals = radicals.replace(" ", "")
+
       if ("#" in radicals) and (self.filter == 4):
         i.radicals = i.radicals[:-2]
         good_kanjies.append(i)
@@ -562,23 +448,21 @@ class SymbolBox(object):
 
     return good_kanjies
 
-  def make_round(self, left_symbols = False, loading_square = False):
-    """Sets a new symbol to be tested and gives the left symbols if
-    the parameter is true"""
-
-    symbol = self.random_p
+  def make_round(self, left_kanjies = False, loading_square = False):
+    """Sets a new kanji to be tested and gives the left kanjies if is true"""
+    kanji = self.random_p
     # Optional parameters
 
-    print("Number of symbols that are remaining: ",
-          len(self.symbols)) if left_symbols == True else None
+    print("Número de kanjies que faltan: ",
+          len(self.kanji)) if left_kanjies == True else None
 
-    # Symbol showing
-    symbol.show_symbol(loading_square)
-    self.actual_k = symbol
+    # Kanji showing
+    kanji.show_kanji(loading_square)
+    self.actual_k = kanji
 
   @property
   def solution(self):
-    """Shows the solution of the symbol if the user has started a round"""
+    """Shows the solution of the kanji if the user has started a round"""
     if self.actual_k == "":
       return "Start a round to show a solution"
     self.actual_k.show_answer
@@ -588,16 +472,16 @@ class SymbolBox(object):
     """Make a skip of kanjies until the number that is given"""
     if self.skip_kanjies == True:
       skips = int(input("\nKanjies to skip: "))
-      available_nums = range(0, len(self.symbols) - 2)
+      available_nums = range(0, len(self.kanji) - 2)
 
       while skips not in available_nums:
-        skips = int(input("\nThat's not a number possible of symbols to skip: "))
+        skips = int(input("\nThat's not a number possible of days to skip: "))
       only_skips = input("\nDo you want to only have the skipped kanjies but randomized? y/n: ")
       if only_skips == "y":
         new_kanjies = []
         for i in range(skips):
           new_kanjies.append(self.random_p)
-        self.symbol = new_kanjies
+        self.kanji = new_kanjies
         self.random_state = 0
       else:
         for i in range(skips):
