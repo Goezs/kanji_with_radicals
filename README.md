@@ -22,10 +22,14 @@ One form to put to work the python code is.
    There copy the code :
 
   (A little late, but in any code don't copy the quatiation marks '"')
+
+  
   "
+  
    !git clone https://github.com/Goezs/kanji_with_radicals
   !cp "/content/kanji_with_radicals/JP_FONTS_test/static/NotoSansJP-Regular.ttf" "/usr/share/fonts/truetype/humor-sans"
   from kanji_with_radicals import kanji_anki
+  
   "
   
 8.  Create another normal code cell
