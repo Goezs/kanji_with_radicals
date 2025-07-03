@@ -135,7 +135,7 @@ Kanji,Meaning,Radicals,Sound
 １０代,the teens (10-19),Substitute,じゅうだい
 ４０,forty,,よんじゅう
 ５０,fifty,,ごじゅう
-１０万,"100,000",Ten Thousand,じゅうまん
+１０万,100000,Ten Thousand,じゅうまん
 工場,factory,Construction + Location,こうじょう
 具合,condition,Tool + Suit,ぐあい
 工業,(manufacturing) industry,Construction + Business,こうぎょう
@@ -277,7 +277,7 @@ Kanji,Meaning,Radicals,Sound
 一周,one round,One + Circumference,いっしゅう
 一貫,consistency,One + Pierce,いっかん
 一等,first class,One + Equal,いっとう
-一億,"100,000,000",One + Hundred Million,いちおく
+一億,100000000,One + Hundred Million,いちおく
 一階,first floor,One + Floor,いっかい
 一例,example,One + Example,いちれい
 一打,stroke,One + Hit,いちだ
@@ -475,7 +475,7 @@ Kanji,Meaning,Radicals,Sound
 何千,many thousands,What + Thousand,なんぜん
 ４０００,four thousand,,よんせん
 千円札,"1,000 yen bill",Thousand + Yen + Bill,せんえんさつ
-１０００,"1,000",,いっせん
+１０００,1000,,いっせん
 千葉,"Chiba (city, prefecture)",Thousand + Leaf,ちば
 先月,last month,Previous + Moon,せんげつ
 来月,next month,Come + Moon,らいげつ
@@ -700,8 +700,8 @@ Kanji,Meaning,Radicals,Sound
 汚水,filthy water,Dirty + Water,おすい
 水彩画,watercolor painting,Water + Coloring + Drawing,すいさいが
 万年筆,fountain pen,Ten Thousand + Year + Writing Brush,まんねんひつ
-１００万,"1,000,000",Ten Thousand,ひゃくまん
-１万,"10,000",Ten Thousand,いちまん
+１００万,1000000,Ten Thousand,ひゃくまん
+１万,10000,Ten Thousand,いちまん
 費用,cost,Expense + Task,ひよう
 活用,practical use,Lively + Task,かつよう
 必要,necessary,Certain + Need,ひつよう
@@ -1027,7 +1027,7 @@ Kanji,Meaning,Radicals,Sound
 字幕,subtitles,Letter + Curtain,じまく
 誤字,misprint,Mistake + Letter,ごじ
 脱字,omitted character,Undress + Letter,だつじ
-当て字,"kanji as a phonetic symbol (not meaning)",Correct + Letter,あじ
+当て字,kanji as a phonetic symbol (not meaning),Correct + Letter,あじ
 仮名,kana,Temporary + Name,かな
 絵文字,emoji,Drawing + Writing + Letter,えもじ
 一文字,straight line,One + Writing + Letter,いちもんじ
@@ -2894,7 +2894,7 @@ Kanji,Meaning,Radicals,Sound
 暗い,dark,Dark,くら
 暮れる,to get dark,Livelihood,く
 暗殺,assassination,Dark + Kill,あんさつ
-無闇に,thoughtlessly,Nothing + Darkness,
+無闇に,thoughtlessly,Nothing + Darkness,むやみ
 暗礁,reef,Dark + Reef,あんしょう
 暗闇,darkness,Dark + Darkness,くらやみ
 謝る,to apologize,Apologize,あやま
