@@ -452,7 +452,6 @@ class SymbolBox(object):
       url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/refs/heads/main/basic_symbols.csv"
     elif self.filter == 5:
       url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/main/kanjgetting/cleared_vocabulary1.csv"
-      split_str = "\r\n"
     else:
       url = "https://raw.githubusercontent.com/Goezs/kanji_with_radicals/refs/heads/main/Kanji.csv"
 
