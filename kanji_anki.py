@@ -17,10 +17,11 @@ matplotlib.rcParams['font.family'] = font_name
 
 def initiate_game():
   """Gets the params to create a SymbolBox and return it to the user"""
-  lvl = get_lvl()
   n_rad = get_rad()
   random_state = get_random_state()
   skip = get_skip(random_state)
+  if n_rad == 5:
+    lvl = get_question()
 
   symbol_box = SymbolBox(lvl, filter = n_rad, random_state = random_state,
                        skip_kanjies = skip)
@@ -28,53 +29,65 @@ def initiate_game():
 
   return symbol_box
 
-def get_lvl():
-  """Asks the user a method to question and show the solution of the symbol"""
-  question_0 = "0: All in one"
-  question_1 = "1: What is the kanji and meaning?"
-  question_2 = "2: What is the use description?"
-  question_3 = "3: Give the sound of the kanji"
+def get_question():
+  """Selects a modality to see the information about kanjies
+  All the modes with have the same solution, thus it will have
+  the kanji, radical(s), meaning and sound.
+  
+  There are 3 modes:
+    - Learning mode: Gives only the kanji
+    - Mode 1: Gives only the sound
+    - Mode 2: Gives only the meaning
+  """
+  question_0= "0: Learning mode (Used until now)"
+  question_1= "1: What is the kanji combination? based on the sound only" 
+  question_2= "2: What is the kanji combination? based on the meaning only"
 
-  possible_questions = [question_0, question_1, question_2, question_3]
+  possible_questions = [question_0, question_1, question_2]
 
-  print("The difficulties of the game are: ")
-  for q in possible_questions:
-    print(q)
-  lvl = int(input("What difficulty you want? "))
-  possibly_levels = range(0, 4)
-  while lvl not in possibly_levels:
-    lvl = int(input("That's not a difficulty elect one available: "))
-
-  # Convert the [1, 3] into [0, 2]
-  lvl = lvl - 1 #######
-  return lvl
+  answer = input("Do you want a diffent modality? y/n: ")
+  answer = answer.lower()
+  if answer == "y":
+      print("\nThe difficulties of the game are: \n")
+      for q in possible_questions:
+        print(q)
+      lvl = int(input("\nWhat difficulty you want?\n"))
+      possibly_levels = range(0, 3)
+      while lvl not in possibly_levels:
+        lvl = int(input("That's not a difficulty, elect one available: "))
+    
+      return lvl
+  return 0
 
 def get_rad():
   """Asks the user the number of radicals that will have the kanjies"""
   answer = input("You want to filter kanjies based on radicals? y/n: ")
+  answer = answer.lower()
   if answer == "y":
     print("\nRadicals explanations: \n")
-    ### Filter 0
+    # Filter 0: Basic Symbols
     print("Filter on number 0: Sounds that make kanjies.\n")
-
+    # Filter 1-4: Kanjies
     print("Filter on number 1: Radicals (Some are also kanjies).")
     print("Filter on number 2: Kanjies made with radicals.")
     print("Filter on number 3: Kanjies made with kanjies of filter 2.")
     print("Filter on number 4: Kanjies made with kanjies of filter 3.\n")
-    ########## FILTER 5
+    # FILTER 5 : Vocabulary
     print("Filter on number 5: Vocabulary made based on all kanjies.\n")
 
     n_rad = int(input("\nradicals to have: "))
-    available_nums = range(0, 6) ########## If nothing selected is 5
+    available_nums = range(0, 6)
     while n_rad not in available_nums:
        n_rad = int(input("Introduce an available number of radicals: "))
     return n_rad
+  # If the answer is not 'y' the layer is 5
   else:
-    return 5 ########## If nothing selected is 5
+    return 5
 
 def get_random_state():
-  """Asks the user what will be the timeline of sucecions of kanjies"""
+  """Asks the user what will be the timeline of sequence in kanjies"""
   answer = input("Do you want to set a specific random state? y/n: ")
+  answer = answer.lower()
   if answer == "y":
     random_state = int(input("\nRandom state (0 is not valid): "))
     return random_state
@@ -85,6 +98,7 @@ def get_skip(random_state):
   """Asks the user how many symbols will be skipped"""
   if random_state != 0:
     answer = input("Skip a quantity of symbols? y/n: ")
+    answer = answer.lower()
     if answer == "y":
       return 1
   return 0
@@ -106,21 +120,6 @@ class Symbol(object):
     self.lvl = lvl
     self.points = points
 
-  ################### Change this for 'select_question'
-  @property
-  def question(self):
-    """
-    Given a number returns the correspondent answer
-    """
-    question_0 = ""
-    question_1 = "What is the kanji and sound?"
-    question_2 = "What are the radicals and the meaning?"
-    question_3 = "Give the sound"
-
-    possible_questions = [question_1, question_2, question_3, question_0]
-
-    return possible_questions[self.lvl]
-
   ##################################### symbol triangular background
   def show_symbol(self, loading_square):
     """
@@ -129,6 +128,11 @@ class Symbol(object):
     #Plot modifications
     plt.figure(figsize = (10, 4))
     plt.axis("off")
+    # Limit on y axis
+    plt.ylim(top = 0.85, bottom = 0)
+    # Limit on x axis
+    plt.xlim(right = 1, left = 0)
+
     # The parameters you know
     self.parameter_to_show()
 
@@ -136,8 +140,6 @@ class Symbol(object):
     if loading_square == True:
        self.points = self.loading_square
 
-    # The question
-    plt.text(0.3 * 3, 0.05 * 3, "%s" % self.question, size = 15)
     plt.show()
 
   @property
@@ -219,37 +221,39 @@ class Kanji(Symbol):
     """
     Texts in the plt the information you know based on the level
     """
-    # Limit on y axis
-    plt.ylim(top = 0.85, bottom = 0)
-    plt.xlim(right = 1, left = 0)
+
 
     # Arrangement space neccesary for more than 1 character showing
+    ## Set move space value for the different letters
+    ### Kanji
+    if self.lvl == 0:
+      move_space = 0.09
+    ### Hiragana
+    elif self.lvl == 1:
+      move_space = 0.20
+    ### Roman letters
+    elif self.lvl == 2:
+      move_space = 0.10
+
     lenght_kanji = len(self.symbol) - 1
-    arrangement_space = lenght_kanji * 0.09
+    arrangement_space = lenght_kanji * move_space
 
-    if abs(self.lvl) == 1:
-      # First clue
+    # lvl 0 : Give kanji
+    if self.lvl == 0:
+      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20,
+               "%s" % self.symbol, size = size_parameter + 100)
 
-      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.symbol,
-               size = size_parameter + 100)
+    # lvl 1 : Give sound
+    elif self.lvl == 1:
+      plt.text(center_x + 0.30 - arrangement_space, center_y - 0.20,
+               "%s" % self.sound, size = size_parameter + 55)
 
-    elif self.lvl == 0:
-      # First clue
-      plt.text(center_x + 0.04, center_y, "%s" % self.meaning,
-               size = size_parameter + 25)
-
+    # lvl 2 : Give meaning
     else:
-      # First clue
-      plt.text(center_x - 0.05, center_y + 0.15, "kanji",
-               size = size_title + 15)
+       plt.text(center_x + 0.20 - arrangement_space, center_y - 0.12,
+                "%s" % self.meaning, size = size_parameter + 25,
+                rotation = -10)
 
-      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.symbol,
-               size = size_parameter + 20)
-      # Second clue
-      plt.text(center_x + 0.25, center_y + 0.15, "meaning",
-               size = size_title + 15)
-      plt.text(center_x + 0.30, center_y - 0.10, "%s" % self.meaning,
-               size = size_parameter + 20)
 
   def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
                      size_title: float = 20, size_answer : float = 15):
@@ -279,37 +283,22 @@ class Kanji(Symbol):
     plt.plot(x0, y0, c = "w")
     plt.plot(x1, y1, c = "w")
 
-    # Print the kanji
+    # Print the kanji on the part above
     plt.text(center_x - 0.05 - arrangement_space, center_y + 0.25, self.symbol,
              size = size_title + 40)
 
-    if self.lvl == -1:
-      # Answer 1
-      plt.text(center_x - 0.4, center_y + 0.15, "Meaning", size = size_title)
-      plt.text(center_x - 0.4, center_y, self.meaning, size = size_answer)
-      # Answer 2
-      plt.text(center_x + 0.25, center_y + 0.15, "Sound", size = size_title)
-      plt.text(center_x + 0.25, center_y, self.sound, size = size_answer)
-      # Answer 3
-      plt.text(center_x - 0.05, center_y - 0.30, "Radical(s)",
-               size = size_title)
-      plt.text(center_x - 0.05, center_y - 0.45, self.radicals,
-               size = size_answer)
+    # Answer 1 : Meaning
+    plt.text(center_x - 0.4, center_y + 0.15, "Meaning", size = size_title)
+    plt.text(center_x - 0.4, center_y, self.meaning, size = size_answer)
+    # Answer 2 : Sound
+    plt.text(center_x + 0.25, center_y + 0.15, "Sound", size = size_title)
+    plt.text(center_x + 0.25, center_y, self.sound, size = size_answer)
+    # Answer 3 : Radical(s)
+    plt.text(center_x - 0.05, center_y - 0.30, "Radical(s)",
+              size = size_title)
+    plt.text(center_x - 0.05, center_y - 0.45, self.radicals,
+              size = size_answer)
 
-    elif self.lvl == 1:
-      # Answer 1
-      plt.text(center_x - 0.4, center_y, "Radicals", size = size_title + 5)
-      plt.text(center_x - 0.4, center_y - 0.15, self.radicals,
-               size = size_answer)
-      # Answer 2
-      plt.text(center_x + 0.2, center_y, "Meaning", size = size_title + 5)
-      plt.text(center_x + 0.2, center_y - 0.15, self.meaning,
-               size = size_answer)
-
-    else:
-      # Answer 1
-      plt.text(center_x - 0.05, center_y - 0.2, self.sound,
-               size = size_answer + 30)
 
 class BasicSymbol(Symbol):
   """
@@ -332,32 +321,16 @@ class BasicSymbol(Symbol):
     """
     Texts in the plt the information you know based on the level
     """
-    # Limit on y axis
-    plt.ylim(top = 0.85, bottom = 0)
-    plt.xlim(right = 1, left = 0)
 
     # Arrangement space neccesary for more than 1 character showing
     lenght_symbol = len(self.symbol) - 1
     arrangement_space = lenght_symbol * 0.09
 
-    if abs(self.lvl) == 1:
-      # First clue
 
-      plt.text(center_x + 0.12 - arrangement_space, center_y - 0.20, "%s" % self.symbol,
+    # Hiragana symbol
+    plt.text(center_x + 0.12 - arrangement_space,
+             center_y - 0.20, "%s" % self.symbol,
                size = size_parameter + 100)
-
-    elif self.lvl == 0:
-      # First clue
-      plt.text(center_x + 0.04, center_y, "%s" % self.sound,
-               size = size_parameter + 25)
-
-    else:
-      # First clue
-      plt.text(center_x - 0.05, center_y + 0.15, "symbol",
-               size = size_title + 15)
-
-      plt.text(center_x - arrangement_space, center_y - 0.10, "%s" % self.level,
-               size = size_parameter + 20)
 
   def answer_to_show(self, center_x: int = 0.5, center_y: int = 0.5,
                      size_title: float = 20, size_answer : float = 15):
