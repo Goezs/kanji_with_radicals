@@ -19,10 +19,11 @@ def initiate_game():
   """Gets the params to create a SymbolBox and return it to the user"""
   n_rad = get_rad()
   random_state = get_random_state()
-  skip = get_skip(random_state)
   if n_rad == 5:
     lvl = get_question()
-
+    
+  skip = get_skip(random_state)
+  
   symbol_box = SymbolBox(lvl, filter = n_rad, random_state = random_state,
                        skip_kanjies = skip)
   symbol_box.get_kanji
@@ -100,8 +101,8 @@ def get_skip(random_state):
     answer = input("Skip a quantity of symbols? y/n: ")
     answer = answer.lower()
     if answer == "y":
-      return 1
-  return 0
+      return True
+  return False
 
 class Symbol(object):
   """
@@ -386,7 +387,7 @@ class SymbolBox(object):
             (cannot be higher than the total symbols in a filter )
   """
   def __init__(self, lvl, filter = 0, symbols = [], actual_k = "",
-               random_state = 0, skip_kanjies = 0, onlyskip = 0):
+               random_state = 0, skip_kanjies = False):
     self.lvl = lvl
     self.symbols = symbols
     self.filter = filter
@@ -499,7 +500,8 @@ class SymbolBox(object):
       all_symbols.append(self.kanjilizer(s))
     # Filter symbols
     self.symbols = self.filter_kanji(all_symbols)
-    self.skips
+    if self.skip_kanjies == True:
+      self.skips
 
   def filter_kanji(self, kanjies):
     """
@@ -564,19 +566,18 @@ class SymbolBox(object):
   @property
   def skips(self):
     """Make a skip of kanjies until the number that is given"""
-    if self.skip_kanjies == True:
-      skips = int(input("\nKanjies to skip: "))
-      available_nums = range(0, len(self.symbols) - 2)
+    skips = int(input("\nKanjies to skip: "))
+    available_nums = range(0, len(self.symbols) - 2)
 
-      while skips not in available_nums:
-        skips = int(input("\nThat's not a number possible of symbols to skip: "))
-      only_skips = input("\nDo you want to only have the skipped kanjies but randomized? y/n: ")
-      if only_skips == "y":
-        new_kanjies = []
-        for i in range(skips):
-          new_kanjies.append(self.random_p)
-        self.symbol = new_kanjies
-        self.random_state = 0
-      else:
-        for i in range(skips):
-          self.random_p
+    while skips not in available_nums:
+      skips = int(input("\nThat's not a number possible of symbols to skip: "))
+    only_skips = input("\nDo you want to only have the skipped kanjies but randomized? y/n: ")
+    if only_skips == "y":
+      new_kanjies = []
+      for i in range(skips):
+        new_kanjies.append(self.random_p)
+      self.symbol = new_kanjies
+      self.random_state = 0
+    else:
+      for i in range(skips):
+        self.random_p
