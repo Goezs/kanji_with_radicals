@@ -1,6 +1,6 @@
 ![Question Card](/showed_question.png)
 
-# Andswer:
+# Answer:
 
 ![Answer Card](/showed_answer.png)
 
