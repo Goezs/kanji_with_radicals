@@ -478,7 +478,7 @@ class SymbolBox(object):
       p_idx = random.choice(range(len(self.symbols)))
     except IndexError:
       if self.random_state == 0:
-        message = "You end the filter %s, ニズ !" % self.filter
+        message = "You end the filter %s, アイズ !" % self.filter
       else:
         message = "You end the filter %s in the %s timeline" % (self.filter,
                         self.random_state)
@@ -568,7 +568,7 @@ class SymbolBox(object):
   def skips(self):
     """Make a skip of kanjies until the number that is given"""
     skips = int(input("\nKanjies to skip: "))
-    available_nums = range(0, len(self.symbols) - 2)
+    available_nums = range(0, len(self.symbols) - 2) # -2 because of header and empty line
 
     while skips not in available_nums:
       skips = int(input("\nThat's not a number possible of symbols to skip: "))
@@ -577,7 +577,7 @@ class SymbolBox(object):
       new_kanjies = []
       for i in range(skips):
         new_kanjies.append(self.random_p)
-      self.symbol = new_kanjies
+      self.symbols = new_kanjies
       self.random_state = 0
     else:
       for i in range(skips):
