@@ -19,6 +19,7 @@ def initiate_game():
   """Gets the params to create a SymbolBox and return it to the user"""
   n_rad = get_rad()
   random_state = get_random_state()
+  lvl = 0
   if n_rad == 5:
     lvl = get_question()
     

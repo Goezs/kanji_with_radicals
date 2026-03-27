@@ -249,7 +249,7 @@ Kanji,Meaning,Radicals,Sound
 川柳,senryū,River + Willow,せんりゅう
 川崎,Kawasaki (city),River + Cape,かわさき
 滝川,rapids,Waterfall + River,たきがわ
-淀川,Yodo River,Eddy + River,
+淀川,Yodo River,Eddy + River,よどはわ
 神奈川県,Kanagawa Prefecture (Kanto area),God + Nara + River + Prefecture,かながわけん
 香川県,Kagawa Prefecture (Shikoku),Fragrance + River + Prefecture,かがわけん
 一致,agreement,One + Do,いっち
@@ -752,7 +752,7 @@ Kanji,Meaning,Radicals,Sound
 仕方,way,Doing + Direction,しかた
 両方,both,Both + Direction,りょうほう
 方法,method,Direction + Method,ほうほう
-味方,friend,Flavor + Direction,
+味方,friend,Flavor + Direction,みかた
 法則,law,Method + Rule,ほうそく
 見方,viewpoint,See + Direction,みかた
 考え方,way of thinking,Think + Direction,かんがかた
@@ -1168,7 +1168,7 @@ Kanji,Meaning,Radicals,Sound
 不合格,(examination) failure,Not + Suit + Status,ふごうかく
 不明瞭,unclear,Not + Bright + Clear,ふめいりょう
 仕事,work,Doing + Action,しごと
-試合,match,Try + Suit,
+試合,match,Try + Suit,しあい
 奉仕,service,Dedicate + Doing,ほうし
 幸せ,happiness,Happiness,しあわ
 支度,preparation,Support + Degrees,したく
@@ -1233,7 +1233,7 @@ Kanji,Meaning,Radicals,Sound
 換気,ventilation,Exchange + Energy,かんき
 気持ち,feeling,Energy + Hold,きも
 悪気,ill will,Bad + Energy,わるぎ
-呆気,being taken aback,Shock + Energy,
+呆気,being taken aback,Shock + Energy,あっけ
 交差点,crossing,Mix + Distinction + Point,こうさてん
 交番,police box,Mix + Number In A Series,こうばん
 交通,traffic,Mix + Pass Through,こうつう
@@ -1610,7 +1610,7 @@ Kanji,Meaning,Radicals,Sound
 対向,counter-,Versus + Yonder,たいこう
 紅茶,black tea,Deep Red + Tea,こうちゃ
 喫茶店,coffee shop,Consume + Tea + Shop,きっさてん
-無茶,absurd,Nothing + Tea,
+無茶,absurd,Nothing + Tea,むちゃ
 茶の湯,tea ceremony,Tea + Hot Water,ちゃゆ
 茶屋,teahouse,Tea + Roof,ちゃや
 抹茶,matcha,Erase + Tea,まっちゃ
@@ -2336,7 +2336,7 @@ Kanji,Meaning,Radicals,Sound
 観客,spectator,View + Guest,かんきゃく
 お客さん,guest,Guest,きゃく
 賓客,guest of honour,VIP + Guest,ひんきゃく
-可哀想,poor,Possible + Pathetic + Concept,
+可哀想,poor,Possible + Pathetic + Concept,かわいそう
 相互,mutual,Mutual + Mutual,そうご
 要る,to be needed,Need,い
 要求,demand,Need + Request,ようきゅう
@@ -2792,7 +2792,7 @@ Kanji,Meaning,Radicals,Sound
 野菜,vegetable,Field + Vegetable,やさい
 野球,baseball,Field + Sphere,やきゅう
 野蛮,savage,Field + Barbarian,やばん
-野暮,boorish,Field + Livelihood,
+野暮,boorish,Field + Livelihood,やぼ
 粗野,rustic,Coarse + Field,そや
 野獣,wild beast,Field + Beast,やじゅう
 野郎,guy,Field + Guy,やろう
@@ -3243,7 +3243,7 @@ Kanji,Meaning,Radicals,Sound
 徹底,thoroughness,Penetrate + Bottom,てってい
 奥底,depths,Interior + Bottom,おくそこ
 無限,infinity,Nothing + Limit,むげん
-無駄,futility,Nothing + Burdensome,
+無駄,futility,Nothing + Burdensome,むだ
 無視,disregarding,Nothing + Look At,むし
 無縁,unrelated,Nothing + Edge,むえん
 無秩序,disorder,Nothing + Order + Preface,むちつじょ
@@ -3327,7 +3327,7 @@ Kanji,Meaning,Radicals,Sound
 干潟,tidal flat,Dry + Lagoon,ひがた
 干天,drought,Dry + Heaven,かんてん
 此れ,this,,こ
-可愛い,cute,Possible + Love,
+可愛い,cute,Possible + Love,かわい
 惜しむ,to spare,Frugal,お
 愛憎,love and hate,Love + Hate,あいぞう
 慈愛,affection (esp. parental),Mercy + Love,じあい
@@ -4200,7 +4200,7 @@ Kanji,Meaning,Radicals,Sound
 染める,to dye,Dye,そ
 染まる,to be dyed,Dye,そ
 染み,stain,Dye,し
-甘党,person who prefers sweet things to alcoholic drinks,Sweet + Group,あまとう
+甘党,person who prefers sweet things,Sweet + Group,あまとう
 恩赦,amnesty,Kindness + Pardon,おんしゃ
 秘密,secret,Secret + Secrecy,ひみつ
 秘める,to hide,Secret,ひ
